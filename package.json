@@ -15,7 +15,10 @@
     "apep-std-vars": "^0.1.0",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "epub-gen": "^0.0.20",
+    "popper": "^1.0.1",
+    "html2canvas": "^1.0.0-alpha.12"
   },
   "engines": {
     "node": "8.x"

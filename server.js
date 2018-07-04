@@ -5,11 +5,20 @@
 //express loading
 var express = require('express');
 var app = express();
+
 //apep loading
 var pep = require('apep');
 pep = require('apep-std-transformations')(pep);
+
+//other middleware
 var bodyParser = require('body-parser');
+
+//html templating
 const pug = require('pug');
+
+
+
+//my script
 var dS = require('./demonSolo.js');
 
 app.set("view engine", "pug");
@@ -24,10 +33,17 @@ app.use(express.static('public'));
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function(req, res){
  res.render("pug1", {
-        user: 'rawr',
-        story: dS.lineOne.run()
+      title: pep.capitalize(dS.title).run(),
+      author: dS.author.run(),
+      lineOne: dS.lineOne.run(),
+      bookCover: dS.bookCover.run()
     });
 });
+
+
+
+
+
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
