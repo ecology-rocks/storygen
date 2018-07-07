@@ -203,7 +203,7 @@ let myStory = {
 };
 
 //console.log(myStory.abstract.run());
-console.log(myStory.lineOne.run());
+//console.log(myStory.lineOne.run());
 //console.log(myStory.lineTwo.run());
 
 module.exports = {
