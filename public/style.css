@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
 .darken {
-  height:600px;
+  /*height:600px;*/
   background-image: 
     linear-gradient(
       rgba(0, 0, 0, 0.5),
@@ -30,3 +30,4 @@
 .author {
   font-size: 2em; 
 }
+

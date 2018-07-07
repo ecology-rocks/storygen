@@ -1,21 +1,14 @@
-//load our library
+//load our library and append the special needed ones
 var pep = require("apep");
 pep = require('apep-std-transformations')(pep);
 pep = require('apep-std-vars')(pep);
 
-
-
-
-    
+ //define your specialized functions here   
 const pluralize = pep.match()
     .case(/(.*)y$/,   (_, x) => x + 'ies')
     .case(/(.*s)$/,   (_, x) => x + 'es')
     .case(/.*/,       (x) => x + 's');
 
-
-//match the first (^) letter as a vowel, 
-//add "an" -- else add "a". concatenate 
-//everything into a string, no trailing space
 const aAn = pep.match()
     .case(/^[aeiou]/, (x) => 'an '+x)
     .case(/.*/, (x) => 'a '+x);
@@ -25,66 +18,20 @@ const edIng = pep.match()
     .case(/(.*)ed$/, (_, x) => x + 'ing');
 
 
-//set dictionaries
+//set dictionaries for generic lookup values
 let myDicts = {
   
   they: pep.dict({ male: 'he', female: 'she',}, 'they'),
   them: pep.dict({ male: 'him', female: 'her',}, 'them'),
   their: pep.dict({ male: 'his', female: 'her',}, 'their'),
   theirs: pep.dict({ male: 'his', female: 'hers',}, 'theirs'),
-  aAn: pep.dict({ impressively: 'an', intimidating: 'an', extravagantly: 'an', obnoxiously: 'an',}, 'a')
   
 };
 
-//set simple word choices
-let myChoices = {
-  
-  must: pep.weightedChoice([[0.5, "must"], [0.25, "have to"], [0.25, "need to"]]),
-  
-  demonName: pep.choice("Urnuthun", "Tralroloth", "Unorez", "Sinoth", 
-                     "Vog'thun", "Bag'thanniud", "Onnoch", "Geglod", 
-                        "Toth'tekis", "Anez","Tastraniz","Thol'gith",
-                        "Sigrok","Vizreruth","Uzomud","Jurkadal",
-                        "Thelgen","Bagoneth","Orkodath","Urkomaud"),
+//set title and author
 
-  said: pep.weightedChoice([
-    [0.6, "said"], 
-    [0.1, "voiced"],
-    [0.1, "spoke"],
-    [0.1, "pronounced"],
-    [0.1, "stated"]]),
-  
-  gender: pep.choice("male", "female", "enby", "xe"),
-  
-  bladedWeapon: pep.choice("battle axe", "sword", "scythe", "scimitar", "knife", "dagger"),
-  
-  impressively: pep.choice("impressively", "intimidating", "extravagantly", 
-                           "obnoxiously", "remarkably", "fiercely", "grotesque"),
-  
-  colors: pep.choice("red", "yellow", "green", "orange", "brown", "amber", "azure"),
-  
-  shaking: pep.choice("shaking", "trembling", "quivering", "shivering", "convulsing"),
-  
-  shook: pep.choice("shook", "trembled", "quivered", "shivered"),
-  
-  fear: pep.choice("fear", "terror", "horror", "dismay", "distress"),
-  
-  gems: pep.choice("quartz", "ruby", "gold", "silver", "bronze", "diamond", 
-                   "emerald", "iron", "platinum"),
-  
-  stone: pep.choice("stone", "boulder", "wall", "rock"),
-  
-  shone: pep.choice("shone", "glowed", "shimmered", "exploded", "glinted", 
-                    "glistened", "flashed", "gleamed", "glowed", "glittered"),
-  
-  swept: pep.choice("swept", "swung", "moved", "sailed"),
-  
-  backAndForth: pep.choice("back and forth", "to and fro", 
-                           "from side to side", "from front to back"),
-  
-  rhythmically: pep.choice("rhythmically", "steadily", "unwaveringly", 
-                           "continuously", "continually"),
-  
+let frMat = {
+    
   darknessTitle: pep.choice("darkness", "night", "shadows", "depth", 
                             "deep", "twilight", "flame", "fire", "fury"),
   
@@ -150,6 +97,61 @@ let myChoices = {
 };
 
 
+
+//set simple word choices -- should only be .choice or .weightedChoice
+let myChoices = {
+  
+  must: pep.weightedChoice([[0.5, "must"], [0.25, "have to"], [0.25, "need to"]]),
+  
+  demonName: pep.choice("Urnuthun", "Tralroloth", "Unorez", "Sinoth", 
+                     "Vog'thun", "Bag'thanniud", "Onnoch", "Geglod", 
+                        "Toth'tekis", "Anez","Tastraniz","Thol'gith",
+                        "Sigrok","Vizreruth","Uzomud","Jurkadal",
+                        "Thelgen","Bagoneth","Orkodath","Urkomaud"),
+
+  said: pep.weightedChoice([
+    [0.6, "said"], 
+    [0.1, "voiced"],
+    [0.1, "spoke"],
+    [0.1, "pronounced"],
+    [0.1, "stated"]]),
+  
+  gender: pep.choice("male", "female", "enby", "xe"),
+  
+  bladedWeapon: pep.choice("battle axe", "sword", "scythe", "scimitar", "knife", "dagger"),
+  
+  impressively: pep.choice("impressively", "intimidating", "extravagantly", 
+                           "obnoxiously", "remarkably", "fiercely", "grotesque"),
+  
+  colors: pep.choice("red", "yellow", "green", "orange", "brown", "amber", "azure"),
+  
+  shaking: pep.choice("shaking", "trembling", "quivering", "shivering", "convulsing"),
+  
+  shook: pep.choice("shook", "trembled", "quivered", "shivered"),
+  
+  fear: pep.choice("fear", "terror", "horror", "dismay", "distress"),
+  
+  gems: pep.choice("quartz", "ruby", "gold", "silver", "bronze", "diamond", 
+                   "emerald", "iron", "platinum"),
+  
+  stone: pep.choice("stone", "boulder", "wall", "rock"),
+  
+  shone: pep.choice("shone", "glowed", "shimmered", "exploded", "glinted", 
+                    "glistened", "flashed", "gleamed", "glowed", "glittered"),
+  
+  swept: pep.choice("swept", "swung", "moved", "sailed"),
+  
+  backAndForth: pep.choice("back and forth", "to and fro", 
+                           "from side to side", "from front to back"),
+  
+  rhythmically: pep.choice("rhythmically", "steadily", "unwaveringly", 
+                           "continuously", "continually"),
+  
+  failDuty: pep.choice(" won't do your duty", " will shirk your duty", 
+                       " will fail the family", " will fail us", " will run instead of fight" )
+};
+
+
 //set names and genders and other story constants
 
 //boss
@@ -161,41 +163,60 @@ const mcName = pep.store('mcName', myChoices.demonName);
 const mcGender = pep.store('mcGender', myChoices.gender);
 
 
+//run choices for paragraph1
+let par1 = {
+  youMustFight: pep.choice('<p>"You ' + myChoices.must.run() + ' fight." ', 
+                           '<p>"I\'m worried that you ' + myChoices.failDuty.run() + '." '),
+  acSaid: pep.seq(' ', myChoices.said),
+  
+  optSharpen: pep.choice('. ', 
+                         pep.seq(', sharpening ', aAn(myChoices.impressively), ' large ',
+                   myChoices.bladedWeapon,' against ',aAn(myChoices.gems), 
+                   '-like ', myChoices.stone, '. ', pep.opt(pep.seq('The sparks ',myChoices.shone, ' ', myChoices.colors, ' as it ', myChoices.swept, ' ',
+                   myChoices.backAndForth, ' ', myChoices.rhythmically, '. '))))
+};
+
 let myStory = {
-  title: pep.choice(pep.seq(myChoices.intoTitle,
-                                       " the ",myChoices.darknessTitle),
-                               pep.seq(myChoices.intoTitle, " ", 
-                                       myChoices.darknessTitle, " ", 
-                                       myChoices.iTitle, " ", myChoices.glowTitle)
+  //myName: myChoices.demonName,
+  title: pep.choice(pep.seq(frMat.intoTitle,
+                                       " the ",frMat.darknessTitle),
+                               pep.seq(frMat.intoTitle, " ", 
+                                       frMat.darknessTitle, " ", 
+                                       frMat.iTitle, " ", frMat.glowTitle)
                    ),
   
-  author: pep.seq(myChoices.authorFirst, " ", pep.opt(myChoices.authorMiddle), myChoices.authorLast),
+  author: pep.seq(frMat.authorFirst, " ", pep.opt(frMat.authorMiddle), frMat.authorLast),
   
-  lineOne: pep.seq('<p>"You ', myChoices.must, ' fight." ',  
-                   acName, ' ', 
-                    myChoices.said, ', sharpening ', 
-
-                   aAn(myChoices.impressively), ' ', 
-
-                    ' large ',myChoices.bladedWeapon,' against a ',myChoices.gems, '-like ', myChoices.stone, '. ',
-                    'The sparks ',myChoices.shone, ' ', myChoices.colors, ' as it ', myChoices.swept, ' ',
-                   myChoices.backAndForth, ' ', myChoices.rhythmically, '.</p>',
-                   '<p>"I don’t want to." ', mcName, ' ', myChoices.said, 
+  lineOne: pep.seq(par1.youMustFight),  
+  lineTwo: pep.seq(par1.acSaid, par1.optSharpen, '</p>',
+                   '<p>"I don’t want to." '),
+  lineThree: pep.seq(' ', myChoices.said, 
                    '. ', pep.capitalize(myDicts.they(acGender)), ' stood before ', 
-                   myDicts.their(acGender), ' master, ', acName,
-                   ', naked and unarmed. ',mcName, ' ',
+                   myDicts.their(acGender), ' master, '),
+  lineFour: pep.seq(', naked and unarmed. ',mcName, ' ',
                    pep.choice(pep.str("was " + myChoices.shaking.run() + " with " + myChoices.fear.run()), myChoices.shook), '.  ',
                    '"I want none of this war and the death and destruction it will bring. ',
-                   'We are immortal. Why can we not stay that way?"</p>')
+                   'We are immortal. Why can we not stay that way?"</p>')//,
+  
+  //lineTwo: pep.seq(acNameDos)
   
 };
+
+//console.log(myStory.abstract.run());
+console.log(myStory.lineOne.run());
+//console.log(myStory.lineTwo.run());
 
 module.exports = {
   mcName: mcName,
   acName: acName,
+  
   title: myStory.title,
   author: myStory.author,
-  //aWord: aWord,
+  
   lineOne: myStory.lineOne, 
-  bookCover: myChoices.bookCover
+  lineTwo: myStory.lineTwo,
+  lineThree: myStory.lineThree,
+  lineFour: myStory.lineFour,
+  
+  bookCover: frMat.bookCover
 };

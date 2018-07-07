@@ -1,6 +1,7 @@
 dependencies:
   apep: 1.3.2
   apep-std: 1.1.0
+  apep-std-sep: 0.0.2
   apep-std-transformations: 0.1.0
   apep-std-vars: 0.1.0
   body-parser: 1.18.3
@@ -4557,6 +4558,7 @@ shrinkwrapVersion: 3
 specifiers:
   apep: ^1.3.2
   apep-std: ^1.1.0
+  apep-std-sep: ^0.0.2
   apep-std-transformations: ^0.1.0
   apep-std-vars: ^0.1.0
   body-parser: ^1.18.3
