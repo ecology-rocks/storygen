@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    title StoryGen 0.1.1
+    title StoryGen 0.1.2
     meta(name="description" content="")
     link(rel='stylesheet', href='./style.css' type='text/css')
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', type='text/css' )
@@ -18,11 +18,6 @@ html(lang="en")
         h1.text-center Welcome To My Story Generator!
         p.text-center 
           a(class="btn btn-warning text-center", href="https://gem-cook.glitch.me/") New Story
-    div.row
-      div.col-md-3
-      div(class="col-md-6 rounded mt-2 darken box" id="capture" style="background-image: url(" + bookCover + ")")
-        h1(class="text-light module text-center title") #{title}
-        h1(class="text-light module text-center author") #{author}
     div.container !{finalStory}
         div(class="jumbotron mt-5 bg-secondary text-light")
           h1.text-center Thanks For Reading!

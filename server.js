@@ -20,7 +20,7 @@ const pug = require('pug');
 
 //my script
 var dS = require('./demonSolo.js');
-var dL = require('./demonLong.js');
+var dL = require('./demonLong/demonLong.js');
 
 app.set("view engine", "pug");
 app.set("views", (__dirname + "/views"));
@@ -51,8 +51,8 @@ app.get('/old', function(req, res){
 
 app.get('/', function(req, res){
  res.render("pugLongStory", {
-      title: dL.title.run(),
-      author: dL.author.run(),
+      //title: dL.title.run(),
+      //author: dL.author.run(),
       bookCover: dL.bookCover.run(),
       finalStory: dL.finalStory.run(),
     });

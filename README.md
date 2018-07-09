@@ -10,6 +10,19 @@ I'm hosting the project on Glitch (read more below), and I'll push occasional up
 The live version can be found [here](https://gem-cook.glitch.me/).
 
 --------------------
+## Road Map and Random Notes
+
+### Chapter One
+* Could do a relations look up to change "momma" in chapter one to various relatives or names.
+  
+1. ~~Write the first version of text~~
+2. ~~Import the first version and get it running~~
+3. ~~Add two alternate sentence versions to each sentence~~
+4. Add in word variation 
+  
+
+
+--------------------
 **Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
 
 Find out more [about Glitch](https://glitch.com/about).
