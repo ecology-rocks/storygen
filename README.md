@@ -7,6 +7,7 @@ The last iteration I made of this project relied on R, OCaml, Perl, and ImageMag
 
 I'm hosting the project on Glitch (read more below), and I'll push occasional updates to the GitHub repository. 
 
+The live version can be found [here](https://gem-cook.glitch.me/).
 
 --------------------
 **Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
