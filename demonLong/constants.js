@@ -48,19 +48,31 @@ else if(pep.begin(setVar) == 'f'){
 };
 */
 
-//main character
+//main character - abstract
 const c0 = pep.store('c0', nameFn); 
 const c0g = pep.store('c0g', myPep.gender);
 
-//archenemy of the king
+//archenemy of the king - abstract
 const c1 = pep.store('c1', nameFn);
 const c1g = pep.store('c1g', myPep.gender);
 
-//childhood tormentors
+//childhood tormentors - ch1
 const c2 = pep.store('c2', nameFn);
-const c2g = pep.store('c2g', nameFn);
+const c2g = pep.store('c2g', myPep.gender);
 const c3 = pep.store('c3', nameFn);
-const c3g = pep.store('c3g', nameFn);
+const c3g = pep.store('c3g', myPep.gender);
+
+//lunch buddy - ch2
+const c4 = pep.store('c4', nameFn);
+const c4g = pep.store('c4g', myPep.gender);
+
+//commander - ch2
+const c5 = pep.store('c5', nameFn);
+const c5g = pep.store('c5g', myPep.gender);
+
+//rampart colleague - ch2
+const c6 = pep.store('c6', nameFn);
+const c6g = pep.store('c6g', myPep.gender);
 
 //DONT FORGET TO PUT IT IN MOD EXPORTS TOO
 
@@ -76,4 +88,10 @@ module.exports = {
   c2g: c2g,
   c3: c3,
   c3g: c3g,
+  c4: c4,
+  c4g: c4g,
+  c5: c5,
+  c5g: c5g, 
+  c6: c6,
+  c6g: c6g,
 };

@@ -34,6 +34,7 @@ edIng: pep.match()
     Them: pep.dict({ male: 'Him', female: 'Her',}, 'Them'),
     Their: pep.dict({ male: 'His', female: 'Her',}, 'Their'),
     Theirs: pep.dict({ male: 'His', female: 'Hers',}, 'Theirs'),
+    themself: pep.dict({male: 'himself', female: 'herself',}, 'themself'),
   },
   
   
@@ -255,7 +256,9 @@ dict: {
   
   footprints: pep.choice("footprints", "impressions", "footsteps"),
   
-  gods: pep.choice("gods", "masters", "High Lords", "deities", "Great Ones"),
+  furtively: pep.choice("furtively", "covertly", "clandestinely", "surreptitiously", ), 
+  
+  gods: pep.choice("gods", "High Lords", "deities", "Great Ones"),
   
   good: pep.choice("good", "great", "amazing", "excellent", "peaceful", "adequate"),
   
@@ -269,9 +272,13 @@ dict: {
   
   juveniles: pep.choice("juveniles", "adolescents", "children", "miscreants", "teenagers", "youths"),
   
+  leaveMeAlone: pep.choice("Leave me alone!", "Leave me be!", "Go away!"),
+  
   longing: pep.choice("longing", "searching", "yearning", "scheming"),
   
   overthrow: pep.choice("overthrow", "conquer", "depose", "topple", "displace", "unseat", "dethrone"),
+  
+  peeking: pep.choice("peeking", "peering", "looking", ),
   
   pick: pep.choice("pick", "choose", "join"),
   
@@ -281,11 +288,15 @@ dict: {
   
   speed: pep.choice("speed", "rate", "pace", "velocity"),
   
+  spotted: pep.choice("spotted", "spied", "glimpsed"),
+  
   stirring: pep.choice("stirring", "brewing", "bubbling", "boiling over", "overflowing", "beginning", "rising", "looming", "pending" ),
   
   stronger: pep.choice("stronger", "athletic", "robust", "tenacious", "tough", "muscular", "powerful"),
   
   taller: pep.choice("taller", "lanky", "towering", "slender", "gangly", "angular"),
+  
+  terror: pep.choice("terror", "fear", "dread", "horror", "alarm", "panic"),
   
   trouble: pep.choice("trouble", "disaster", "calamity", "catastrophe", "unrest"),
 

@@ -6,12 +6,14 @@ pep = require('apep-std-vars')(pep);
 var myPep = require('../my-apep-fxns.js');
 
 //include constants and story content
+var myCon = require('./constants.js');
 var myA = require('./abstract.js');
 var myCh1 = require('./ch1.js');
-var myCon = require('./constants.js');
+var myCh2 = require('./ch2.js');
+
  
 
-//define chapter titlesdem
+//define chapter titles
 let ch2t = 'ch2 title';
 let ch3t = 'ch3 title';
 let ch4t = 'ch4 title';
@@ -86,9 +88,9 @@ let finalStory = pep.seq(myPep.html.div('row'),
                          myPep.html.btt,myPep.html.div('c2'),
                          myPep.html.div('oCh'),
                          myPep.html.div('h1'),
-                               ch2t,
+                               myCh2.title,
                          myPep.html.div('h1c'),   
-                                'Our main character struggles to name and stand strong for their pacifism in the face of growing tensions. Our character is told to \'do or die\' in terms of joining the fight. They are left unsettled and looking for a way out.', 
+                                myCh2.text, 
                          myPep.html.btt,myPep.html.div('c2'),
                          myPep.html.div('oCh'),
                          myPep.html.div('h1'),

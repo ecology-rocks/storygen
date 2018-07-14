@@ -22,7 +22,7 @@ var myCon = require('./constants.js');
 */
 
 
-
+//could be expanded more
 let title = pep.choice("Rosy Recollections", "Childhood", "The Cruel, Cruel World");
 
 //p1as1a = par 1 ver a sen 1 ver a
@@ -36,7 +36,7 @@ let aText = {
   // “Momma, momma!” C0 cried as they ran from their tormentors. 
   p1as1a: pep.seq('"Momma, momma!" ', myCon.c0, ' ', myPep.dict.cried, ' as ',myPep.pronouns.they(myCon.c0g), ' ', myPep.dict.fled, ' from ', myPep.pronouns.their(myCon.c0g), ' ', myPep.dict.bullies, '. '),
   //"Leave me alone!" C0 shouted as  they fled in terror.
-  p1as1b: pep.seq('"Leave me alone!" ', myCon.c0, ' ', myPep.dict.cried, ' as ', myPep.pronouns.they(myCon.c0g), ' ', myPep.dict.fled, ' in terror. '),
+  p1as1b: pep.seq('"', myPep.dict.leaveMeAlone, '" ', myCon.c0, ' ', myPep.dict.cried, ' as ', myPep.pronouns.they(myCon.c0g), ' ', myPep.dict.fled, ' in ', myPep.dict.terror, '. '),
   //C0 ran at breakneck speed around the corner and towards the house. 
   p1as1c: pep.seq(myCon.c0, ' ', myPep.dict.fled, ' at ', myPep.dict.breakneck, ' ', myPep.dict.speed, ' around the ', myPep.dict.corner, ' and towards the ', myPep.dict.house, '. '),
   
@@ -53,9 +53,9 @@ let aText = {
   //s3
   
   //C0 felt relief wash over them when they say their mother peeking out from behind the kitchen window curtains.
-  p1as3a: pep.seq(myCon.c0, ' felt relief wash over ', myPep.pronouns.them(myCon.c0g), ' when ', myPep.pronouns.they(myCon.c0g), ' saw ', myPep.pronouns.their(myCon.c0g), ' mother peeking out from behind the kitchen window curtains. '),
+  p1as3a: pep.seq(myCon.c0, ' felt relief wash over ', myPep.pronouns.them(myCon.c0g), ' when ', myPep.pronouns.they(myCon.c0g), ' saw ', myPep.pronouns.their(myCon.c0g), ' mother ', myPep.dict.peeking, pep.opt(pep.seq(" ", myPep.dict.furtively)), ' out from behind the ',pep.opt("kitchen "), 'window',pep.opt(" curtains"), '. '),
   // C0 spotted their mother inside the window. 
-  p1as3b: pep.seq(myCon.c0, ' spotted their mother inside the window. '),
+  p1as3b: pep.seq(myCon.c0, myPep.dict.spotted, ' their mother inside the window. '),
   //Closing the distance to the house, C0 knew relief and safety were close.
   p1as3c: pep.seq('Closing the distance to the ', myPep.dict.house, ', ', myCon.c0, ' knew relief and safety were close. '),
   
@@ -99,7 +99,7 @@ let aText = {
   //“Let me in!”
   p2as3a: pep.seq('"Let me in!" '),
   //"Please god."
-  p2as3b: pep.seq('"Please ', myPep.dict.gods, '. "'),
+  p2as3b: pep.seq('"Please, ', myPep.dict.gods, '. "'),
   //"Momma..."
   p2as3c: pep.seq('"Momma..." '),
   
