@@ -11,6 +11,11 @@ module.exports = {//define your specialized functions here
     .case(/(.*s)$/,   (_, x) => x + 'es')
     .case(/.*/,       (x) => x + 's'),
 
+ doing: pep.match()
+    .case(/(.*)e$/,   (_, x) => x + 'ing')
+    //.case(/(.*s)$/,   (_, x) => x + 'es')
+    .case(/.*/,       (x) => x + 'ing'),
+  
 aAn: pep.match()
     .case(/^[aeiou]/, (x) => 'an '+x)
     .case(/.*/, (x) => 'a '+x),
@@ -29,15 +34,30 @@ edIng: pep.match()
     Them: pep.dict({ male: 'Him', female: 'Her',}, 'Them'),
     Their: pep.dict({ male: 'His', female: 'Her',}, 'Their'),
     Theirs: pep.dict({ male: 'His', female: 'Hers',}, 'Theirs'),
+    themself: pep.dict({male: 'himself', female: 'herself',}, 'themself'),
   },
   
+  
   //tl
+  
+  /*div.row
+      div.col-md-3
+      div(class="col-md-6 rounded mt-2 darken box" id="capture" style="background-image: url(" + bookCover + ")")
+        h1(class="text-light module text-center title") #{title}
+        h1(class="text-light module text-center author") #{author}*/
+  
   html: {
     btt: '<p><a href="#top"><i>Back To Top</i></a></p>',
     i: pep.dict({o: '<i>', c: '</i>'}),
     p: pep.dict({o: '<p>', c: '</p>'}),
     div: pep.dict({row: '<div class="row mt-3">', 
                    sp: '<div class="col-md-1"></div>',
+                   oCov: '<div class="col-md-3"></div><div class="col-md-6 rounded mt-2 darken box" style="background-image:url(',
+                   //put in book cover url
+                   oCovC: ')"><h1 class="text-light module text-center title">',
+                   //put in title, end h1
+                   oCovA: '<h1 class="text-light module text-center author">',
+                   //end h1
                    oAbs: '<div class="col-md-5 rounded bg-info t-2 ml-2 mr-2 text-light">', 
                    oCh: '<div class="row mt-3"><div class="col-md-2"></div><div class="col-md-8 rounded bg-light pt-3 pl-3 pr-3 pb-3 text-dark">',
                    c: '</div>',
@@ -53,12 +73,16 @@ edIng: pep.match()
   
   verbS: pep.dict({male: 's', female: 's'}, ''),
   
+  charNames: pep.dict({e: 'elfName', f: 'feyName', h: 'demonName'}),
+  
+  
+  
   //tl myPep.setting.realm(myPep.chooseRealm)
   setting: {
     realm: pep.dict({e: 'Ealionem', f: 'Astaran',  h: 'Hell'}),
     brethren: pep.dict({e: 'elf', f: 'faery', h: 'demon'}),
     brethrens: pep.dict({e: 'elves', f: 'faeries', h: 'demons'}),
-    boss: pep.dict({e: 'Emporer', f: 'Archfey', h: 'Archdemon'}),
+    boss: pep.dict({e: 'Emperor', f: 'Archfey', h: 'Archdemon'}),
       
       },
   
@@ -158,9 +182,7 @@ edIng: pep.match()
                   "Baglanod","Jiz'gad","Xozoruth","Birremon",
                   "Brugdris","Gag'draros","Volgemos","Jolgriroth",
                   "Uzgak","Sag'dran","Zogakoth","Gar'or",
-                      ),
-    
-    elfName: pep.choice("Arathorn","Venpeiros","Rennyn","Iliyarus",
+                "Arathorn","Venpeiros","Rennyn","Iliyarus",
                 "Mardeiym","Zylmoira","Intevar","Phiqirelle",
                 "Ayas","Uriwraek","Alwin","Eilris",
                 "Montagor","Wranwraek","Ualair","Aragwyn",
@@ -170,32 +192,115 @@ edIng: pep.match()
                 "Ygrainne","Syldove","Caerthynna","Preslen",
                 "Gweyr","Zinleth","Radelia","Elgolor",
                 "Kenia","Magbanise","Cilivren","Vadan",
-                       ),
-    feyName: pep.choice("Teodi","Pamla","Lyllas","Styssa",
-                "Ghamish","Nefre","Sceothisy","Sinsebe",
-                "Pherravy","Miastore","Dhympaph","Giero",
-                "Zeormof","Zifrath","Mnastri","Shapo",
-                "Stentamuih","Nylrimaeph","Oelitesh","Scylrene",
-                "Dhoelleph","Zyphif","Shiste","Maethrah",
-                "Phrevaph","Gaphlaph","Ziflode","Pynshiny",
-                "Pirlereos","Phrempanuis","Thapha","Scinshi",
-                "Phamesh","Paetse","Mysan","Tafo",
-                "Syffane","Emafah","Scefferas","Yrripes",
-                "Astoh","Pilna","Nimbes","Steodhe",
-                "Zashes","Yfi","Thintili","Yphlapysh",
-                "Draerlomi","Scafravi"
+                  "Teodi","Pamla","Lyllas","Styssa",
+                  "Ghamish","Nefre","Sceothisy","Sinsebe",
+                  "Pherravy","Miastore","Dhympaph","Giero",
+                  "Zeormof","Zifrath","Mnastri","Shapo",
+                  "Stentamuih","Nylrimaeph","Oelitesh","Scylrene",
+                  "Dhoelleph","Zyphif","Shiste","Maethrah",
+                  "Phrevaph","Gaphlaph","Ziflode","Pynshiny",
+                  "Pirlereos","Phrempanuis","Thapha","Scinshi",
+                  "Phamesh","Paetse","Mysan","Tafo",
+                  "Syffane","Emafah","Scefferas","Yrripes",
+                  "Astoh","Pilna","Nimbes","Steodhe",
+                  "Zashes","Yfi","Thintili","Yphlapysh",
+                  "Draerlomi","Scafravi"
                        ),
   },//end frMat
   
 dict: {
-  stirring: pep.choice("stirring", "brewing", "bubbling", "starting", 
-                       "boiling over", "overflowing", "beginning", "rising", ),
   
-  across: pep.choice("across", "within", "around", "between", "inside", "in", ),
+  across: pep.choice("across", "within", "around", "between", "inside", ),
+  
+  afraid: pep.choice("afraid", "terrified", "scared", "fearful"),
+  
+  afterAll: pep.choice("After all", "Truly", "Above all", "Most importantly"),
+  
+  anotherPath: pep.choice("another path", "a third choice", "a final choice", "a way out"),
+  
+  army: pep.choice("army", "batallion", "horde", "force", "calvary", "militia"),
+  
+  breakneck: pep.choice("breakneck", "reckless", "full-tilt", "lightning", "supernatural"),
+  
+  buddy: pep.choice("buddy", "comrade", "friend", "classmate", "mate", "pal", "playmate"),
+  
+  bullies: pep.choice("bullies", "tormenters", "persecutors"),
+  
+  cackling: pep.choice("cackling", "laughing", "giggling", "chortling", "snickering", "sniggering", "tittering"),
+  
+  chased: pep.choice("chased", "followed", "hounded", "hunted", "trailed", "ran"),
+  
+  coming: pep.choice("coming", "running", "hiding"),
+  
+  corner: pep.choice("corner", "bend", "ridge", "edge"),
+  
+  couple: pep.choice("team", "couple", "brace", "set", "duo", "dyad", "twosome", "doublet"),
+  
+  cried: pep.choice("cried", "shouted", "yelped", "hollered", "bellowed"),
+  
+  crusade: pep.choice("crusade", "conquest", "campaign", "struggle", "goal", ),
   
   depths: pep.seq("the ", pep.choice("depths", "boundaries", "breadth", "borders"), " of"),
   
+  discover: pep.choice("discover", "stumble upon", "find", "unearth", "uncover"),
+  
+  discovered: pep.choice("discovered", "stumbled upon", "found", "unearthed", "uncovered"),
+  
+  displeased: pep.choice("displeased", "angry", "frustrated", "disgusted", "uneasy"),
+  
+  faster: pep.choice("faster", "speedier", "quicker", "agile", "swifter", "fleet"),
+  
+  fierce: pep.choice("fierce", "angry", "violent", "war-mongering", "war-hungry", "bloodthirsty", "bloodhungry"),
+  
+  fled: pep.choice("fled", "ran", "scampered", "sprinted", "dashed", "bolted", "scurried", "sped", "scrambled"),
+  
+  footprints: pep.choice("footprints", "impressions", "footsteps"),
+  
+  furtively: pep.choice("furtively", "covertly", "clandestinely", "surreptitiously", ), 
+  
+  gods: pep.choice("gods", "High Lords", "deities", "Great Ones"),
+  
+  good: pep.choice("good", "great", "amazing", "excellent", "peaceful", "adequate"),
+  
+  hastily: pep.choice("hastily", "carelessly", "rashly"),
+  
+  heartless: pep.choice("heartless", "cruel", "brutal", "callous", "cold-hearted", "cold-blooded", "harsh", "inhuman", "insensitive", "merciless", "ruthless"),
+  
+  house: pep.choice("house", "homestead", "cabin", "building", "dwelling", "shanty"),
+  
+  hungry: pep.choice("hungry", "starved", "famished", "searching"),
+  
+  juveniles: pep.choice("juveniles", "adolescents", "children", "miscreants", "teenagers", "youths"),
+  
+  leaveMeAlone: pep.choice("Leave me alone!", "Leave me be!", "Go away!"),
+  
+  longing: pep.choice("longing", "searching", "yearning", "scheming"),
+  
+  overthrow: pep.choice("overthrow", "conquer", "depose", "topple", "displace", "unseat", "dethrone"),
+  
+  peeking: pep.choice("peeking", "peering", "looking", ),
+  
+  pick: pep.choice("pick", "choose", "join"),
+  
+  pleased: pep.choice("pleased", "happy", "comfortable", "excited", ),
+  
+  sp2to6: pep.choice("two", "three", "four", "five", "six"),
+  
+  speed: pep.choice("speed", "rate", "pace", "velocity"),
+  
+  spotted: pep.choice("spotted", "spied", "glimpsed"),
+  
+  stirring: pep.choice("stirring", "brewing", "bubbling", "boiling over", "overflowing", "beginning", "rising", "looming", "pending" ),
+  
+  stronger: pep.choice("stronger", "athletic", "robust", "tenacious", "tough", "muscular", "powerful"),
+  
+  taller: pep.choice("taller", "lanky", "towering", "slender", "gangly", "angular"),
+  
+  terror: pep.choice("terror", "fear", "dread", "horror", "alarm", "panic"),
+  
   trouble: pep.choice("trouble", "disaster", "calamity", "catastrophe", "unrest"),
+
+  
 },
   
 }//end module.exports
