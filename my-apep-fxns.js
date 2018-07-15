@@ -49,7 +49,7 @@ edIng: pep.match()
   html: {
     btt: '<p><a href="#top"><i>Back To Top</i></a></p>',
     i: pep.dict({o: '<i>', c: '</i>'}),
-    p: pep.dict({o: '<p>', c: '</p>'}),
+    p: pep.dict({o: '<p>', c: '</p>', co: '</p><p>',}),
     div: pep.dict({row: '<div class="row mt-3">', 
                    sp: '<div class="col-md-1"></div>',
                    oCov: '<div class="col-md-3"></div><div class="col-md-6 rounded mt-2 darken box" style="background-image:url(',
@@ -73,7 +73,54 @@ edIng: pep.match()
   
   verbS: pep.dict({male: 's', female: 's'}, ''),
   
-  charNames: pep.dict({e: 'elfName', f: 'feyName', h: 'demonName'}),
+  charNames: function(v){
+    console.log(v);
+    if(v == 'e'){
+
+    return(pep.choice("Arathorn","Venpeiros","Rennyn","Iliyarus",
+                "Mardeiym","Zylmoira","Intevar","Phiqirelle",
+                "Ayas","Uriwraek","Alwin","Eilris",
+                "Montagor","Wranwraek","Ualair","Aragwyn",
+                "Ettrian","Sarsalor","Kymil","Magna",
+                "Anhaern","Orikian","Naesala","Genqirelle",
+                "Farryn","Ulacaryn","Elincia","Phiqen",
+                "Ygrainne","Syldove","Caerthynna","Preslen",
+                "Gweyr","Zinleth","Radelia","Elgolor",
+                "Kenia","Magbanise","Cilivren","Vadan",
+                  ))
+    } else if(v == 'f'){
+    
+     return(pep.choice("Teodi","Pamla","Lyllas","Styssa",
+                  "Ghamish","Nefre","Sceothisy","Sinsebe",
+                  "Pherravy","Miastore","Dhympaph","Giero",
+                  "Zeormof","Zifrath","Mnastri","Shapo",
+                  "Stentamuih","Nylrimaeph","Oelitesh","Scylrene",
+                  "Dhoelleph","Zyphif","Shiste","Maethrah",
+                  "Phrevaph","Gaphlaph","Ziflode","Pynshiny",
+                  "Pirlereos","Phrempanuis","Thapha","Scinshi",
+                  "Phamesh","Paetse","Mysan","Tafo",
+                  "Syffane","Emafah","Scefferas","Yrripes",
+                  "Astoh","Pilna","Nimbes","Steodhe",
+                  "Zashes","Yfi","Thintili","Yphlapysh",
+                  "Draerlomi","Scafravi"))
+    } else {
+     return(pep.choice( "Urnuthun", "Tralroloth", "Unorez", "Sinoth", 
+                  "Vog'thun", "Bag'thanniud", "Onnoch", "Geglod", 
+                  "Toth'tekis", "Anez","Tastraniz","Thol'gith",
+                  "Sigrok","Vizreruth","Uzomud","Jurkadal",
+                  "Thelgen","Bagoneth","Orkodath","Urkomaud",
+                  "Ag'thoth","Or'amal","Tonnon","Ogixath",
+                  "Xirzarath","Golgrech","Solvos","Elmadir",
+                  "Birgrath","Vullmin","Iz'gadig","Drorgrazon",
+                  "Bagdrazith","Trorrother","Ragrinor","Oth'tomen",
+                  "Tarruth","Roz'gonath","Roth'tidag","Tharzamon",
+                  "Moggiz","Agrauth","Moz'gonog","Sinnelan",
+                  "Troramith","Galremath","Ralgromoth","Ozgunaug",
+                  "Baglanod","Jiz'gad","Xozoruth","Birremon",
+                  "Brugdris","Gag'draros","Volgemos","Jolgriroth",
+                  "Uzgak","Sag'dran","Zogakoth","Gar'or",))
+      }
+    },
   
   
   
@@ -220,15 +267,29 @@ dict: {
   
   army: pep.choice("army", "batallion", "horde", "force", "calvary", "militia"),
   
+  beat: pep.choice("beat", "break", "batter", "crush", "pummel"),
+  
+  bees: pep.choice("bees", "hornets", "wasps", "cockroaches", "dung beetles"),
+  
+  began: pep.choice("began", "started", "commenced", ),
+  
   breakneck: pep.choice("breakneck", "reckless", "full-tilt", "lightning", "supernatural"),
   
   buddy: pep.choice("buddy", "comrade", "friend", "classmate", "mate", "pal", "playmate"),
+  
+  budging: pep.choice("moving", "budging", "shifting", "swaying",), 
   
   bullies: pep.choice("bullies", "tormenters", "persecutors"),
   
   cackling: pep.choice("cackling", "laughing", "giggling", "chortling", "snickering", "sniggering", "tittering"),
   
+  cajoled: pep.choice("cajoled", "teased", "provoked", "goaded", "spurred"),
+  
+  caught: pep.choice("caught", "snagged", "grabbed", "snared"),
+  
   chased: pep.choice("chased", "followed", "hounded", "hunted", "trailed", "ran"),
+  
+  chasing: pep.choice("chasing", "following", "hounding", "hunting", "trailed", "running"),
   
   coming: pep.choice("coming", "running", "hiding"),
   
@@ -236,11 +297,19 @@ dict: {
   
   couple: pep.choice("team", "couple", "brace", "set", "duo", "dyad", "twosome", "doublet"),
   
+  cowed: pep.choice("cowed", "intimidated", "subdued", "unnerved", "rattled"),
+  
+  creepy: pep.choice("creepy", "macabre", "eerie", "menacing", "ominous", "sinister"),
+  
   cried: pep.choice("cried", "shouted", "yelped", "hollered", "bellowed"),
+  
+  crossedTheirArms: pep.choice("crossed their arms", "intertwined their arms", "giggled", "cackled", "waved" ),
   
   crusade: pep.choice("crusade", "conquest", "campaign", "struggle", "goal", ),
   
   depths: pep.seq("the ", pep.choice("depths", "boundaries", "breadth", "borders"), " of"),
+  
+  dirt: pep.choice("dirt", "soil", "muck", "mud", "dust", ),
   
   discover: pep.choice("discover", "stumble upon", "find", "unearth", "uncover"),
   
@@ -248,19 +317,35 @@ dict: {
   
   displeased: pep.choice("displeased", "angry", "frustrated", "disgusted", "uneasy"),
   
+  elm: pep.choice("elm", "tree", "bush", "pine", "maple", "oak", "tupelo", "crabapple", "ash", "shrubbery",),
+  
+  escape: pep.choice("escape", "escaping", "way out", "running", "going back", "safe passage", ),
+  
   faster: pep.choice("faster", "speedier", "quicker", "agile", "swifter", "fleet"),
   
   fierce: pep.choice("fierce", "angry", "violent", "war-mongering", "war-hungry", "bloodthirsty", "bloodhungry"),
   
   fled: pep.choice("fled", "ran", "scampered", "sprinted", "dashed", "bolted", "scurried", "sped", "scrambled"),
   
+  fooled: pep.choice("fooled", "bamboozled", "tricked", "conned", "deceived", "deluded", "hornswaggled", "duped"),
+  
   footprints: pep.choice("footprints", "impressions", "footsteps"),
   
+  freakishly: pep.choice("freakishly", "aberrantly", "freakily", "grotesquely", "oddly", ),
+  
+  fuckYourselves: pep.choice("fuck yourselves", "die in a fire", "set yourselves on fire", "eat a dick", "hump a porcupine", "deep throat a dagger", "eat shit and die", "pound salt in your ass"),
+  
   furtively: pep.choice("furtively", "covertly", "clandestinely", "surreptitiously", ), 
+  
+  goBy: pep.choice("go by", "pass", "arrive", "come"),
   
   gods: pep.choice("gods", "High Lords", "deities", "Great Ones"),
   
   good: pep.choice("good", "great", "amazing", "excellent", "peaceful", "adequate"),
+  
+  grinned: pep.choice("grinned", "smiled", "smirked", "beamed", ),
+  
+  harassed: pep.choice("harassed", "heckled", "teased", "tormented", "pestered", "persecuted", "hounded", "bedeviled", ),
   
   hastily: pep.choice("hastily", "carelessly", "rashly"),
   
@@ -270,11 +355,25 @@ dict: {
   
   hungry: pep.choice("hungry", "starved", "famished", "searching"),
   
+  idly: pep.choice("idly", "casually", "easily", "absently", "carelessly", "leisurely"),
+  
   juveniles: pep.choice("juveniles", "adolescents", "children", "miscreants", "teenagers", "youths"),
+  
+  laughter: pep.choice("laughter", "humor", "amusement", ),
+  
+  leaned: pep.choice("leaned", "rested", "reclined", ),
   
   leaveMeAlone: pep.choice("Leave me alone!", "Leave me be!", "Go away!"),
   
+  little: pep.choice("little", "bit", "tad", ),
+  
   longing: pep.choice("longing", "searching", "yearning", "scheming"),
+  
+  moment: pep.choice("minute", "moment", "second", "space", "time"),
+  
+  murder: pep.choice("murder", "annihilation", "torture", "destruction", "bloodshed", "trouble"),
+  
+  ornamental: pep.choice("ornamental", "ornate", "exquisite", "showy",),
   
   overthrow: pep.choice("overthrow", "conquer", "depose", "topple", "displace", "unseat", "dethrone"),
   
@@ -284,21 +383,67 @@ dict: {
   
   pleased: pep.choice("pleased", "happy", "comfortable", "excited", ),
   
+  position: pep.choice("position", "spot", "location", "place", "station", ),
+  
+  raced: pep.choice("raced", "ran", "sped"),
+  
+  retreated: pep.choice("retreated", "backed away", "fell back", "withdrew"),
+  
+  sack: pep.choice("sack", "bundle", "satchel", "pouch", "tote", "bag", "duffel"),
+  
+  scraggly: pep.choice("scraggly", "unkempt", "dingy", "bedraggled", "scruffy", "tacky"),
+  
+  seriously: pep.choice("seriously", "earnestly", "passionately", "sincerely", "resolutely", "firmly", ),
+  
+  shade: pep.choice("shade", "shadow", "relief from heat", "penumbra", "cover"),
+  
+  short: pep.choice("short", "just short", "shy", "just shy",),
+  
+  silence: pep.choice("silence", "quiet", "stillness", "reticence", "dead air",),
+  
+  slackJawed: pep.choice("slack-jawed", "absently", "mindlessly", "inattentively", "vacuously", "hollowly"),
+  
+  sobbed: pep.choice("sobbed", "cried", "blubbered", "whimpered", "wept"), 
+  
+  sobs: pep.choice("sobs", "tears", "blubbering", "whimpers"),
+  
   sp2to6: pep.choice("two", "three", "four", "five", "six"),
   
   speed: pep.choice("speed", "rate", "pace", "velocity"),
   
-  spotted: pep.choice("spotted", "spied", "glimpsed"),
+  spent: pep.choice("spent", "passed", "wasted", "exhausted", ), 
+  
+  spotted: pep.choice("spotted", "spied", "glimpsed", "saw",),
+  
+  standstill: pep.choice("standstill", "impasse", "stalemate", "dead end", "deadlock", ),
+  
+  stared: pep.choice("stared", "gawked", "looked", "gazed", "goggled", ),
+  
+  stifled: pep.choice("stifled", "repressed", "held back", "squelched", "suffocated", "suppressed"), 
   
   stirring: pep.choice("stirring", "brewing", "bubbling", "boiling over", "overflowing", "beginning", "rising", "looming", "pending" ),
   
+  strode: pep.choice("strode", "tromped", "traipsed", "tramped", "walked", "stalked", "paced"),
+  
   stronger: pep.choice("stronger", "athletic", "robust", "tenacious", "tough", "muscular", "powerful"),
+  
+  swallow: pep.choice("swallow", "eat", "choke on", ), 
   
   taller: pep.choice("taller", "lanky", "towering", "slender", "gangly", "angular"),
   
   terror: pep.choice("terror", "fear", "dread", "horror", "alarm", "panic"),
   
+  thankYou: pep.choice("thank you", "thanks"),
+  
+  threw: pep.choice("threw", "tossed", "lobbed", "heaved", "hurled", "pitched"),
+  
   trouble: pep.choice("trouble", "disaster", "calamity", "catastrophe", "unrest"),
+  
+  unconcerned: pep.choice("unconcerned", "unperturbed", "uninterested"),
+  
+  washOver: pep.choice("wash over", "wash through", "flood over", "flood through", "rush through", "course over", ),
+  
+  widely: pep.choice("widely", "ear to ear", "lavishly", "liberally", ),
 
   
 },

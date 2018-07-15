@@ -12,6 +12,8 @@ The live version can be found [here](https://gem-cook.glitch.me/).
 --------------------
 ## Road Map and Random Notes
 *  Noticed a potential issue with pronouns and past-tense was/were -- will need to watch as I implement.
+*  Should add in NODEPUB and/or TURNDOWN integration to convert HTML to either markdown or an epub. 
+*  Still need to do a real image generation
 
 ### Chapter One
 * Could do a relations look up to change "momma" in chapter one to various relatives or names.
@@ -20,7 +22,7 @@ The live version can be found [here](https://gem-cook.glitch.me/).
 1. ~~Write the first version of text~~
 2. ~~Import the first version and get it running~~
 3. ~~Add two alternate sentence versions to each sentence~~
-4. Add in word variation 
+4. ~~Add in word variation~~
 5. Add in alternate paragraphs or storylines
   
 ### Chapter Two
@@ -30,7 +32,15 @@ The live version can be found [here](https://gem-cook.glitch.me/).
   
 1. ~~Write the first version of text~~
 2. ~~Import the first version and get it running~~
-3. Add two alternate sentence versions to each sentence
+3. Add two alternate sentence versions to each sentence (10 of 35)
+4. Add in word variation 
+
+### Chapter Three
+*  Base text is drafted and relatively straight forward.
+
+1. ~~Write the first version of text~~
+2. ~~Import the first version and get it running~~
+3. Add two alternate sentence versions to each sentence (0 of 20)
 4. Add in word variation 
 
 

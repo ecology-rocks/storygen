@@ -10,11 +10,11 @@ var myCon = require('./constants.js');
 var myA = require('./abstract.js');
 var myCh1 = require('./ch1.js');
 var myCh2 = require('./ch2.js');
+var myCh3 = require('./ch3.js');
 
  
 
 //define chapter titles
-let ch2t = 'ch2 title';
 let ch3t = 'ch3 title';
 let ch4t = 'ch4 title';
 let ch5t = 'ch5 title';
@@ -67,15 +67,6 @@ let finalStory = pep.seq(myPep.html.div('row'),
                          myPep.html.div('h1c'), myPep.html.div('oCovA'), 
                          myCon.author, 
                          myPep.html.div('h1c'), myPep.html.div('c2'),
-                         
-     /* div.row
-      div.col-md-3
-      div(class="col-md-6 rounded mt-2 darken box" id="capture" style="background-image: url(" + bookCover + ")")
-        h1(class="text-light module text-center title") #{title}
-        h1(class="text-light module text-center author") #{author}',*/
-  
-  
-  
   
                          myPep.html.div('oCh'),
                                myA.abstract, 
@@ -94,9 +85,9 @@ let finalStory = pep.seq(myPep.html.div('row'),
                          myPep.html.btt,myPep.html.div('c2'),
                          myPep.html.div('oCh'),
                          myPep.html.div('h1'),
-                               ch3t,
+                               myCh3.title,
                          myPep.html.div('h1c'), 
-                                'Our main character is presented with an opportunity to escape the realm that they\'re currently in and move onto the mortal realm. They take the opportunity and walk through the magic portal. Some of the portal lore may be introduced in this section. Supporting and/or recurring characters may also appear as helpers in this section.', 
+                                myCh3.text, 
                          myPep.html.btt,myPep.html.div('c2'),
                                limitsClusterNoLearn,
                                limitsClusterStLearn,

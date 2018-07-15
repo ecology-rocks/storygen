@@ -14,86 +14,215 @@ var myCon = require('./constants.js');
 
 //p1as1a = par 1 ver a sen 1 ver a
 let aText = {
+
+//p1
   
-  //
-  p1as1a: pep.seq('"Momma, momma!" ', myCon.c0, ' cried as ',myPep.pronouns.they(myCon.c0g), ' ran from ', myPep.pronouns.their(myCon.c0g), ' tormentors.'),
+  p1as1a: pep.seq(''),
   p1as1b: pep.seq(''),
   p1as1c: pep.seq(''),
-  
-  //
-  p1as2a: pep.seq(myCon.c2, ' and ', myCon.c3, ' chased after ', myPep.pronouns.them(myCon.c0g), ', leaving hastily placed footprints behind them as they ran. '),
+
+  p1as2a: pep.seq(''),
   p1as2b: pep.seq(''),
   p1as2c: pep.seq(''),
   
-  //
   p1as3a: pep.seq(''),
   p1as3b: pep.seq(''),
   p1as3c: pep.seq(''),
   
-  //
   p1as4a: pep.seq(''),
   p1as4b: pep.seq(''),
   p1as4c: pep.seq(''),
   
-    //
+  p1as5a: pep.seq(''),
+  p1as5b: pep.seq(''),
+  p1as5c: pep.seq(''),
+  
+  p1as6a: pep.seq(''),
+  p1as6b: pep.seq(''),
+  p1as6c: pep.seq(''),
+
+  p1as7a: pep.seq(''),
+  p1as7b: pep.seq(''),
+  p1as7c: pep.seq(''),
+
+  p1as8a: pep.seq(''),
+  p1as8b: pep.seq(''),
+  p1as8c: pep.seq(''),
+  
+//p2 
+  
   p2as1a: pep.seq(''),
   p2as1b: pep.seq(''),
   p2as1c: pep.seq(''),
-  
-  //
+
   p2as2a: pep.seq(''),
   p2as2b: pep.seq(''),
   p2as2c: pep.seq(''),
   
-  //
   p2as3a: pep.seq(''),
   p2as3b: pep.seq(''),
   p2as3c: pep.seq(''),
   
-  //
   p2as4a: pep.seq(''),
   p2as4b: pep.seq(''),
   p2as4c: pep.seq(''),
   
-    //
+  p2as5a: pep.seq(''),
+  p2as5b: pep.seq(''),
+  p2as5c: pep.seq(''),
+  
+  p2as6a: pep.seq(''),
+  p2as6b: pep.seq(''),
+  p2as6c: pep.seq(''),
+
+  p2as7a: pep.seq(''),
+  p2as7b: pep.seq(''),
+  p2as7c: pep.seq(''),
+
+  p2as8a: pep.seq(''),
+  p2as8b: pep.seq(''),
+  p2as8c: pep.seq(''),
+
+//p3
+  
   p3as1a: pep.seq(''),
   p3as1b: pep.seq(''),
   p3as1c: pep.seq(''),
-  
-  //
+
   p3as2a: pep.seq(''),
   p3as2b: pep.seq(''),
   p3as2c: pep.seq(''),
   
-  //
   p3as3a: pep.seq(''),
   p3as3b: pep.seq(''),
   p3as3c: pep.seq(''),
   
-  //
   p3as4a: pep.seq(''),
   p3as4b: pep.seq(''),
   p3as4c: pep.seq(''),
   
-    //
+  p3as5a: pep.seq(''),
+  p3as5b: pep.seq(''),
+  p3as5c: pep.seq(''),
+  
+  p3as6a: pep.seq(''),
+  p3as6b: pep.seq(''),
+  p3as6c: pep.seq(''),
+
+  p3as7a: pep.seq(''),
+  p3as7b: pep.seq(''),
+  p3as7c: pep.seq(''),
+
+  p3as8a: pep.seq(''),
+  p3as8b: pep.seq(''),
+  p3as8c: pep.seq(''),
+
+//p4
+
   p4as1a: pep.seq(''),
   p4as1b: pep.seq(''),
   p4as1c: pep.seq(''),
-  
-  //
+
   p4as2a: pep.seq(''),
   p4as2b: pep.seq(''),
   p4as2c: pep.seq(''),
   
-  //
   p4as3a: pep.seq(''),
   p4as3b: pep.seq(''),
   p4as3c: pep.seq(''),
   
-  //
   p4as4a: pep.seq(''),
   p4as4b: pep.seq(''),
   p4as4c: pep.seq(''),
+  
+  p4as5a: pep.seq(''),
+  p4as5b: pep.seq(''),
+  p4as5c: pep.seq(''),
+  
+  p4as6a: pep.seq(''),
+  p4as6b: pep.seq(''),
+  p4as6c: pep.seq(''),
+
+  p4as7a: pep.seq(''),
+  p4as7b: pep.seq(''),
+  p4as7c: pep.seq(''),
+
+  p4as8a: pep.seq(''),
+  p4as8b: pep.seq(''),
+  p4as8c: pep.seq(''),
+
+//p5
+
+  p5as1a: pep.seq(''),
+  p5as1b: pep.seq(''),
+  p5as1c: pep.seq(''),
+
+  p5as2a: pep.seq(''),
+  p5as2b: pep.seq(''),
+  p5as2c: pep.seq(''),
+  
+  p5as3a: pep.seq(''),
+  p5as3b: pep.seq(''),
+  p5as3c: pep.seq(''),
+  
+  p5as4a: pep.seq(''),
+  p5as4b: pep.seq(''),
+  p5as4c: pep.seq(''),
+  
+  p5as5a: pep.seq(''),
+  p5as5b: pep.seq(''),
+  p5as5c: pep.seq(''),
+  
+  p5as6a: pep.seq(''),
+  p5as6b: pep.seq(''),
+  p5as6c: pep.seq(''),
+
+  p5as7a: pep.seq(''),
+  p5as7b: pep.seq(''),
+  p5as7c: pep.seq(''),
+
+  p5as8a: pep.seq(''),
+  p5as8b: pep.seq(''),
+  p5as8c: pep.seq(''),
+
+//p6
+  
+  p6as1a: pep.seq(''),
+  p6as1b: pep.seq(''),
+  p6as1c: pep.seq(''),
+
+  p6as2a: pep.seq(''),
+  p6as2b: pep.seq(''),
+  p6as2c: pep.seq(''),
+  
+  p6as3a: pep.seq(''),
+  p6as3b: pep.seq(''),
+  p6as3c: pep.seq(''),
+  
+  p6as4a: pep.seq(''),
+  p6as4b: pep.seq(''),
+  p6as4c: pep.seq(''),
+  
+  p6as5a: pep.seq(''),
+  p6as5b: pep.seq(''),
+  p6as5c: pep.seq(''),
+  
+  p6as6a: pep.seq(''),
+  p6as6b: pep.seq(''),
+  p6as6c: pep.seq(''),
+
+  p6as7a: pep.seq(''),
+  p6as7b: pep.seq(''),
+  p6as7c: pep.seq(''),
+
+  p6as8a: pep.seq(''),
+  p6as8b: pep.seq(''),
+  p6as8c: pep.seq(''),
+
+
+
+ 
+  
 };
 
 //p1as1 = par 1 ver a sen 1
@@ -120,10 +249,16 @@ let aPar = {
 };
 
 
+let aBlock = {
+  p1a: pep.seq(aPar.p1as1, aPar.p1as2, aPar.p1as3),
+  
+  
+};
+
 
 let abstract = pep.seq(myPep.html.p('o'),
                        
-myPep.html.i('o'), aPar.p1as1, aPar.p1as2, /*aPar.p1as3 ,aPar.p1as4,
+               aBlock.p1a, myPep.html.p('co'), /*
                        
                        myPep.html.p('c'), myPep.html.p('o'),
 
