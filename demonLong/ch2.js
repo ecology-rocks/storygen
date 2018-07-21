@@ -196,940 +196,440 @@ p10as3c: pep.seq(myCon.c0, ' was suddenly hyper aware of ', myPep.pronouns.their
   //p11
 
 p11as1a: pep.seq('"Have you heard all this nonsense about ',myCon.c1, ' recently?" '),
-p11as1b: pep.seq(),
-p11as1c: pep.seq(),
+p11as1b: pep.seq('"Have you heard about this impending tomfoolery?" '),
+p11as1c: pep.seq('"Have you heard about ', myCon.c1, '?" '),
 
-//s2
-
-//C5 asked with a growl, and C0 shrugged noncommittally. 
 p11as2a: pep.seq(myCon.c5, ' asked with a growl, and ', myCon.c0, ' shrugged noncommittally. '),
-//
-p11as2b: pep.seq(),
-//
-p11as2c: pep.seq(),
+p11as2b: pep.seq(myCon.c5, ' growled. '),
+p11as2c: pep.seq(myCon.c5, ' adjusted their glasses and fixed their stare on ', myCon.c0, '. '),
 
   //p12
-
-//s1
-
-//“A bit, here and there. 
-
 p12as1a: pep.seq('"A bit, here and there. '),
-//
-p12as1b: pep.seq(),
-//
-p12as1c: pep.seq(),
+p12as1b: pep.seq('"You mean about the rebellion? '),
+p12as1c: pep.seq('"Another upstart? '),
 
-//s2
-
-//Not much. 
 p12as2a: pep.seq('Not much. '),
-//
-p12as2b: pep.seq(),
-//
-p12as2c: pep.seq(),
+p12as2b: pep.seq('That\'s news to me.'),
+p12as2c: pep.seq('I assumed it was just talk. '),
 
-//s3
-
-//Why?”
 p12as3a: pep.seq('Why?" '),
-//
-p12as3b: pep.seq(),
-//
-p12as3c: pep.seq(),
+p12as3b: pep.seq('Is it serious?" '),
+p12as3c: pep.seq('Do you think we should worry?" '),
 
   //p13
 
-//s1
-
-//“Well, knowing your past…” 
-
 p13as1a: pep.seq('"Well, knowing your past..." '),
-//
-p13as1b: pep.seq(),
-//
-p13as1c: pep.seq(),
+p13as1b: pep.seq('"Listen, ',myCon.c0, '..." '),
+p13as1c: pep.seq('"So, look..." '),
 
-//s2
-
-//C5 trailed off as if trying to find a delicate way to state something offensive. 
 p13as2a: pep.seq(myCon.c5, ' trailed off as if trying to find a delicate way to state something offensive. '),
-//
-p13as2b: pep.seq(),
-//
-p13as2c: pep.seq(),
+p13as2b: pep.seq(myCon.c5, ' paused as if gathering courage to say something. '),
+p13as2c: pep.seq(myCon.c5, ' took a breath. '),
 
-//s3
-
-//Though C5 had never been the polite sort. 
 p13as3a: pep.seq('Though ', myCon.c5, ' had never been the polite sort. '),
-//
-p13as3b: pep.seq(),
-//
-p13as3c: pep.seq(),
+p13as3b: pep.seq(myCon.c0, ' wondered what ', myCon.c5, ' was about to drop on ', myPep.pronouns.them(myCon.c0g), '. '),
+p13as3c: pep.seq('The silence was awkward. '),
 
-//s4
-
-//“No bullshit alright?” 
 p13as4a: pep.seq('"No bullshit alright?" '),
-//
-p13as4b: pep.seq(),
-//
-p13as4c: pep.seq(),
+p13as4b: pep.seq('"This is kinda hard to say, but..." '),
+p13as4c: pep.seq('"I don\'t want to be that commander, but..." '),
 
-//s5
-
-//hey settled on cutting to the chase. 
 p13as5a: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c5g)), ' settled on cutting to the chase. '),
-//
-p13as5b: pep.seq(),
-//
-p13as5c: pep.seq(),
+p13as5b: pep.seq(myCon.c5, ' continued. '),
+p13as5c: pep.seq(myCon.c5, ' grinned sheepishly. '),
 
-//s6
-
-//“If this comes to blows, you know we’re on the front lines. 
 p13as6a: pep.seq('If this comes to blows, you know we’re on the front lines. '),
-//
-p13as6b: pep.seq(),
-//
-p13as6c: pep.seq(),
+p13as6b: pep.seq('"You know we\'re the first line of defense, right?  '),
+p13as6c: pep.seq('"If you spot something unusual on your shift... '),
 
-//s7
-
-//You can’t hesitate. 
 p13as7a: pep.seq('You can’t hesitate. '),
-//
-p13as7b: pep.seq(),
-//
-p13as7c: pep.seq(),
+p13as7b: pep.seq('You can\'t back down. '),
+p13as7c: pep.seq('You can\'t run away. '),
 
-//s8
-
-//Not like you did…”
 p13as8a: pep.seq('Not like you did..." '),
-//
-p13as8b: pep.seq(),
-//
-p13as8c: pep.seq(),
+p13as8b: pep.seq('You haven\'t exactly prove yourself in the past." '),
+p13as8c: pep.seq('You don\'t even think about it." '),
   
   //p14
 
-//s1
-
-//“No, commander. Of course not.” 
 p14as1a: pep.seq('"No, commander. '),
-//
-p14as1b: pep.seq(),
-//
-p14as1c: pep.seq(),
+p14as1b: pep.seq('"I would never, commander. '),
+p14as1c: pep.seq('"You don\'t need to worry about me. '),
 
-//s2
-
-//Of course not."
 p14as2a: pep.seq('Of course not." '),
-//
-p14as2b: pep.seq(),
-//
-p14as2c: pep.seq(),
-
-//s3
-
-//C0 cut C5 off before they could reiterate what C0 had failed to do.  
+p14as2b: pep.seq('You can trust me." '), 
+p14as2c: pep.seq('That was one time." '),
+ 
 p14as3a: pep.seq(myCon.c0, ' cut ', myCon.c5, ' off before ', myPep.pronouns.they(myCon.c5g), ' could reiterate what ', myCon.c0, ' had failed to do. '),
-//
-p14as3b: pep.seq(),
-//
-p14as3c: pep.seq(),
+p14as3b: pep.seq(myCon.c0, ' reassured the commander. '),
+p14as3c: pep.seq(myCon.c0, ' blushed with embarrassment at being called out. '),
 
-//s4
-
-//C0 felt the falseness of the words as they left their mouth. 
 p14as4a: pep.seq(myCon.c0, ' felt the falseness of the words as they left ', myPep.pronouns.their(myCon.c0g), ' mouth. '),
-//
-p14as4b: pep.seq(),
-//
-p14as4c: pep.seq(),
-
-  
-  //stopped here 
+p14as4b: pep.seq(myCon.c0, ' knew as soon as the words came out, that they were a lie.'),
+p14as4c: pep.seq(myCon.c0, ' was lying, but it didn\'t matter.'),
   
   //p15
 
-//s1
-
-//“No freezing. 
 p15as1a: pep.seq('"No freezing. '),
-//
-p15as1b: pep.seq(),
-//
-p15as1c: pep.seq(),
+p15as1b: pep.seq('"No thinking. '),
+p15as1c: pep.seq('"Not a flinch from you. '),
 
-//s2
-
-//No moral qualms. 
 p15as2a: pep.seq('No moral qualms. '),
-//
-p15as2b: pep.seq(),
-//
-p15as2c: pep.seq(),
+p15as2b: pep.seq('I know you\'ve got those deep thoughts and all... '),
+p15as2c: pep.seq('You might be the sensitive one, but... '),
 
-//s3
-
-//You do what needs to be done and you put those halfwits in their place -- most likely, a grave. 
 p15as3a: pep.seq('You do what needs to be done and you put those halfwits in their place -- most likely, a grave. '),
-//
-p15as3b: pep.seq(),
-//
-p15as3c: pep.seq(),
+p15as3b: pep.seq('You put this rebellion down if it comes to your front door. '),
+p15as3c: pep.seq('Those rebels deserve everything they\'ve got coming to them. '),
 
-//s4
-
-//You hear me? 
 p15as4a: pep.seq('You hear me? '),
-//
-p15as4b: pep.seq(),
-//
-p15as4c: pep.seq(),
+p15as4b: pep.seq('You understand? '),
+p15as4c: pep.seq('They\'re a waste of breath and space. '),
 
-//s5
-
-//It’s us or them.”
 p15as5a: pep.seq('It’s us or them." '),
-//
-p15as5b: pep.seq(),
-//
-p15as5c: pep.seq(),
-
-
+p15as5b: pep.seq('We are law and order." '),
+p15as5c: pep.seq('This is what we were made for." '),
   
   //p16
 
-//s1
-
-//“Yes, commander.” 
 p16as1a: pep.seq('"Yes, commander." '),
-//
-p16as1b: pep.seq(),
-//
-p16as1c: pep.seq(),
+p16as1b: pep.seq('"Of course." '),
+p16as1c: pep.seq('"I won\'t let you down." '),
 
-//s2
-
-//C0’s palms were itchy and a sheen of sweat was breaking out across their skin. 
 p16as2a: pep.seq(myCon.c0, '\'s palms were itchy and a sheen of sweat was breaking out across ', myPep.pronouns.their(myCon.c0g), ' skin. '),
-//
-p16as2b: pep.seq(),
-//
-p16as2c: pep.seq(),
+p16as2b: pep.seq(myCon.c0, ' was more than ready to get out of this conversation. '),
+p16as2c: pep.seq(myCon.c0, '\'s mouth was full of ash. '),
 
-//s3
-
-//They wondered if C5 noticed. 
 p16as3a: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0g)), ' wondered if ', myCon.c5, ' noticed. '),
-//
-p16as3b: pep.seq(),
-//
-p16as3c: pep.seq(),
+p16as3b: pep.seq('"Thank you for bringing this to my attention." '),
+p16as3c: pep.seq(myCon.c0, ' felt their knees shaking just a little bit. '),
+  
+  //p17
 
-//p17
-
-//s1
-
-//“You have duties.” 
 p17as1a: pep.seq('"You have duties." '),
-//
-p17as1b: pep.seq(),
-//
-p17as1c: pep.seq(),
+p17as1b: pep.seq('"Your duties are the most important." '),
+p17as1c: pep.seq('"Our duties are above all else." '),
 
-//s2
-
-//C5 finished. 
 p17as2a: pep.seq(myCon.c5, ' finished. '),
-//
-p17as2b: pep.seq(),
-//
-p17as2c: pep.seq(),
+p17as2b: pep.seq(myCon.c5, ' grunted at ', myCon.c0, '. '),
+p17as2c: pep.seq(myCon.c0, ' nodded in agreement. '),
 
-//s3
-
-//“And you will die either doing them or refusing them. 
 p17as3a: pep.seq('"And you will die either doing them or refusing them. '),
-//
-p17as3b: pep.seq(),
-//
-p17as3c: pep.seq(),
+p17as3b: pep.seq('"If you shirk them, you will die. '),
+p17as3c: pep.seq('"It is duty or death. '),
 
-//s4
-
-//It’s your choice.”
 p17as4a: pep.seq('It\'s your choice." '),
-//
-p17as4b: pep.seq(),
-//
-p17as4c: pep.seq(),
+p17as4b: pep.seq('You can choose." '),
+p17as4c: pep.seq('You understand?" '),
 
   //p18
 
-//s1
-
-//“I’m sorry?” 
 p18as1a: pep.seq('"I\'m sorry?" '),
-//
-p18as1b: pep.seq(),
-//
-p18as1c: pep.seq(),
+p18as1b: pep.seq('"Excuse me?" '),
+p18as1c: pep.seq('"Pardon?" '),
 
-//s2
-
-//C0 asked. 
 p18as2a: pep.seq(myCon.c0, ' asked. '),
-//
-p18as2b: pep.seq(),
-//
-p18as2c: pep.seq(),
+p18as2b: pep.seq(myCon.c0, ' was confused. '),
+p18as2c: pep.seq(myCon.c0, ' was unsure what ', myCon.c5, ' had just uttered. '),
 
-//s3
-
-//Did the commander just say that they would die in battle?
 p18as3a: pep.seq('Did the commander just say that ', myPep.pronouns.they(myCon.c0g), ' would die in battle? '),
-//
-p18as3b: pep.seq(),
-//
-p18as3c: pep.seq(),
+p18as3b: pep.seq('Did the commander just threaten ', myPep.pronouns.them(myCon.c0), '? '),
+p18as3c: pep.seq('Did the commander really just say that? '),
 
   //p19
 
-//s1
-
-//“What I mean is, if you refuse, or stall, or fuck around when it’s time to fight, you’re dead. 
 p19as1a: pep.seq('"What I mean is, if you refuse, or stall, or fuck around when it\'s time to fight, you\'re dead. '),
-//
-p19as1b: pep.seq(),
-//
-p19as1c: pep.seq(),
+p19as1b: pep.seq('"It\'s fight or die. '),
+p19as1c: pep.seq('"Yeah, I didn\'t stutter. '),
 
-//s2
-
-//Literally. 
+  
 p19as2a: pep.seq('Literally. '),
-//
-p19as2b: pep.seq(),
-//
-p19as2c: pep.seq(),
+p19as2b: pep.seq('It\'s true. '),
+p19as2c: pep.seq('I\'m not fucking around. '),
 
-//s3
-
-//I will kill you.”
 p19as3a: pep.seq('I will kill you." '),
-//
-p19as3b: pep.seq(),
-//
-p19as3c: pep.seq(),
+p19as3b: pep.seq('You will be thrown into the pit quicker than I can say "Go!" if you refuse to fight." '),
+p19as3c: pep.seq('Failing to fight is punishable by death." '),
 
   //p20
 
-//s1
-
-//“We’re a team, commander.” 
 p20as1a: pep.seq('"We\'re a team, commander." '),
-//
-p20as1b: pep.seq(),
-//
-p20as1c: pep.seq(),
+p20as1b: pep.seq('"We\'re all in this together." '),
+p20as1c: pep.seq('"Understood." '),
 
-//s2
-
-//C0 mustered all of the courage they could to make it sound convincing. 
 p20as2a: pep.seq(myCon.c0, ' mustered all of the courage ', myPep.pronouns.they(myCon.c0g), ' could to make it sound convincing. '),
-//
-p20as2b: pep.seq(),
-//
-p20as2c: pep.seq(),
+p20as2b: pep.seq(myCon.c0, ' knew that myCon.c5 was dead serious. '),
+p20as2c: pep.seq(myCon.c0, ' felt the sweats come in ', myPep.pronouns.their(myCon.c0), ' fear. '),
 
-//s3
-
-//“I wouldn’t abandon my fellow soldiers in the field of war.”
 p20as3a: pep.seq('"I wouldn\'t abandon my fellow soldiers in the field of war." '),
-//
-p20as3b: pep.seq(),
-//
-p20as3c: pep.seq(),
+p20as3b: pep.seq('"I would never do anything to endanger my squad." '),
+p20as3c: pep.seq('"I would give my life for our ', myPep.setting.boss(myCon.setVar), '." '),
 
   //p21
 
-//s1
-
-//C5’s searching gaze seemed to invade C0’s soul. 
-
 p21as1a: pep.seq(myCon.c5,'’s searching gaze seemed to invade ',myCon.c0, '’s soul. '),
-//
-p21as1b: pep.seq(),
-//
-p21as1c: pep.seq(),
+p21as1b: pep.seq(myCon.c5, ' stared menacingly at ', myCon.c0, '. '),
+p21as1c: pep.seq('There was a moment of silence as ', myCon.c5, ' evaluated the truth of ', myCon.c0, '\'s statement. '),
 
-//s2
-
-//But they could not -- thank the dogs -- detect the lie in it. 
 p21as2a: pep.seq('But they could not -- thank the dogs -- detect the lie in it. '),
-//
-p21as2b: pep.seq(),
-//
-p21as2c: pep.seq(),
+p21as2b: pep.seq('Thankfully, ', myCon.c5, ' seemed blissfully unaware of ', myCon.c0, '\'s nervousness. '),
+p21as2c: pep.seq(myCon.c5, ' seemed ready to kill ', myCon.c0, ' at the slightest hint of doubt. '),
 
-//s3
-
-//C5 nodded approvingly.
 p21as3a: pep.seq(myCon.c5, ' nodded approvingly. '),
-//
-p21as3b: pep.seq(),
-//
-p21as3c: pep.seq(),
+p21as3b: pep.seq(myCon.c5, ' smiled warmly at ', myCon.c0, '. '),
+p21as3c: pep.seq(myCon.c5, ' seemed satisfied, though, and smiled. '),
 
   //p22
 
-//s1
-
-//“Knew I could count on you. 
-
 p22as1a: pep.seq('"Knew I could count on you. '),
-//
-p22as1b: pep.seq(),
-//
-p22as1c: pep.seq(),
-
-//s2
-
-//Carry on. 
+p22as1b: pep.seq('"I knew they were liars up in command. '),
+p22as1c: pep.seq('"No reason to doubt, is there. '),
+ 
 p22as2a: pep.seq('Carry on. '),
-//
-p22as2b: pep.seq(),
-//
-p22as2c: pep.seq(),
+p22as2b: pep.seq('Go on back to your post. '),
+p22as2c: pep.seq('Be gone now. '),
 
-//s3
-
-//Look sharp.”
 p22as3a: pep.seq('Look sharp." '),
-//
-p22as3b: pep.seq(),
-//
-p22as3c: pep.seq(),
+p22as3b: pep.seq('Stay ready." '),
+p22as3c: pep.seq('I\'ll be up in a while." ' ),
 
   //p23
 
-//s1
-
-//C0 walked past the command desk and up the curling stairs to their post. 
-
 p23as1a: pep.seq(myCon.c0, ' walked past the command desk and up the curling stairs to ', myPep.pronouns.their(myCon.c0g), ' post. '),
-//
-p23as1b: pep.seq(),
-//
-p23as1c: pep.seq(),
-
-//s2
-
-//The sweat was real. 
+p23as1b: pep.seq(myCon.c0, ' carried onwards up the stairs. '),
+p23as1c: pep.seq(myCon.c0, ' left the command post and headed upstairs to ', myPep.pronouns.their(myCon.c0), ' guard station. '),
+ 
 p23as2a: pep.seq('The sweat was real. '),
-//
-p23as2b: pep.seq(),
-//
-p23as2c: pep.seq(),
+p23as2b: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0)), ' felt hot and cold at the same time. '),
+p23as2c: pep.seq('Sweat poured off of ', myCon.c0, '. ' ),
 
-//s3
-
-//They were trembling. 
 p23as3a: pep.seq(myCon.c0, ' was trembling. '),
-//
-p23as3b: pep.seq(),
-//
-p23as3c: pep.seq(),
+p23as3b: pep.seq('Shaking with fear, ', myPep.pronouns.they(myCon.c0), ' finished the climb upwards. '),
+p23as3c: pep.seq('Shaking like a leaf, ', myCon.c0, ' wondered if anything would come of the pending conflict. '),
 
-//s4
-
-//Was war really that imminent? 
 p23as4a: pep.seq('Was war really that imminent? '),
-//
-p23as4b: pep.seq(),
-//
-p23as4c: pep.seq(),
-
-//s5
-
-//How could they get out of it? 
+p23as4b: pep.seq('Was ', myCon.c1, ' really about to take down the ', myPep.setting.boss(myCon.setVar), '? '),
+p23as4c: pep.seq('Could war be on the horizon? '),
+ 
 p23as5a: pep.seq('How could they get out of it? '),
-//
-p23as5b: pep.seq(),
-//
-p23as5c: pep.seq(),
-
+p23as5b: pep.seq('How would ', myCon.c0, ' find a way to avoid fighting? '),
+p23as5c: pep.seq('Would this particular town be safe from the horrors of war? '),
 
   //p24
 
-//s1
-
-//Peering across the dusty landscape surrounding the compound, C0 idly wondered if they could fling themselves from the ramparts. 
 p24as1a: pep.seq('Peering across the dusty landscape surrounding the compound, ', myCon.c0, ' idly wondered if ', myPep.pronouns.they(myCon.c0g), ' could fling ', myPep.pronouns.themself(myCon.c0g), ' from the ramparts. '),
-//
-p24as1b: pep.seq(),
-//
-p24as1c: pep.seq(),
-
-//s2
-
-//After all, the hospitalized could not fight.  
+p24as1b: pep.seq(myCon.c0, ' contemplated suicide by rampart as ', myPep.pronouns.they(myCon.c0), ' scanned the dusty landscape. '),
+p24as1c: pep.seq(myCon.c0, ' briefly wondered if death was better than war. '),
+  
 p24as2a: pep.seq('After all, the hospitalized could not fight. '),
-//
-p24as2b: pep.seq(),
-//
-p24as2c: pep.seq(),
+p24as2b: pep.seq('Even if ', myPep.pronouns.they(myCon.c0), ' didn\'t die, ', myCon.c0, ' could at least avoid the fighting. '),
+p24as2c: pep.seq('But what if ', myPep.pronouns.they(myCon.c0), ' failed even at suicide? '),
 
-//s3
-
-//Then again, they could end up dead, or worse, especially if the invading forces took control of the hospital. 
 p24as3a: pep.seq('Then again, ', myPep.pronouns.they(myCon.c0g), ' could end up dead, or worse, especially if the invading forces took control of the hospital. '),
-//
-p24as3b: pep.seq(),
-//
-p24as3c: pep.seq(),
-
-//s4
-
-//BRETHRENS were not kind in civil war. 
+p24as3b: pep.seq('Or maybe invading forces would not look kindly at prisoners of war. '),
+p24as3c: pep.seq('Likely, ', myPep.pronouns.they(myCon.c0), ' would be killed anyway by invading forces. '),
+ 
 p24as4a: pep.seq(myPep.setting.brethrens(myCon.setVar), ' were not kind in civil war. '),
-//
-p24as4b: pep.seq(),
-//
-p24as4c: pep.seq(),
+p24as4b: pep.seq(myPep.setting.brethrens(myCon.setVar), ' did not fuck around in times of war. '),
+p24as4c: pep.seq(myCon.c0, ' would not last long in the hands of ', myPep.pronouns.their(myCon.c0), ' enemies. '),
 
-//s5
-
-//There were no rules to follow. 
 p24as5a: pep.seq('There were no rules to follow. '),
-//
-p24as5b: pep.seq(),
-//
-p24as5c: pep.seq(),
+p24as5b: pep.seq('There was no Geneva Convention in ', myPep.setting.realm(myCon.setVar), '. '),
+p24as5c: pep.seq('There were no rules in civil war. '),
 
-//s6
-
-//Dead could be buried -- wounded needed care.
 p24as6a: pep.seq('Dead could be buried -- wounded needed care. '),
-//
-p24as6b: pep.seq(),
-//
-p24as6c: pep.seq(),
+p24as6b: pep.seq('And the dead were much easier to deal with than the wounded. '),
+p24as6c: pep.seq('Prisoners were more expensive than mass graves. '),
   
   //p25
 
-//s1
-
-//Looking down the thirty foot drop though, C0 decided that perhaps suicide was not the best way. 
 p25as1a: pep.seq('Looking down the thirty foot drop though, ', myCon.c0, ' decided that perhaps suicide was not the best way. '),
-//
-p25as1b: pep.seq(),
-//
-p25as1c: pep.seq(),
+p25as1b: pep.seq('Looking down into the chasm, ', myCon.c0, ' decided that suicide was not for ', myPep.pronouns.them(myCon.c0), '. '),
+p25as1c: pep.seq(myCon.c0, ' shied away from thoughts of suicide. '),
 
-//s2
-
-//There had to be another. 
 p25as2a: pep.seq('There had to be another. '),
-//
-p25as2b: pep.seq(),
-//
-p25as2c: pep.seq(),
+p25as2b: pep.seq('There had to be a way to stay out of war that didn\'t result in pain or death. '),
+p25as2c: pep.seq('Like momma always said, there\'s a better way to do things. '),
 
-//s3
-
-//Could they request a transfer to the medical or other nonviolent units? 
 p25as3a: pep.seq('Could ', myPep.pronouns.they(myCon.c0g), ' request a transfer to the medical or other nonviolent units? '),
-//
-p25as3b: pep.seq(),
-//
-p25as3c: pep.seq(),
-
-//s4
-
-//They could -- but they would be laughed at, for they had no marketable skills.
+p25as3b: pep.seq('Maybe ', myPep.pronouns.they(myCon.c0), ' could request a transfer. '),
+p25as3c: pep.seq('Maybe ', myPep.pronouns.they(myCon.c0), ' could request a promotion. '),
+  
 p25as4a: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0g)), ' could -- but ', myPep.pronouns.they(myCon.c0g), ' would be laughed at, for ', myPep.pronouns.they(myCon.c0g), ' had no marketable skills. '),
-//
-p25as4b: pep.seq(),
-//
-p25as4c: pep.seq(),
+p25as4b: pep.seq('The commander wouldn\'t go for it. ' ),
+p25as4c: pep.seq('That plan was doomed to fail. '),
 
   //p26
 
-//s1
-
-//They could join the revolution, although then they’d just be fighting for the otherside, and C0 doubted that they were kinder. 
 p26as1a: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0g)), ' could join the revolution, although then ', myPep.pronouns.they(myCon.c0g), '’d just be fighting for the otherside, and ', myCon.c0, ' doubted that they were kinder. '),
-//
-p26as1b: pep.seq(),
-//
-p26as1c: pep.seq(),
+p26as1b: pep.seq(myCon.c0, ' contemplated joining the rebellion. '),
+p26as1c: pep.seq(myCon.c0, ' wondered if joining the rebellion would somehow be safer. '),
 
-//s2
-
-//What about an extended vacation, perhaps to the mortal realm? 
 p26as2a: pep.seq('What about an extended vacation, perhaps to the mortal realm? '),
-//
-p26as2b: pep.seq(),
-//
-p26as2c: pep.seq(),
+p26as2b: pep.seq('What about vacationing to the mortal realm? '),
+p26as2c: pep.seq('What about sneaking away to the mortal realm? '),
 
-//s3
-
-//Or joining a scouting mission to the other side? 
 p26as3a: pep.seq('Or joining a scouting mission to the other side? '),
-//
-p26as3b: pep.seq(),
-//
-p26as3c: pep.seq(),
+p26as3b: pep.seq('Or joining an expedition to somewhere remote? '),
+p26as3c: pep.seq('Or joining the fire crews instead? '),
 
-//s4
-
-//Either could help C0 forego battle, although C0 had a feeling that no vacations were being approved in this particular moment in time. 
 p26as4a: pep.seq('Either could help ', myCon.c0, ' forego battle, although ', myCon.c0, ' had a feeling that no vacations were being approved in this particular moment in time. '),
-//
-p26as4b: pep.seq(),
-//
-p26as4c: pep.seq(),
+p26as4b: pep.seq('Either would help ', myCon.c0, ' avoid battle, but they weren\'t exactly easy solutions. '),
+p26as4c: pep.seq(myCon.c0, ' knew that these were just fantasies. '),
 
-//s5
-
-//You know, pending civil war and all. 
 p26as5a: pep.seq('You know, pending civil war and all. '),
-//
-p26as5b: pep.seq(),
-//
-p26as5c: pep.seq(),
-
+p26as5b: pep.seq('Pending civil war really narrowed the options for escape. '),
+p26as5c: pep.seq('It was far too late to escape the situation.  '),
 
   //p27
 
-//s1
-
-//“Did you hear they closed the portals down?”  
 p27as1a: pep.seq('"Did you hear they closed the portals down?" '),
-//
-p27as1b: pep.seq(),
-//
-p27as1c: pep.seq(),
+p27as1b: pep.seq('"Did you hear about the portals?" '),
+p27as1c: pep.seq('"Did you hear the mortal world\'s been cut off from us?" '),
 
-//s2
-
-//C6’s voice came from behind C0, startling them.
 p27as2a: pep.seq(myCon.c6, '\'s voice came from behind ', myCon.c0, ', startling them.'),
-//
-p27as2b: pep.seq(),
-//
-p27as2c: pep.seq(),
+p27as2b: pep.seq(myCon.c6, ' spoke behind ', myCon.c0, '. '),
+p27as2c: pep.seq(myCon.c6, ' blew cigar smoke in ', myCon.c0, '\'s face as ', myPep.pronouns.they(myCon.c6), ' approached. '),
 
   //p28
 
-//s1
-
-//“What?” 
 p28as1a: pep.seq('"What?" '),
-//
-p28as1b: pep.seq(),
-//
-p28as1c: pep.seq(),
+p28as1b: pep.seq('"You\'re kidding." '),
+p28as1c: pep.seq('"No way." '),
 
-//s2
-
-//C0 said incredulously. 
 p28as2a: pep.seq(myCon.c0, ' said incredulously. '),
-//
-p28as2b: pep.seq(),
-//
-p28as2c: pep.seq(),
-  
+p28as2b: pep.seq(myCon.c0, ' was surprised. '),
+p28as2c: pep.seq(myCon.c0, ' couldn\'t tell if ', myCon.c6, ' was kidding. '), 
   
 //p29
 
-//s1
-
-//“Yeah, no one is supposed to leave or enter until this whole mess with C1 is done.” 
 p29as1a: pep.seq('"Yeah, no one is supposed to leave or enter until this whole mess with ', myCon.c1, ' is done." '),
-//
-p29as1b: pep.seq(),
-//
-p29as1c: pep.seq(),
+p29as1b: pep.seq('"They\'ve got the portals under lock and key until ', myCon.c1, ' is dealt with." '),
+p29as1c: pep.seq('"Yeah, portals are closed and there\'s a bounty on ', myCon.c1, ', too." '),
 
-//s2
-
-//C6 huffed on a cigarette, releasing a long trail of white smoke. 
 p29as2a: pep.seq(myCon.c6, ' huffed on a cigarette, releasing a long trail of white smoke. '),
-//
-p29as2b: pep.seq(),
-//
-p29as2c: pep.seq(),
+p29as2b: pep.seq(myCon.c6, ' took another drag of ', myPep.pronouns.their(myCon.c6), ' cigar. '),
+p29as2c: pep.seq(myCon.c6, ' nodded sagely. '),
 
   //p30
 
-//s1
-
-//“Well, fuck me.” 
 p30as1a: pep.seq('"Well, fuck me." '),
-//
-p30as1b: pep.seq(),
-//
-p30as1c: pep.seq(),
+p30as1b: pep.seq('"Damn, that\'s crazy." '),
+p30as1c: pep.seq('"Who would\'ve thought." ' ),
 
-//s2
-
-//C0 said. 
 p30as2a: pep.seq(myCon.c0, ' said. '),
-//
-p30as2b: pep.seq(),
-//
-p30as2c: pep.seq(),
+p30as2b: pep.seq(myCon.c0, ' chewed on the words for a moment. '),
+p30as2c: pep.seq(myCon.c0, ' felt the unease grow inside ', myPep.pronouns.them(myCon.c0), '. ' ),
 
-//s3
-
-//“This is serious then.”
 p30as3a: pep.seq('"This is serious then." '),
-//
-p30as3b: pep.seq(),
-//
-p30as3c: pep.seq(),
+p30as3b: pep.seq('"That\'s unreal." '),
+p30as3c: pep.seq('"I didn\'t think it was that serious." '),
 
   //p31
 
-//s1
-
-//“Sure seems that way. 
 p31as1a: pep.seq('"Sure seems that way. '),
-//
-p31as1b: pep.seq(),
-//
-p31as1c: pep.seq(),
-
-//s2
-
-//It’s a fucking shame, too. 
+p31as1b: pep.seq('"War is imminent. '),
+p31as1c: pep.seq('"Can\'t make this shit up. '),
+ 
 p31as2a: pep.seq('It\'s a fucking shame, too. '),
-//
-p31as2b: pep.seq(),
-//
-p31as2c: pep.seq(),
+p31as2b: pep.seq('It\'s so hard to imagine us at war. '),
+p31as2c: pep.seq('I can\'t believe the ', myPep.setting.boss(myCon.setVar), ' let it get this far. '),
 
-//s3
-
-//I’d hate to get blood on my brand new dagger.” 
 p31as3a: pep.seq('I\'d hate to get blood on my brand new dagger." '),
-//
-p31as3b: pep.seq(),
-//
-p31as3c: pep.seq(),
+p31as3b: pep.seq('I didn\'t want to blood my new dagger on ', myPep.setting.brethrens(myCon.setVar), '." '),
+p31as3c: pep.seq('I didn\'t actually want to use this dagger." '),
 
-//s4
-
-//C6 hefted a shiny blade from their waist belt. 
 p31as4a: pep.seq(myCon.c6, ' hefted a shiny blade from ', myPep.pronouns.their(myCon.c6g), ' waist belt. '),
-//
-p31as4b: pep.seq(),
-//
-p31as4c: pep.seq(),
+p31as4b: pep.seq(myCon.c6, ' displayed a bright new blade from ', myPep.pronouns.their(myCon.c6), ' belt. '),
+p31as4c: pep.seq(myCon.c6, ' fingered a blade on ', myPep.pronouns.their(myCon.c6), ' belt. '),
 
-//s5
-
-//“But I guess if traitor blood is the only way to whet it, count me in.”
-p31as5a: pep.seq('"But I guess if traitor blood is the only way to whet it, count me in."'),
-//
-p31as5b: pep.seq(),
-//
-p31as5c: pep.seq(),
-
+p31as5a: pep.seq('"But I guess if traitor blood is the only way to whet it, count me in." '),
+p31as5b: pep.seq('"I hope it does me good though, when the time comes." '),
+p31as5c: pep.seq('"But that\'s what daggers are for, I guess." '),
 
   //p32
 
-//s1
-
-//C0 paused a moment, weighing what to say to that ridiculously, flat toned desire to murder. 
-
 p32as1a: pep.seq(myCon.c0, ' paused a moment, weighing what to say to that ridiculously, flat toned desire to murder. '),
-//
-p32as1b: pep.seq(),
-//
-p32as1c: pep.seq(),
+p32as1b: pep.seq(myCon.c0, ' gathered thoughts before speaking. '),
+p32as1c: pep.seq(myCon.c0, ' wasn\'t sure how to respond. '),
 
-//s2
-
-//They settled on an ambivalent nod and grunt.
 p32as2a: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0g)), ' settled on an ambivalent nod and grunt. '),
-//
-p32as2b: pep.seq(),
-//
-p32as2c: pep.seq(),
+p32as2b: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0)), ' decided on a smile. '),
+p32as2c: pep.seq('Smiling, ', myCon.c0, ' nodded at ', myCon.c6, '. ' ),
 
   //p33
 
-//s1
-
-//“I’m going to walk the ledge.” 
-
 p33as1a: pep.seq('"I\'m going to walk the ledge." '),
-//
-p33as1b: pep.seq(),
-//
-p33as1c: pep.seq(),
+p33as1b: pep.seq('"I\'m off for a round." '),
+p33as1c: pep.seq('"I will be back shortly." '),
 
-//s2
-
-//C6 said, pocketing the blade. 
 p33as2a: pep.seq(myCon.c6, ' said, pocketing the blade. '),
-//
-p33as2b: pep.seq(),
-//
-p33as2c: pep.seq(),
+p33as2b: pep.seq(myCon.c6, ' sheathed the blade. '),
+p33as2c: pep.seq(myCon.c6, ' grinned at myCon.c0. '),
 
-//s3
-
-//“Commander thinks you’re going to break first. 
 p33as3a: pep.seq('"Commander thinks you’re going to break first. '),
-//
-p33as3b: pep.seq(),
-//
-p33as3c: pep.seq(),
+p33as3b: pep.seq('"', myCon.c6, ' says you\'re our first and biggest coward." '),
+p33as3c: pep.seq('"', myCon.c6, ' is saying you\'ll break rank and run when the time comes." '),
 
-//s4
-
-//You aren’t, are you, C0? 
 p33as4a: pep.seq('You aren’t, are you, ', myCon.c0, '? '),
-//
-p33as4b: pep.seq(),
-//
-p33as4c: pep.seq(),
+p33as4b: pep.seq('You won\'t, will you? '),
+p33as4c: pep.seq('You wouldn\'t do that to me, though. '),
 
-//s5
-
-//We gotta have each other’s backs up here."
 p33as5a: pep.seq('We gotta have each other’s backs up here." '),
-//
-p33as5b: pep.seq(),
-//
-p33as5c: pep.seq(),
-
+p33as5b: pep.seq('We\'re like family." '),
+p33as5c: pep.seq('I believe in you." '),
 
   //p34
 
-//s1
-
-//“Fuck C5.” 
 p34as1a: pep.seq('"Fuck ', myCon.c5, '." '),
-//
-p34as1b: pep.seq(),
-//
-p34as1c: pep.seq(),
+p34as1b: pep.seq('"Fuck this place." '),
+p34as1c: pep.seq('"This place could burn up for all I care." '),
 
-//s2
-
-//C0 said rashly. 
 p34as2a: pep.seq(myCon.c0, ' said rashly. '),
-//
-p34as2b: pep.seq(),
-//
-p34as2c: pep.seq(),
+p34as2b: pep.seq(myCon.c0, ' spoke without a waver in ', myPep.pronouns.their(myCon.c0), ' voice. '),
+p34as2c: pep.seq(myCon.c0, ' did not hesitate to speak rashly. '),
 
-//s3
-
-//Boldly.  
 p34as3a: pep.seq('Boldly. '),
-//
-p34as3b: pep.seq(),
-//
-p34as3c: pep.seq(),
+p34as3b: pep.seq(myCon.c0, ' felt reckless. '),
+p34as3c: pep.seq('With fervor. '),
 
-//s4
-
-//“They don't know shit about me. 
 p34as4a: pep.seq('"They don\'t know shit about me. '),
-//
-p34as4b: pep.seq(),
-//
-p34as4c: pep.seq(),
+p34as4b: pep.seq('"They don\'t know me from a brick in the wall. '),
+p34as4c: pep.seq('"They\'re full of shit. '),
 
-//s5
-
-//I got your back.” 
 p34as5a: pep.seq('I got your back." '),
-//
-p34as5b: pep.seq(),
-//
-p34as5c: pep.seq(),
+p34as5b: pep.seq('I would never leave you." ' ),
+p34as5c: pep.seq('I would never fuck you over." ' ),
 
-  //s6
-
-//C0 felt the lie like a wet blanket. 
 p34as6a: pep.seq(myCon.c0, ' felt the lie like a wet blanket. '),
-//
-p34as6b: pep.seq(),
-//
-p34as6c: pep.seq(),
+p34as6b: pep.seq(myCon.c0, ' knew ', myPep.pronouns.they(myCon.c0), ' were veering into dangerous territory. '),
+p34as6c: pep.seq(myCon.c0, ' was straight up lying. '),
 
-//s7
-
-//But C6 had an unblooded knife, and C0 wasn’t about to be its maiden voyage.
 p34as7a: pep.seq('But ', myCon.c6, ' had an unblooded knife, and ', myCon.c0, ' wasn\'t about to be its maiden voyage. '),
-//
-p34as7b: pep.seq(),
-//
-p34as7c: pep.seq(),
+p34as7b: pep.seq('But ', myCon.c6, ' had a knife, so honesty wasn\'t an option. '),
+p34as7c: pep.seq('Anything to keep ', myPep.pronouns.them(myCon.c0), ' alive another day. '),
 
   //p35
 
-//s1
-
-//C6’s eyes widened at the outright insult to the commander. 
 p35as1a: pep.seq(myCon.c6, '\'s eyes widened at the outright insult to the commander. '),
-//
-p35as1b: pep.seq(),
-//
-p35as1c: pep.seq(),
+p35as1b: pep.seq(myCon.c6, ' flinched when ', myCon.c0, ' insulted the commander. '),
+p35as1c: pep.seq(myCon.c6, ' looked perplexed at ', myCon.c0, '\'s resolve. '),
 
-//s2
-
-//That, apparently, took courage to say out loud. 
 p35as2a: pep.seq('That, apparently, took courage to say out loud. '),
-//
-p35as2b: pep.seq(),
-//
-p35as2c: pep.seq(),
+p35as2b: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c6)), ' had not expected such furor from ', myCon.c1, '. '),
+p35as2c: pep.seq(myCon.c6, ' was utterly taken aback by ', myCon.c0, '\'s boldness. '),
 
-//s3
-
-//C6 slapped C0 on the back. 
 p35as3a: pep.seq(myCon.c6, ' slapped ', myCon.c0, ' on the back. '),
-//
-p35as3b: pep.seq(),
-//
-p35as3c: pep.seq(),
+p35as3b: pep.seq(myCon.c6, ' grinned. '),
+p35as3c: pep.seq(myCon.c6, ' seemed satisfied. '),
 
-//s4
-
-//“I knew they were full of shit. 
 p35as4a: pep.seq('"I knew they were full of shit. '),
-//
-p35as4b: pep.seq(),
-//
-p35as4c: pep.seq(),
+p35as4b: pep.seq('"I knew it. '),
+p35as4c: pep.seq('"Atta boy. '),
 
-//s5
-
-//Be back in a bit.” 
 p35as5a: pep.seq('Be back in a bit." '),
-//
-p35as5b: pep.seq(),
-//
-p35as5c: pep.seq(),
-
-
-
+p35as5b: pep.seq('Be back soon." ' ),
+p35as5c: pep.seq('Gonna go make my rounds." '),
   
 };
 
@@ -1179,131 +679,131 @@ let aPar = {
   p9as2: pep.choice(aText.p9as2a, aText.p9as2b, aText.p9as2c),
   p9as3: pep.choice(aText.p9as3a, aText.p9as3b, aText.p9as3c),
   
-  p10as1: pep.choice(aText.p10as1a),//, aText.p10as1b),//, aText.p10as1c),
-  p10as2: pep.choice(aText.p10as2a),//, aText.p10as2b),//, aText.p10as2c),
-  p10as3: pep.choice(aText.p10as3a),//, aText.p10as3b),//, aText.p10as3c),
+  p10as1: pep.choice(aText.p10as1a, aText.p10as1b, aText.p10as1c),
+  p10as2: pep.choice(aText.p10as2a, aText.p10as2b, aText.p10as2c),
+  p10as3: pep.choice(aText.p10as3a, aText.p10as3b, aText.p10as3c),
 
-  p11as1: pep.choice(aText.p11as1a),//, aText.p11as1b),//, aText.p11as1c),
-  p11as2: pep.choice(aText.p11as2a),//, aText.p11as2b),//, aText.p11as2c),
+  p11as1: pep.choice(aText.p11as1a, aText.p11as1b, aText.p11as1c),
+  p11as2: pep.choice(aText.p11as2a, aText.p11as2b, aText.p11as2c),
 
-  p12as1: pep.choice(aText.p12as1a),//, aText.p12as1b),//, aText.p12as1c),
-  p12as2: pep.choice(aText.p12as2a),//, aText.p12as2b),//, aText.p12as2c),
-  p12as3: pep.choice(aText.p12as3a),//, aText.p12as3b),//, aText.p12as3c),
+  p12as1: pep.choice(aText.p12as1a, aText.p12as1b, aText.p12as1c),
+  p12as2: pep.choice(aText.p12as2a, aText.p12as2b, aText.p12as2c),
+  p12as3: pep.choice(aText.p12as3a, aText.p12as3b, aText.p12as3c),
 
-  p13as1: pep.choice(aText.p13as1a),//, aText.p13as1b),//, aText.p13as1c),
-  p13as2: pep.choice(aText.p13as2a),//, aText.p13as2b),//, aText.p13as2c),
-  p13as3: pep.choice(aText.p13as3a),//, aText.p13as3b),//, aText.p13as3c),
-  p13as4: pep.choice(aText.p13as4a),//, aText.p13as4b),//, aText.p13as4c),
-  p13as5: pep.choice(aText.p13as5a),//, aText.p13as5b),//, aText.p13as5c),
-  p13as6: pep.choice(aText.p13as6a),//, aText.p13as6b),//, aText.p13as6c),
-  p13as7: pep.choice(aText.p13as7a),//, aText.p13as7b),//, aText.p13as7c),
-  p13as8: pep.choice(aText.p13as8a),//, aText.p13as8b),//, aText.p13as8c),
+  p13as1: pep.choice(aText.p13as1a, aText.p13as1b, aText.p13as1c),
+  p13as2: pep.choice(aText.p13as2a, aText.p13as2b, aText.p13as2c),
+  p13as3: pep.choice(aText.p13as3a, aText.p13as3b, aText.p13as3c),
+  p13as4: pep.choice(aText.p13as4a, aText.p13as4b, aText.p13as4c),
+  p13as5: pep.choice(aText.p13as5a, aText.p13as5b, aText.p13as5c),
+  p13as6: pep.choice(aText.p13as6a, aText.p13as6b, aText.p13as6c),
+  p13as7: pep.choice(aText.p13as7a, aText.p13as7b, aText.p13as7c),
+  p13as8: pep.choice(aText.p13as8a, aText.p13as8b, aText.p13as8c),
 
-  p14as1: pep.choice(aText.p14as1a),//, aText.p14as1b),//, aText.p14as1c),
-  p14as2: pep.choice(aText.p14as2a),//, aText.p14as2b),//, aText.p14as2c),
-  p14as3: pep.choice(aText.p14as3a),//, aText.p14as3b),//, aText.p14as3c),
-  p14as4: pep.choice(aText.p14as4a),//, aText.p14as4b),//, aText.p14as4c),
+  p14as1: pep.choice(aText.p14as1a, aText.p14as1b, aText.p14as1c),
+  p14as2: pep.choice(aText.p14as2a, aText.p14as2b, aText.p14as2c),
+  p14as3: pep.choice(aText.p14as3a, aText.p14as3b, aText.p14as3c),
+  p14as4: pep.choice(aText.p14as4a, aText.p14as4b, aText.p14as4c),
 
-  p15as1: pep.choice(aText.p15as1a),//, aText.p15as1b),//, aText.p15as1c),
-  p15as2: pep.choice(aText.p15as2a),//, aText.p15as2b),//, aText.p15as2c),
-  p15as3: pep.choice(aText.p15as3a),//, aText.p15as3b),//, aText.p15as3c),
-  p15as4: pep.choice(aText.p15as4a),//, aText.p15as4b),//, aText.p15as4c),
-  p15as5: pep.choice(aText.p15as5a),//, aText.p15as5b),//, aText.p15as5c),
+  p15as1: pep.choice(aText.p15as1a, aText.p15as1b, aText.p15as1c),
+  p15as2: pep.choice(aText.p15as2a, aText.p15as2b, aText.p15as2c),
+  p15as3: pep.choice(aText.p15as3a, aText.p15as3b, aText.p15as3c),
+  p15as4: pep.choice(aText.p15as4a, aText.p15as4b, aText.p15as4c),
+  p15as5: pep.choice(aText.p15as5a, aText.p15as5b, aText.p15as5c),
 
-  p16as1: pep.choice(aText.p16as1a),//, aText.p16as1b),//, aText.p16as1c),
-  p16as2: pep.choice(aText.p16as2a),//, aText.p16as2b),//, aText.p16as2c),
-  p16as3: pep.choice(aText.p16as3a),//, aText.p16as3b),//, aText.p16as3c),
+  p16as1: pep.choice(aText.p16as1a, aText.p16as1b, aText.p16as1c),
+  p16as2: pep.choice(aText.p16as2a, aText.p16as2b, aText.p16as2c),
+  p16as3: pep.choice(aText.p16as3a, aText.p16as3b, aText.p16as3c),
 
-  p17as1: pep.choice(aText.p17as1a),//, aText.p17as1b),//, aText.p17as1c),
-  p17as2: pep.choice(aText.p17as2a),//, aText.p17as2b),//, aText.p17as2c),
-  p17as3: pep.choice(aText.p17as3a),//, aText.p17as3b),//, aText.p17as3c),
-  p17as4: pep.choice(aText.p17as4a),//, aText.p17as4b),//, aText.p17as4c),
+  p17as1: pep.choice(aText.p17as1a, aText.p17as1b, aText.p17as1c),
+  p17as2: pep.choice(aText.p17as2a, aText.p17as2b, aText.p17as2c),
+  p17as3: pep.choice(aText.p17as3a, aText.p17as3b, aText.p17as3c),
+  p17as4: pep.choice(aText.p17as4a, aText.p17as4b, aText.p17as4c),
 
-  p18as1: pep.choice(aText.p18as1a),//, aText.p18as1b),//, aText.p18as1c),
-  p18as2: pep.choice(aText.p18as2a),//, aText.p18as2b),//, aText.p18as2c),
-  p18as3: pep.choice(aText.p18as3a),//, aText.p18as3b),//, aText.p18as3c),
+  p18as1: pep.choice(aText.p18as1a, aText.p18as1b, aText.p18as1c),
+  p18as2: pep.choice(aText.p18as2a, aText.p18as2b, aText.p18as2c),
+  p18as3: pep.choice(aText.p18as3a, aText.p18as3b, aText.p18as3c),
 
-  p19as1: pep.choice(aText.p19as1a),//, aText.p19as1b),//, aText.p19as1c),
-  p19as2: pep.choice(aText.p19as2a),//, aText.p19as2b),//, aText.p19as2c),
-  p19as3: pep.choice(aText.p19as3a),//, aText.p19as3b),//, aText.p19as3c),
+  p19as1: pep.choice(aText.p19as1a, aText.p19as1b, aText.p19as1c),
+  p19as2: pep.choice(aText.p19as2a, aText.p19as2b, aText.p19as2c),
+  p19as3: pep.choice(aText.p19as3a, aText.p19as3b, aText.p19as3c),
 
-  p20as1: pep.choice(aText.p20as1a),//, aText.p20as1b),//, aText.p20as1c),
-  p20as2: pep.choice(aText.p20as2a),//, aText.p20as2b),//, aText.p20as2c),
-  p20as3: pep.choice(aText.p20as3a),//, aText.p20as3b),//, aText.p20as3c),
+  p20as1: pep.choice(aText.p20as1a, aText.p20as1b, aText.p20as1c),
+  p20as2: pep.choice(aText.p20as2a, aText.p20as2b, aText.p20as2c),
+  p20as3: pep.choice(aText.p20as3a, aText.p20as3b, aText.p20as3c),
 
-  p21as1: pep.choice(aText.p21as1a),//, aText.p21as1b),//, aText.p21as1c),
-  p21as2: pep.choice(aText.p21as2a),//, aText.p21as2b),//, aText.p21as2c),
-  p21as3: pep.choice(aText.p21as3a),//, aText.p21as3b),//, aText.p21as3c),
+  p21as1: pep.choice(aText.p21as1a, aText.p21as1b, aText.p21as1c),
+  p21as2: pep.choice(aText.p21as2a, aText.p21as2b, aText.p21as2c),
+  p21as3: pep.choice(aText.p21as3a, aText.p21as3b, aText.p21as3c),
 
-  p22as1: pep.choice(aText.p22as1a),//, aText.p22as1b),//, aText.p22as1c),
-  p22as2: pep.choice(aText.p22as2a),//, aText.p22as2b),//, aText.p22as2c),
-  p22as3: pep.choice(aText.p22as3a),//, aText.p22as3b),//, aText.p22as3c),
+  p22as1: pep.choice(aText.p22as1a, aText.p22as1b, aText.p22as1c),
+  p22as2: pep.choice(aText.p22as2a, aText.p22as2b, aText.p22as2c),
+  p22as3: pep.choice(aText.p22as3a, aText.p22as3b, aText.p22as3c),
 
-  p23as1: pep.choice(aText.p23as1a),//, aText.p23as1b),//, aText.p23as1c),
-  p23as2: pep.choice(aText.p23as2a),//, aText.p23as2b),//, aText.p23as2c),
-  p23as3: pep.choice(aText.p23as3a),//, aText.p23as3b),//, aText.p23as3c),
-  p23as4: pep.choice(aText.p23as4a),//, aText.p23as4b),//, aText.p23as4c),
-  p23as5: pep.choice(aText.p23as5a),//, aText.p23as5b),//, aText.p23as5c),
+  p23as1: pep.choice(aText.p23as1a, aText.p23as1b, aText.p23as1c),
+  p23as2: pep.choice(aText.p23as2a, aText.p23as2b, aText.p23as2c),
+  p23as3: pep.choice(aText.p23as3a, aText.p23as3b, aText.p23as3c),
+  p23as4: pep.choice(aText.p23as4a, aText.p23as4b, aText.p23as4c),
+  p23as5: pep.choice(aText.p23as5a, aText.p23as5b, aText.p23as5c),
 
-  p24as1: pep.choice(aText.p24as1a),//, aText.p24as1b),//, aText.p24as1c),
-  p24as2: pep.choice(aText.p24as2a),//, aText.p24as2b),//, aText.p24as2c),
-  p24as3: pep.choice(aText.p24as3a),//, aText.p24as3b),//, aText.p24as3c),
-  p24as4: pep.choice(aText.p24as4a),//, aText.p24as4b),//, aText.p24as4c),
-  p24as5: pep.choice(aText.p24as5a),//, aText.p24as5b),//, aText.p24as5c),
-  p24as6: pep.choice(aText.p24as6a),//, aText.p24as6b),//, aText.p24as6c),
+  p24as1: pep.choice(aText.p24as1a, aText.p24as1b, aText.p24as1c),
+  p24as2: pep.choice(aText.p24as2a, aText.p24as2b, aText.p24as2c),
+  p24as3: pep.choice(aText.p24as3a, aText.p24as3b, aText.p24as3c),
+  p24as4: pep.choice(aText.p24as4a, aText.p24as4b, aText.p24as4c),
+  p24as5: pep.choice(aText.p24as5a, aText.p24as5b, aText.p24as5c),
+  p24as6: pep.choice(aText.p24as6a, aText.p24as6b, aText.p24as6c),
 
-  p25as1: pep.choice(aText.p25as1a),//, aText.p25as1b),//, aText.p25as1c),
-  p25as2: pep.choice(aText.p25as2a),//, aText.p25as2b),//, aText.p25as2c),
-  p25as3: pep.choice(aText.p25as3a),//, aText.p25as3b),//, aText.p25as3c),
-  p25as4: pep.choice(aText.p25as4a),//, aText.p25as4b),//, aText.p25as4c),
+  p25as1: pep.choice(aText.p25as1a, aText.p25as1b, aText.p25as1c),
+  p25as2: pep.choice(aText.p25as2a, aText.p25as2b, aText.p25as2c),
+  p25as3: pep.choice(aText.p25as3a, aText.p25as3b, aText.p25as3c),
+  p25as4: pep.choice(aText.p25as4a, aText.p25as4b, aText.p25as4c),
 
-  p26as1: pep.choice(aText.p26as1a),//, aText.p26as1b),//, aText.p26as1c),
-  p26as2: pep.choice(aText.p26as2a),//, aText.p26as2b),//, aText.p26as2c),
-  p26as3: pep.choice(aText.p26as3a),//, aText.p26as3b),//, aText.p26as3c),
-  p26as4: pep.choice(aText.p26as4a),//, aText.p26as4b),//, aText.p26as4c),
-  p26as5: pep.choice(aText.p26as5a),//, aText.p26as5b),//, aText.p26as5c),
+  p26as1: pep.choice(aText.p26as1a, aText.p26as1b, aText.p26as1c),
+  p26as2: pep.choice(aText.p26as2a, aText.p26as2b, aText.p26as2c),
+  p26as3: pep.choice(aText.p26as3a, aText.p26as3b, aText.p26as3c),
+  p26as4: pep.choice(aText.p26as4a, aText.p26as4b, aText.p26as4c),
+  p26as5: pep.choice(aText.p26as5a, aText.p26as5b, aText.p26as5c),
 
-  p27as1: pep.choice(aText.p27as1a),//, aText.p27as1b),//, aText.p27as1c),
-  p27as2: pep.choice(aText.p27as2a),//, aText.p27as2b),//, aText.p27as2c),
+  p27as1: pep.choice(aText.p27as1a, aText.p27as1b, aText.p27as1c),
+  p27as2: pep.choice(aText.p27as2a, aText.p27as2b, aText.p27as2c),
 
-  p28as1: pep.choice(aText.p28as1a),//, aText.p28as1b),//, aText.p28as1c),
-  p28as2: pep.choice(aText.p28as2a),//, aText.p28as2b),//, aText.p28as2c),
+  p28as1: pep.choice(aText.p28as1a, aText.p28as1b, aText.p28as1c),
+  p28as2: pep.choice(aText.p28as2a, aText.p28as2b, aText.p28as2c),
 
-  p29as1: pep.choice(aText.p29as1a),//, aText.p29as1b),//, aText.p29as1c),
-  p29as2: pep.choice(aText.p29as2a),//, aText.p29as2b),//, aText.p29as2c),
+  p29as1: pep.choice(aText.p29as1a, aText.p29as1b, aText.p29as1c),
+  p29as2: pep.choice(aText.p29as2a, aText.p29as2b, aText.p29as2c),
 
-  p30as1: pep.choice(aText.p30as1a),//, aText.p30as1b),//, aText.p30as1c),
-  p30as2: pep.choice(aText.p30as2a),//, aText.p30as2b),//, aText.p30as2c),
-  p30as3: pep.choice(aText.p30as3a),//, aText.p30as3b),//, aText.p30as3c),
+  p30as1: pep.choice(aText.p30as1a, aText.p30as1b, aText.p30as1c),
+  p30as2: pep.choice(aText.p30as2a, aText.p30as2b, aText.p30as2c),
+  p30as3: pep.choice(aText.p30as3a, aText.p30as3b, aText.p30as3c),
 
-  p31as1: pep.choice(aText.p31as1a),//, aText.p31as1b),//, aText.p31as1c),
-  p31as2: pep.choice(aText.p31as2a),//, aText.p31as2b),//, aText.p31as2c),
-  p31as3: pep.choice(aText.p31as3a),//, aText.p31as3b),//, aText.p31as3c),
-  p31as4: pep.choice(aText.p31as4a),//, aText.p31as4b),//, aText.p31as4c),
-  p31as5: pep.choice(aText.p31as5a),//, aText.p31as5b),//, aText.p31as5c),
+  p31as1: pep.choice(aText.p31as1a, aText.p31as1b, aText.p31as1c),
+  p31as2: pep.choice(aText.p31as2a, aText.p31as2b, aText.p31as2c),
+  p31as3: pep.choice(aText.p31as3a, aText.p31as3b, aText.p31as3c),
+  p31as4: pep.choice(aText.p31as4a, aText.p31as4b, aText.p31as4c),
+  p31as5: pep.choice(aText.p31as5a, aText.p31as5b, aText.p31as5c),
 
-  p32as1: pep.choice(aText.p32as1a),//, aText.p32as1b),//, aText.p32as1c),
-  p32as2: pep.choice(aText.p32as2a),//, aText.p32as2b),//, aText.p32as2c),
+  p32as1: pep.choice(aText.p32as1a, aText.p32as1b, aText.p32as1c),
+  p32as2: pep.choice(aText.p32as2a, aText.p32as2b, aText.p32as2c),
 
-  p33as1: pep.choice(aText.p33as1a),//, aText.p33as1b),//, aText.p33as1c),
-  p33as2: pep.choice(aText.p33as2a),//, aText.p33as2b),//, aText.p33as2c),
-  p33as3: pep.choice(aText.p33as3a),//, aText.p33as3b),//, aText.p33as3c),
-  p33as4: pep.choice(aText.p33as4a),//, aText.p33as4b),//, aText.p33as4c),
-  p33as5: pep.choice(aText.p33as5a),//, aText.p33as5b),//, aText.p33as5c),
+  p33as1: pep.choice(aText.p33as1a, aText.p33as1b, aText.p33as1c),
+  p33as2: pep.choice(aText.p33as2a, aText.p33as2b, aText.p33as2c),
+  p33as3: pep.choice(aText.p33as3a, aText.p33as3b, aText.p33as3c),
+  p33as4: pep.choice(aText.p33as4a, aText.p33as4b, aText.p33as4c),
+  p33as5: pep.choice(aText.p33as5a, aText.p33as5b, aText.p33as5c),
  
-  p34as1: pep.choice(aText.p34as1a),//, aText.p34as1b),//, aText.p34as1c),
-  p34as2: pep.choice(aText.p34as2a),//, aText.p34as2b),//, aText.p34as2c),
-  p34as3: pep.choice(aText.p34as3a),//, aText.p34as3b),//, aText.p34as3c),
-  p34as4: pep.choice(aText.p34as4a),//, aText.p34as4b),//, aText.p34as4c),
-  p34as5: pep.choice(aText.p34as5a),//, aText.p34as5b),//, aText.p34as5c),
-  p34as6: pep.choice(aText.p34as6a),//, aText.p34as6b),//, aText.p34as6c),
-  p34as7: pep.choice(aText.p34as7a),//, aText.p34as7b),//, aText.p34as7c),
+  p34as1: pep.choice(aText.p34as1a, aText.p34as1b, aText.p34as1c),
+  p34as2: pep.choice(aText.p34as2a, aText.p34as2b, aText.p34as2c),
+  p34as3: pep.choice(aText.p34as3a, aText.p34as3b, aText.p34as3c),
+  p34as4: pep.choice(aText.p34as4a, aText.p34as4b, aText.p34as4c),
+  p34as5: pep.choice(aText.p34as5a, aText.p34as5b, aText.p34as5c),
+  p34as6: pep.choice(aText.p34as6a, aText.p34as6b, aText.p34as6c),
+  p34as7: pep.choice(aText.p34as7a, aText.p34as7b, aText.p34as7c),
 
-  p35as1: pep.choice(aText.p35as1a),//, aText.p35as1b),//, aText.p35as1c),
-  p35as2: pep.choice(aText.p35as2a),//, aText.p35as2b),//, aText.p35as2c),
-  p35as3: pep.choice(aText.p35as3a),//, aText.p35as3b),//, aText.p35as3c),
-  p35as4: pep.choice(aText.p35as4a),//, aText.p35as4b),//, aText.p35as4c),
-  p35as5: pep.choice(aText.p35as5a),//, aText.p35as5b),//, aText.p35as5c),
+  p35as1: pep.choice(aText.p35as1a, aText.p35as1b, aText.p35as1c),
+  p35as2: pep.choice(aText.p35as2a, aText.p35as2b, aText.p35as2c),
+  p35as3: pep.choice(aText.p35as3a, aText.p35as3b, aText.p35as3c),
+  p35as4: pep.choice(aText.p35as4a, aText.p35as4b, aText.p35as4c),
+  p35as5: pep.choice(aText.p35as5a, aText.p35as5b, aText.p35as5c),
 
   
 };
@@ -1338,7 +838,7 @@ let aBlock = {
   p26a: pep.seq(aPar.p26as1, aPar.p26as2, aPar.p26as3, aPar.p26as4, aPar.p26as5, ),
   p27a: pep.seq(aPar.p27as1, aPar.p27as2,),
   p28a: pep.seq(aPar.p28as1, aPar.p28as2,),
-  p29a: pep.seq(aPar.p29as1, aPar.p29as2, ),
+  p29a: pep.seq(aPar.p29as1, aPar.p29as2,),
   p30a: pep.seq(aPar.p30as1, aPar.p30as2, aPar.p30as3,),
   p31a: pep.seq(aPar.p31as1, aPar.p31as2, aPar.p31as3, aPar.p31as4, aPar.p31as5,),
   p32a: pep.seq(aPar.p32as1, aPar.p32as2,),

@@ -16,6 +16,7 @@ The live version can be found [here](https://gem-cook.glitch.me/).
 *  Still need to do a real image generation
 
 ### Chapter One
+
 * Could do a relations look up to change "momma" in chapter one to various relatives or names.
 * Could improve the titles by adding some randomness and using capitalizeAll or w/e it's called.
   
@@ -32,10 +33,11 @@ The live version can be found [here](https://gem-cook.glitch.me/).
   
 1. ~~Write the first version of text~~
 2. ~~Import the first version and get it running~~
-3. Add two alternate sentence versions to each sentence (10 of 35)
+3. ~~Add two alternate sentence versions to each sentence~~
 4. Add in word variation 
 
 ### Chapter Three
+
 *  Base text is drafted and relatively straight forward.
 
 1. ~~Write the first version of text~~
@@ -43,7 +45,14 @@ The live version can be found [here](https://gem-cook.glitch.me/).
 3. Add two alternate sentence versions to each sentence (0 of 20)
 4. Add in word variation 
 
+### Chapter Four
 
+*  Base text is drafted, but this is the chapter that needs several different versions.
+
+1. ~~Write the first version of text~~
+2. Import the first version and get it running
+3. Add two alternate sentence versions to each sentence
+4. Add in word variation 
 
 --------------------
 **Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
