@@ -23,47 +23,47 @@ let aText = {
   
 //p1
 
-p1as1a: pep.seq('"Is ', myCon.c1, ' insane?" '),
-p1as1b: pep.seq('"Do you think this whole ', myCon.c1, ' stuff is legit?" '),
-p1as1c: pep.seq('"What do you think about our impending doom?" '),
+p1as1a: pep.seq('"Is ', myCon.c1, ' ', myPep.dict.insane, '?" '),
+p1as1b: pep.seq('"Do you think this whole ', myCon.c1, ' stuff is ',myPep.dict.legit, '?" '),
+p1as1c: pep.seq('"What do you think about our ', myPep.dict.impending, ' ', myPep.dict.doom, '?" '),
 
-p1as2a: pep.seq(myCon.c0, ' asked, gnawing ', myPep.pronouns.their(myCon.c0g), ' way through a piece of overcooked meat. '),
-p1as2b: pep.seq(myCon.c0, ' wondered as ', myPep.pronouns.they(myCon.c0g), ' chewed the final bites of ', myPep.pronouns.their(myCon.c0g), ' meal. '),
+p1as2a: pep.seq(myCon.c0, ' ', myPep.dict.asked, ', ', myPep.dict.gnawing, ' ', myPep.pronouns.their(myCon.c0g), ' way through a piece of ', myPep.dict.overcooked, ' meat. '),
+p1as2b: pep.seq(myCon.c0, ' ', myPep.dict.wondered, ' as ', myPep.pronouns.they(myCon.c0g), ' ', myPep.dict.gnawed, ' the final bites of ', myPep.pronouns.their(myCon.c0g), ' meal. '),
 p1as2c: pep.seq('The question hung in the air as ', myCon.c0, ' took another bite. '),
 
-p1as3a: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0g)), ' looked at ', myPep.pronouns.their(myCon.c0g), ' friend, ', myCon.c4, ', for reassurance. '),
+p1as3a: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0g)), ' ', myPep.dict.looked, ' at ', myPep.pronouns.their(myCon.c0g), ' friend, ', myCon.c4, ', for reassurance. '),
 p1as3b: pep.seq(myCon.c0, ' glanced at ',myCon.c4, ', weighing ', myPep.pronouns.their(myCon.c4g), ' expression. '),
 p1as3c: pep.seq(myCon.c4, ' ', myPep.edIng(myPep.dict.cackling), '. '),
 
 //p2
  
-p2as1a: pep.seq('"Perhaps." '),
+p2as1a: pep.seq('"', pep.capitalize(myPep.dict.perhaps), '." '),
 p2as1b: pep.seq('"Does it matter?" '),
-p2as1c: pep.seq('"You always ask the tough questions, ', myCon.c0, '." '),
+p2as1c: pep.seq('"You ', myPep.dict.always, ' ask the ', myPep.dict.tough, ' questions, ', myCon.c0, '." '),
 
-p2as2a: pep.seq(myCon.c4, ' mused, pushing the tray away. '),
-p2as2b: pep.seq(myCon.c4, ' pushed ', myPep.pronouns.their(myCon.c4g), ' tray away and crossed ', myPep.pronouns.their(myCon.c4g), ' arms. '),
-p2as2c: pep.seq(myCon.c4, ' smiled a toothy grin at ', myCon.c0, '. '),
+p2as2a: pep.seq(myCon.c4, ' ', myPep.dict.wondered, ', ', myPep.dict.pushing, ' the tray away. '),
+p2as2b: pep.seq(myCon.c4, ' pushed ', myPep.pronouns.their(myCon.c4g), ' ', myPep.dict.tray, ' away and ', myPep.dict.crossed, ' ', myPep.pronouns.their(myCon.c4g), ' arms. '),
+p2as2c: pep.seq(myCon.c4, ' ',myPep.dict.grinned, ' a ', myPep.dict.toothy, ' ', myPep.dict.grin, ' at ', myCon.c0, '. '),
 
 p2as3a: pep.seq('"But is anyone going to stop ',myPep.pronouns.them(myCon.c1g),'?" '),
-p2as3b: pep.seq(myCon.c4, ' was an intimidating sight, even with grape jelly dripping from ', myPep.pronouns.their(myCon.c4g), ' chin. '),
-p2as3c: pep.seq('"There’s nothing we can do about it." '),
+p2as3b: pep.seq(myCon.c4, ' was ', myPep.aAn(myPep.dict.intimidating), ' ', myPep.dict.sight, ', even with ', myPep.dict.grape, ' ', myPep.dict.jelly, ' ', myPep.dict.drippingFrom, ' ', myPep.pronouns.their(myCon.c4g), ' ', myPep.dict.chin, '. '),
+p2as3c: pep.seq('"There’s ', myPep.dict.nothing, ' we can do about it." '),
 
   //p3
 
-p3as1a: pep.seq('That was the question, after all. '),
-p3as1b: pep.seq('It was the question on every', myPep.setting.brethren(myCon.setVar), '\'s mind. '),
+p3as1a: pep.seq('That was the ', myPep.dict.issue, ', after all. '),
+p3as1b: pep.seq('It was the ', myPep.dict.issue, ' on every', myPep.setting.brethren(myCon.setVar), '\'s mind. '),
 p3as1c: pep.seq('It was what kept ', myPep.setting.brethrens(myCon.setVar), ' up at night. '),
 
-p3as2a: pep.seq('Would anyone stop ', myCon.c1, '’s planned rebellion against the ', myPep.setting.boss(myCon.setVar), '? '),
-p3as2b: pep.seq('Would ', myCon.c1, ' stop before it was too late? '),
-p3as2c: pep.seq('Would anyone put ', myCon.c1, ' in their place? '),
+p3as2a: pep.seq('Would anyone ', myPep.dict.stop, ' ', myCon.c1, '’s ', myPep.dict.planned, ' ', myPep.dict.rebellion, ' against the ', myPep.setting.boss(myCon.setVar), '? '),
+p3as2b: pep.seq('Would ', myCon.c1, ' ', myPep.dict.retreat, ' before it was too late? '),
+p3as2c: pep.seq('Would anyone put ', myCon.c1, ' in ',myPep.pronouns.their(myCon.c1g), ' place? '),
 
-p3as3a: pep.seq('Or were ', myPep.setting.brethrens(myCon.setVar), ' really that fed up with ', myPep.pronouns.their(myCon.c1g), ' style of rule? '),
-p3as3b: pep.seq('Or were ', myPep.setting.brethrens(myCon.setVar), ' really that apathetic to impending war?'),
+p3as3a: pep.seq('Or were ', myPep.setting.brethrens(myCon.setVar), ' really that ', myPep.dict.frustrated, ' with the current ', myPep.setting.boss(myCon.setVar), '\'s style of rule? '),
+p3as3b: pep.seq('Or were ', myPep.setting.brethrens(myCon.setVar), ' really that ', myPep.dict.apathetic, ' to ', myPep.dict.impending, ' ', myPep.dict.war, '?'),
 p3as3c: pep.seq('Was it even possible? '),
 
-p3as4a: pep.seq('It was hard to tell, because there was always a level of unrest in ', myPep.setting.realm(myCon.setVar), ' -- but somehow, it seemed like this time was worse. '),
+p3as4a: pep.seq('It was ', myPep.dict.tough, ' to tell, because there was always a level of unrest in ', myPep.setting.realm(myCon.setVar), ' -- but somehow, it seemed like this time was worse. '),
 p3as4b: pep.seq('There had always been a level of unrest in ', myPep.setting.realm(myCon.setVar), ', but this time seemed more serious. '),
 p3as4c: pep.seq('The entire realm of ', myPep.setting.realm(myCon.setVar), ' teetered on uncertainty and pending bloodshed. '),
 
