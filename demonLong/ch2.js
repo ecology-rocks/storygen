@@ -52,7 +52,7 @@ p2as3c: pep.seq('"There’s ', myPep.dict.nothing, ' we can do about it." '),
   //p3
 
 p3as1a: pep.seq('That was the ', myPep.dict.issue, ', after all. '),
-p3as1b: pep.seq('It was the ', myPep.dict.issue, ' on every', myPep.setting.brethren(myCon.setVar), '\'s mind. '),
+p3as1b: pep.seq('It was the ', myPep.dict.issue, ' on every ', myPep.setting.brethren(myCon.setVar), '\'s mind. '),
 p3as1c: pep.seq('It was what kept ', myPep.setting.brethrens(myCon.setVar), ' up at night. '),
 
 p3as2a: pep.seq('Would anyone ', myPep.dict.stop, ' ', myCon.c1, '’s ', myPep.dict.planned, ' ', myPep.dict.rebellion, ' against the ', myPep.setting.boss(myCon.setVar), '? '),
@@ -63,23 +63,23 @@ p3as3a: pep.seq('Or were ', myPep.setting.brethrens(myCon.setVar), ' really that
 p3as3b: pep.seq('Or were ', myPep.setting.brethrens(myCon.setVar), ' really that ', myPep.dict.apathetic, ' to ', myPep.dict.impending, ' ', myPep.dict.war, '?'),
 p3as3c: pep.seq('Was it even possible? '),
 
-p3as4a: pep.seq('It was ', myPep.dict.tough, ' to tell, because there was always a level of unrest in ', myPep.setting.realm(myCon.setVar), ' -- but somehow, it seemed like this time was worse. '),
-p3as4b: pep.seq('There had always been a level of unrest in ', myPep.setting.realm(myCon.setVar), ', but this time seemed more serious. '),
-p3as4c: pep.seq('The entire realm of ', myPep.setting.realm(myCon.setVar), ' teetered on uncertainty and pending bloodshed. '),
+p3as4a: pep.seq('It was ', myPep.dict.tough, ' to ', myPep.dict.ascertain, ', because there was ', myPep.dict.always, ' a level of ', myPep.dict.trouble, ' in ', myPep.setting.realm(myCon.setVar), ' -- but ', myPep.dict.somehow, ', it ', myPep.dict.seemed, ' like this time was ', myPep.dict.serious, '. '),
+p3as4b: pep.seq('There had ', myPep.dict.always, ' been a level of ', myPep.dict.trouble, ' in ', myPep.setting.realm(myCon.setVar), ', but this time seemed more ', myPep.dict.serious, '. '),
+p3as4c: pep.seq('The entire ', myPep.dict.realm, ' of ', myPep.setting.realm(myCon.setVar), ' ', myPep.dict.teetered, ' on ', myPep.dict.uncertainty, ' and ', myPep.dict.impending, ' ', myPep.dict.war, '. '),
 
-p3as5a: pep.seq('Like they might actually mean it.'),
-p3as5b: pep.seq('Like it might actually happen. '),
-p3as5c: pep.seq('This time was dangerously different. '),
+p3as5a: pep.seq('Like they ', myPep.dict.could, ' ', myPep.dict.actually, ' mean it.'),
+p3as5b: pep.seq('Like it ', myPep.dict.could, ' ', myPep.dict.actually, ' ', myPep.dict.happen, '. '),
+p3as5c: pep.seq('This ', myPep.dict.time, ' was ', myPep.dict.dangerously, ' ', myPep.dict.different, '. '),
 
-//p4
+//p4 -- stopped here for words
 
-p4as1a: pep.seq(myCon.c0, ' savored ', myPep.pronouns.their(myCon.c0g), ' last bite. '),
-p4as1b: pep.seq(myCon.c0, ' was suddenly no longer hungry. '),
-p4as1c: pep.seq('The food had lost its appeal. '),
+p4as1a: pep.seq(myCon.c0, ' ', myPep.dict.savored, ' ', myPep.pronouns.their(myCon.c0g), ' ', myPep.dict.last, ' ', myPep.dict.morsel, '. '),
+p4as1b: pep.seq(myCon.c0, ' was ', myPep.dict.suddenly, ' no longer ', myPep.dict.hungry, '. '),
+p4as1c: pep.seq('The ', myPep.dict.food, ' had ', myPep.dict.lost, ' its ', myPep.dict.appeal, '. '),
 
-p4as2a: pep.seq('"I feel like this is going a bad direction. '),
-p4as2b: pep.seq('"I hate this shit. '),
-p4as2c: pep.seq('"I wish they would all self-immolate. '),
+p4as2a: pep.seq('"I feel like this ', myPep.dict.impending, ' ', myPep.dict.war, ' spells trouble. '),
+p4as2b: pep.seq('"I hate this ', pep.opt(pep.seq(myPep.dict.steaming, ' ', myPep.dict.pile, ' of ')), myPep.dict.shit, '. '),
+p4as2c: pep.seq('"I ', pep.choice("hope", "wish"), ' they would all ', myPep.dict.selfImmolate, '. '),
 
 p4as3a: pep.seq('We\'re all going to be dragged into this steaming pile of dog-shit infighting. '),
 p4as3b: pep.seq('You know who dies when rulers fight? It\'s us, damn it.'),

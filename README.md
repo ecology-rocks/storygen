@@ -34,7 +34,7 @@ The live version can be found [here](https://gem-cook.glitch.me/).
 1. ~~Write the first version of text~~
 2. ~~Import the first version and get it running~~
 3. ~~Add two alternate sentence versions to each sentence~~
-4. Add in word variation (2.5 of 35)
+4. Add in word variation (3.5 of 35 paragraphs)
 
 ### Chapter Three
 
@@ -50,7 +50,7 @@ The live version can be found [here](https://gem-cook.glitch.me/).
 *  Base text is drafted, but this is the chapter that needs several different versions.
 
 1. ~~Write the first version of text~~
-2. Import the first version and get it running
+2. ~~Import the first version and get it running~~
 3. Add two alternate sentence versions to each sentence
 4. Add in word variation 
 
