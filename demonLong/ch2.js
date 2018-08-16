@@ -81,31 +81,31 @@ p4as2a: pep.seq('"I feel like this ', myPep.dict.impending, ' ', myPep.dict.war,
 p4as2b: pep.seq('"I hate this ', pep.opt(pep.seq(myPep.dict.steaming, ' ', myPep.dict.pile, ' of ')), myPep.dict.shit, '. '),
 p4as2c: pep.seq('"I ', pep.choice("hope", "wish"), ' they would all ', myPep.dict.selfImmolate, '. '),
 
-p4as3a: pep.seq('We\'re all going to be dragged into this steaming pile of dog-shit infighting. '),
-p4as3b: pep.seq('You know who dies when rulers fight? It\'s us, damn it.'),
+p4as3a: pep.seq('We\'re all going to be ', myPep.dict.dragged, ' into this ', myPep.dict.steaming, ' ', myPep.dict.pile, ' of ', pep.choice(myPep.dict.dog, myPep.dict.animalList), '-', myPep.dict.shit, ' ', myPep.dict.war, '. '),
+p4as3b: pep.seq('You know who ', myPep.dict.dies, ' when ', myPep.dict.rulers, ' fight? It\'s us, ', myPep.dict.damnIt, '.'),
 p4as3c: pep.seq('Who cares who the ', myPep.setting.boss(myCon.setVar), ' is? '),
 
-p4as4a: pep.seq('I don\'t particularly care who wipes their ass at the top of the food chain -- it doesn’t really affect me from day to day." '),
-p4as4b: pep.seq('The ruling class doesn\'t affect our shitty lives one way or another." '),
-p4as4c: pep.seq('I could go my whole life not caring about them, but then they drag us into their infighting." '),
+p4as4a: pep.seq('I don\'t ',pep.opt('particularly '),'care who ', myPep.dict.wipes, ' their ', myPep.dict.ass, ' at the top of the food chain -- it doesn’t really ', myPep.dict.affect, ' me from day to day." '),
+p4as4b: pep.seq('The ', myPep.dict.rulers, ' don\'t ', myPep.dict.affect, ' our ', myPep.dict.shitty, ' lives one way or another." '),
+p4as4c: pep.seq('I could go my ', myPep.dict.whole, ' ', myPep.dict.life, ' not ', myPep.dict.fretting, ' about ', myPep.dict.rulers, ', but then they ', myPep.dict.drag, ' us into their ', myPep.dict.war, '." '),
 
   //p5
 
-p5as1a: pep.seq(myCon.c4, ' barked a harsh laugh in response. '),
-p5as1b: pep.seq(myCon.c4, ' laughed at myCon.c0\'s bluntness. '),
-p5as1c: pep.seq(myCon.c4, ' nodded heartily in agreement. '),
+p5as1a: pep.seq(myCon.c4, ' ', myPep.dict.barked, ' a ', myPep.dict.harsh, ' ', myPep.dict.laugh, pep.opt(' in response'), '. '),
+p5as1b: pep.seq(myCon.c4, ' ', myPep.edIng(myPep.dict.cackling), ' at ', myCon.c0, '\'s ', myPep.dict.bluntness, '. '),
+p5as1c: pep.seq(myCon.c4, ' nodded ', myPep.dict.heartily, ' in ', myPep.dict.agreement, '. '),
 
-p5as2a: pep.seq('"The truest thing that anyone has ever said. '),
-p5as2b: pep.seq('"How right you are. '),
-p5as2c: pep.seq('"Truer words have never been spoken. '),
+p5as2a: pep.seq('"The ', myPep.dict.truest, ' thing that has ever been ', myPep.dict.spoken, '. '),
+p5as2b: pep.seq('"How ', myPep.dict.correct, ' you are. '),
+p5as2c: pep.seq('"Truer words have never been ', myPep.dict.spoken, '. '),
 
-p5as3a: pep.seq('Break\'s over. '),
-p5as3b: pep.seq('I think our time\'s about up. '),
+p5as3a: pep.seq('Break\'s ', myPep.dict.over, '. '),
+p5as3b: pep.seq('I think our time is about ', myPep.dict.over, '. '),
 p5as3c: pep.seq('Looks like it\'s about that time. '),
 
-p5as4a: pep.seq('Come on -- let\'s go before ', myCon.c5, ' gets raging mad." '),
+p5as4a: pep.seq('Come on -- let\'s go before ', myCon.c5, ' gets ', myPep.dict.raging, ' ', myPep.dict.angry, '." '),
 p5as4b: pep.seq('Let\'s get back before ', myCon.c5,' notices." '),
-p5as4c: pep.seq('At least it\'s only a few hours to midnight." '),
+p5as4c: pep.seq('At least it\'s only a ', myPep.dict.few, ' hours to midnight." '),
 
   //p6
   
