@@ -261,11 +261,19 @@ dict: {
   
   actually: pep.choice("actually", "really", "definitely", "absolutely", "indeed"), 
   
+  affect: pep.choice("affect", "influence", "impact"), 
+  
   afraid: pep.choice("afraid", "terrified", "scared", "fearful"),
   
   afterAll: pep.choice("After all", "Truly", "Above all", "Most importantly"),
   
+  agreement: pep.choice("agreement", "consensus", "concurrence", ), 
+  
   always: pep.choice("always", "perpetually", "habitually", "unfailingly", "regularly"),
+  
+  angry: pep.choice("angry", "mad", "displeased"), 
+  
+  animalList: pep.choice("horse", "cat", "bear", "cow", "bull", "goat", "dragon"), 
   
   anotherPath: pep.choice("another path", "a third choice", "a final choice", "a way out"),
   
@@ -277,13 +285,19 @@ dict: {
   
   ascertain: pep.choice("ascertain", "tell", "determine", ),
   
-  asked: pep.choice("asked", "questioned", "inquired", "queried"), 
+  asked: pep.choice("asked", "questioned", "inquired", "queried"),
+  
+  ass: pep.seq(pep.choice("ass", "rump", "butt",), pep.opt("-hole")), 
+  
+  barked: pep.choice("barked", "snapped", "coughed", "growled"), 
   
   beat: pep.choice("beat", "break", "batter", "crush", "pummel"),
   
   bees: pep.choice("bees", "hornets", "wasps", "cockroaches", "dung beetles"),
   
   began: pep.choice("began", "started", "commenced", ),
+  
+  bluntness: pep.choice("blutness", "candor", "directness", "forthrightness", "honesty", "unreserve"), 
   
   breakneck: pep.choice("breakneck", "reckless", "full-tilt", "lightning", "supernatural"),
   
@@ -309,6 +323,8 @@ dict: {
   
   corner: pep.choice("corner", "bend", "ridge", "edge"),
   
+  correct: pep.choice("correct", "precise", "right", "accurate", ), 
+  
   could: pep.choice("could", "might", "may"), 
   
   couple: pep.choice("team", "couple", "brace", "set", "duo", "dyad", "twosome", "doublet"),
@@ -325,9 +341,13 @@ dict: {
 
   crusade: pep.choice("crusade", "conquest", "campaign", "struggle", "goal", ),
   
+  damnIt: pep.choice(pep.seq("damn it", pep.opt(" all to hell")), "for fuck's sake", "for the love of all"),
+  
   dangerously: pep.choice("dangerously", "alarmingly", "precariously", "severely"),
   
   depths: pep.seq("the ", pep.choice("depths", "boundaries", "breadth", "borders"), " of"),
+  
+  dies: pep.choice("dies", "perishes", "burns", "expires"),
   
   different: pep.choice("different", "strange", "unique", "peculiar"), 
   
@@ -339,7 +359,13 @@ dict: {
   
   displeased: pep.choice("displeased", "angry", "frustrated", "disgusted", "uneasy"),
   
+  drag: pep.choice("drag", "haul", "tug", "pull"),
+  
+  dragged: pep.choice("dragged", "hauled", "tugged", "pulled"),
+  
   drippingFrom: pep.choice("dripping from", "hanging from", "smeared on", "all over"), 
+  
+  dog: pep.choice("dog", "hound", "cur", "beast"),
   
   doom: pep.choice("doom", "annihilation", "destruction", "ruin", "downfall", "catastrophe"), 
   
@@ -348,6 +374,8 @@ dict: {
   escape: pep.choice("escape", "escaping", "way out", "running", "going back", "safe passage", ),
   
   faster: pep.choice("faster", "speedier", "quicker", "agile", "swifter", "fleet"),
+  
+  few: pep.choice("few", "couple", "handful"),
   
   fierce: pep.choice("fierce", "angry", "violent", "war-mongering", "war-hungry", "bloodthirsty", "bloodhungry"),
   
@@ -360,6 +388,8 @@ dict: {
   footprints: pep.choice("footprints", "impressions", "footsteps"),
   
   freakishly: pep.choice("freakishly", "aberrantly", "freakily", "grotesquely", "oddly", ),
+  
+  fretting: pep.choice("fretting", "worrying", "caring", "agonizing", "brooding"),
   
   frustrated: pep.choice("frustrated", "fed up", "discontented", "disheartened"), 
   
@@ -387,7 +417,11 @@ dict: {
   
   harassed: pep.choice("harassed", "heckled", "teased", "tormented", "pestered", "persecuted", "hounded", "bedeviled", ),
   
+  harsh: pep.choice("grating", "jarring", "rasping", "strident", "raucous", "brassy", "discordant", "unharmonious", "unmelodious"), 
+  
   hastily: pep.choice("hastily", "carelessly", "rashly"),
+  
+  heartily: pep.choice("heartily", "wholeheartedly", "sincerely", "genuinely", "warmly"),
   
   heartless: pep.choice("heartless", "cruel", "brutal", "callous", "cold-hearted", "cold-blooded", "harsh", "inhuman", "insensitive", "merciless", "ruthless"),
   
@@ -411,6 +445,8 @@ dict: {
   
   last: pep.choice("last", "final", "ultimate", "concluding", "finishing"), 
   
+  laugh: pep.choice("laugh", "cackle", "guffaw", "chortle"),
+  
   laughter: pep.choice("laughter", "humor", "amusement", ),
   
   leaned: pep.choice("leaned", "rested", "reclined", ),
@@ -418,6 +454,8 @@ dict: {
   leaveMeAlone: pep.choice("Leave me alone!", "Leave me be!", "Go away!"),
   
   legit: pep.choice("legit", "legitimate", "serious", "genuine"),
+  
+  life: pep.choice("life", "existence", "creation", "mortal coil"), 
   
   little: pep.choice("little", "bit", "tad", ),
   
@@ -438,6 +476,8 @@ dict: {
   nothing: pep.choice("nothing", "nada", "nil", "aught", "zilch", "nought", ),
   
   ornamental: pep.choice("ornamental", "ornate", "exquisite", "showy",),
+  
+  over: pep.choice('over', 'up', 'done', 'finished'),
   
   overcooked: pep.choice("overcooked", "well-done"), 
   
@@ -463,6 +503,8 @@ dict: {
   
   raced: pep.choice("raced", "ran", "sped"),
   
+  raging: pep.choice("raging", "raving", "stark", "fuming", "storming"), 
+  
   realm: pep.choice("realm", "world", "empire", "kingdom"), 
   
   rebellion: pep.choice("rebellion", "uprising", "civil war", "insurgency", "insurrection", "revolution"),
@@ -470,6 +512,8 @@ dict: {
   retreat: pep.choice("retreat", "back down", "stop", "withdraw", ), 
   
   retreated: pep.choice("retreated", "backed away", "fell back", "withdrew"),
+  
+  rulers: pep.choice("rulers", "kings", "conquerors", "elites", "royals", "ruling classes"),
   
   sack: pep.choice("sack", "bundle", "satchel", "pouch", "tote", "bag", "duffel"),
   
@@ -491,6 +535,8 @@ dict: {
   
   shit: pep.choice("shit", "poop", "crap", "poo poo", "fecal matter"), 
   
+  shitty: pep.choice("shitty", "poopy", "crappy", "terrible", "gross"), 
+  
   short: pep.choice("short", "just short", "shy", "just shy",),
   
   sight: pep.choice("sight", "vision", "visage", "spectacle", "countenance", ), 
@@ -510,6 +556,8 @@ dict: {
   speed: pep.choice("speed", "rate", "pace", "velocity"),
   
   spent: pep.choice("spent", "passed", "wasted", "exhausted", ), 
+  
+  spoken: pep.choice("said", "spoken", "declared", "pronounced"), 
   
   spotted: pep.choice("spotted", "spied", "glimpsed", "saw",),
   
@@ -553,6 +601,7 @@ dict: {
   
   trouble: pep.choice("trouble", "disaster", "calamity", "catastrophe", "unrest", "discontent",),
   
+  truest: pep.choice("truest", "most true", "most accurate"), 
   
   uncertainty: pep.choice("uncertainty", "ambiguity", "murky outcomes"), 
   
@@ -562,7 +611,11 @@ dict: {
   
   washOver: pep.choice("wash over", "wash through", "flood over", "flood through", "rush through", "course over", ),
   
+  whole: pep.choice("whole", "complete", "entire", "full"),
+  
   widely: pep.choice("widely", "ear to ear", "lavishly", "liberally", ),
+  
+  wipes: pep.choice("wipes", "cleans", "sponges", "swabs", ), 
   
   wondered: pep.choice("wondered", "pondered", "considered", "mused", "reflected", "mulled"), 
 
