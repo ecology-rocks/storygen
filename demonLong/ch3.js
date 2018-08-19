@@ -22,73 +22,73 @@ let aText = {
   
   
 //p1
-
+  
 p1as1a: pep.seq('The moon hung low in the sky as ', myCon.c0, ' walked across the courtyard and into the administrative building that led to freedom. '),
-p1as1b: pep.seq(''),
-p1as1c: pep.seq(''),
+p1as1b: pep.seq(myCon.c0, ' crunched through the courtyard towards the ominous administrative building. '),
+p1as1c: pep.seq('The moon hung ominously over the administration building as ', myCon.c0, ' made ', myPep.pronouns.their(myCon.c0g), ' way home. '),
 
 p1as2a: pep.seq('It had been a long shift, but it was over and ', myCon.c0, ' could not wait to crawl into bed. '),
-p1as2b: pep.seq(),
-p1as2c: pep.seq(),
+p1as2b: pep.seq(myCon.c0, ' was thankful that the arduous shift was over. '),
+p1as2c: pep.seq(myCon.c0, '\'s thoughts drifted as ', myPep.pronouns.they(myCon.c0g), ' tried to shake off the long night. '),
 
 p1as3a: pep.seq('Nothing, of course, had happened. '),
-p1as3b: pep.seq(),
-p1as3c: pep.seq(),
+p1as3b: pep.seq('It had been an uneventful day of work. '),
+p1as3c: pep.seq('The evening had been long and boring. '),
 
 //p2
 
 p2as1a: pep.seq('The hallway was dimly lit and sparsely populated. '),
-p2as1b: pep.seq(),
-p2as1c: pep.seq(),
+p2as1b: pep.seq('The door opened with a creak as myCon.c0 stepped into the dimly lit hallway. '),
+p2as1c: pep.seq(myCon.c0, ' always felt like ', myPep.pronouns.they(myCon.c0g), ' were part of some murder mystery when entering the gate building late at night. '),
 
 p2as2a: pep.seq('Despite it being the literal changing of the guard, all of the day staff were gone. '),
-p2as2b: pep.seq(),
-p2as2c: pep.seq(),
+p2as2b: pep.seq('It was amazing to ', myCon.c0, ' how empty the gate building was, despite the shift change at this hour. '),
+p2as2c: pep.seq('The hallway smelled faintly of farm animal and gunpowder. '),
 
 p2as3a: pep.seq('The preternatural quiet was harshly interrupted by ', myCon.c0, '\'s combat books clunking upon the stone floor. '),
-p2as3b: pep.seq(),
-p2as3c: pep.seq(),
+p2as3b: pep.seq(myCon.c0, '\'s boots disrupted the quiet hallway as they clattered against the stone. '),
+p2as3c: pep.seq('The hallway was quiet, punctuated only by ', myCon.c0, '\'s heavy breath and boots upon the floor. '),
 
   //p3
   
   p3as1a: pep.seq(myCon.c0, ' turned a corner and found ', myPep.pronouns.themself(myCon.c0g), ' in the midst of chaos. '),
-  p3as1b: pep.seq(''),
-  p3as1c: pep.seq(''),
+  p3as1b: pep.seq(myCon.c0, ' abruptly found ', myPep.pronouns.themself(myCon.c0g), ' surrounded by activity as ', myPep.pronouns.they(myCon.c0g), ' rounded the corner. '),
+  p3as1c: pep.seq(myCon.c0, ' heard voices just around the bend. '),
 
   p3as2a: pep.seq('The lights were much brighter here, and orange cones and caution tape blocked ', myPep.pronouns.their(myCon.c0g), ' path. '),
-  p3as2b: pep.seq(''),
-  p3as2c: pep.seq(''),
+  p3as2b: pep.seq('The flood lights reflected off of the bright orange safety cones and caution tape fluttered in the wind. '),
+  p3as2c: pep.seq(myCon.c0, ' saw several folks on the other side of orange cones and caution tape. '),
   
   p3as3a: pep.seq('A fellow guard, weapon loose in hands, nodded abruptly at ', myCon.c0, '. '),
-  p3as3b: pep.seq(''),
-  p3as3c: pep.seq(''),
+  p3as3b: pep.seq('The guard closest to ', myCon.c0, ' grunted. '),
+  p3as3c: pep.seq(myCon.c0, ' saw the nearest guard eyeing ', myPep.pronouns.them(myCon.c0g), '. '),
   
   //p4
   
 p4as1a: pep.seq('"You\'ll have to go the long way, sorry, soldier." '),
-p4as1b: pep.seq(''),
-p4as1c: pep.seq(''),
+p4as1b: pep.seq('"This here hallway is closed, soldier." '),
+p4as1c: pep.seq('"Go on back the way you came." '),
 
 p4as2a: pep.seq('The guard grunted. '),
-p4as2b: pep.seq(''),
-p4as2c: pep.seq(''),
+p4as2b: pep.seq('The guard moved the orange cone between them, as if that would solve everything. '),
+p4as2c: pep.seq('The guard smiled. '),
 
 p4as3a: pep.seq('"Bit of an incident up ahead." '),
-p4as3b: pep.seq(''),
-p4as3c: pep.seq(''),
+p4as3b: pep.seq('"Got a bit of a mess to clean up." '),
+p4as3c: pep.seq('"Classified business, you see?" '),
 
   //p5
 p5as1a: pep.seq('"Do you need help?" '),
-p5as1b: pep.seq(''),
-p5as1c: pep.seq(''),
+p5as1b: pep.seq('"Oh, do you need me to assist?" '),
+p5as1c: pep.seq('"I\'ve got hands if you need them." '),
 
-p5as2a: pep.seq(myCon.c0, ' asked, surveying past the soldier to the fresh splats of blood on the wall. '),
-p5as2b: pep.seq(''),
-p5as2c: pep.seq(''),
+p5as2a: pep.seq(myCon.c0, ' offered, surveying past the soldier to the fresh splats of blood on the wall. '),
+p5as2b: pep.seq('myCon.c0 wondered what the story was. '),
+p5as2c: pep.seq('myCon.c0 offered absentmindedly, immediately regretting the decision. '),
 
 p5as3a: pep.seq(myPep.setting.brethrens(myCon.setVar), ' in hazmat suits were hard at work. '),
-p5as3b: pep.seq(''),
-p5as3c: pep.seq(''),
+p5as3b: pep.seq('The hazmats buzzed around behind the guard like busy little bees. '),
+p5as3c: pep.seq('Hazmatted ', myPep.setting.brethrens(myCon.setVar), ' were staring. '),
 
   //p6
 p6as1a: pep.seq('"No, we\'ve got it handled. '),

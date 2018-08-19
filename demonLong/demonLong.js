@@ -45,7 +45,7 @@ let limitsClusterStLearn = pep.many1(pep.seq(myPep.html.div('oCh'),
                          myPep.html.div('h1'),
                                ch5t,
                          myPep.html.div('h1c'),   
-                                'This section will appear at least once, but may appear multiple time. This will be a three section arc where the main character interacts with a mortal, sees the delayed aftermath, and then is confronted by creatures from homeland chasing them down. The main character begins to figure out that they are causing the next-day chaos by interacting with mortals. The main character may also feel guilt about being chased.',
+                                'This section will appear at least once, but may appear multiple times. This will be a three section arc where the main character interacts with a mortal, sees the delayed aftermath, and then is confronted by creatures from homeland chasing them down. The main character begins to figure out that they are causing the next-day chaos by interacting with mortals. The main character may also feel guilt about being chased.',
                          myPep.html.btt,myPep.html.div('c2'),), 0.45);
 
 let portalCluster = pep.many1(pep.seq(myPep.html.div('oCh'),
@@ -111,7 +111,7 @@ let finalStory = pep.seq(myPep.html.div('row'),
                          myPep.html.div('h1'),
                                ch6t,
                          myPep.html.div('h1c'), 
-                                'This section will appear at least once, but may appear multiple time. This will be a three section arc where the main character interacts with a mortal, sees the delayed aftermath, and then is confronted by creatures from homeland chasing them down. The main character either agrees to go willingly or is captured and dragged back to their home realm.',
+                                'This will be a three section arc where the main character interacts with a mortal, sees the delayed aftermath, and then is confronted by creatures from homeland chasing them down. The main character either agrees to go willingly or is captured and dragged back to their home realm.',
                          myPep.html.btt,myPep.html.div('c2'),
                          
                          myPep.html.div('oCh'),

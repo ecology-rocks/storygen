@@ -42,7 +42,7 @@ The live version can be found [here](https://gem-cook.glitch.me/).
 
 1. ~~Write the first version of text~~
 2. ~~Import the first version and get it running~~
-3. Add two alternate sentence versions to each sentence (0 of 21)
+3. Add two alternate sentence versions to each sentence (5 of 21)
 4. Add in word variation (0 of 21)
 
 ### Chapter Four
