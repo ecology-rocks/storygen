@@ -5,6 +5,12 @@ pep = require('apep-std-vars')(pep);
 var myPep = require('../my-apep-fxns.js');
 
 
+
+/*Array.prototype.sample = function(){
+  return this[Math.floor(Math.random()*this.length)];
+}*/
+
+
 let titleFxn = pep.choice(pep.seq(myPep.frMat.intoTitle,
                                   " the ",myPep.frMat.darknessTitle),
                        pep.seq(myPep.frMat.intoTitle, " ", 
@@ -18,35 +24,17 @@ let author = pep.store('author', pep.seq(myPep.frMat.authorFirst, " ",
                      myPep.frMat.authorLast));
 
 //choose the setting
-let setVar = pep.store('setVar', pep.choice('e', 'f', 'h'));
-var myArray = ['e', 'f', 'h'];
-//setVar = myArray[Math.floor(Math.random() * myArray.length)];
-var nameFn = myPep.frMat.demonName;
-//let rawr = setVar.run(); 
-//console.log(rawr);
-//console.log(rawr === 'e');
 
-//these aren't working right now for some reason. 
-//I think it's doing that thing where it stays on the server until a code changes
-/*if(pep.begin(setVar) == 'e'){
-  console.log('chose e ' + setVar);
-  
-  nameFn = myPep.frMat.elfName;
-  
-}
-else if(pep.begin(setVar) == 'f'){
-  console.log('chose f ' + setVar);
-  nameFn = myPep.frMat.feyName;
-  
-} else if (pep.begin(setVar) == 'h') {
-  console.log('chose h ' + setVar);
-  nameFn = myPep.frMat.demonName; 
-  
-} else {
-  console.log('chose nothing ' + setVar.run()); //+  setVar.run() + setVar.run() + setVar.run());
- //nameFn = 'oops'; 
-};
-*/
+
+//trying to fix page refresh environmental variable
+//setInterval(function(){console.log(['e', 'f', 'h'].sample()); }, 30000);
+//setInterval(function(){ console.log("Hello"); }, 3000); //these both work
+
+
+let setVar = pep.store('setVar', pep.choice('e', 'f', 'h'));
+
+var nameFn = myPep.frMat.demonName;
+
 
 //main character - abstract
 const c0 = pep.store('c0', nameFn); 

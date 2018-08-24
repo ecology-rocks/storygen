@@ -3,6 +3,66 @@ var pep = require("apep");
 pep = require('apep-std-transformations')(pep);
 pep = require('apep-std-vars')(pep);
 
+var setting =  {
+    realm: pep.dict({e: 'Ealionem', f: 'Astaran',  h: 'Hell'}),
+    brethren: pep.dict({e: 'elf', f: 'faery', h: 'demon'}),
+    brethrens: pep.dict({e: 'elves', f: 'faeries', h: 'demons'}),
+    boss: pep.dict({e: 'Emperor', f: 'Archfey', h: 'Archdemon'}),
+      };
+
+
+/*var testSetting = function(v = 'e'){
+    console.log(v);
+    console.log(setting.brethren(v).run());
+    /*if(v == 'e'){
+
+    return(pep.choice("Arathorn","Venpeiros","Rennyn","Iliyarus",
+                "Mardeiym","Zylmoira","Intevar","Phiqirelle",
+                "Ayas","Uriwraek","Alwin","Eilris",
+                "Montagor","Wranwraek","Ualair","Aragwyn",
+                "Ettrian","Sarsalor","Kymil","Magna",
+                "Anhaern","Orikian","Naesala","Genqirelle",
+                "Farryn","Ulacaryn","Elincia","Phiqen",
+                "Ygrainne","Syldove","Caerthynna","Preslen",
+                "Gweyr","Zinleth","Radelia","Elgolor",
+                "Kenia","Magbanise","Cilivren","Vadan",
+                  ))
+    } else if(v == 'f'){
+    
+     return(pep.choice("Teodi","Pamla","Lyllas","Styssa",
+                  "Ghamish","Nefre","Sceothisy","Sinsebe",
+                  "Pherravy","Miastore","Dhympaph","Giero",
+                  "Zeormof","Zifrath","Mnastri","Shapo",
+                  "Stentamuih","Nylrimaeph","Oelitesh","Scylrene",
+                  "Dhoelleph","Zyphif","Shiste","Maethrah",
+                  "Phrevaph","Gaphlaph","Ziflode","Pynshiny",
+                  "Pirlereos","Phrempanuis","Thapha","Scinshi",
+                  "Phamesh","Paetse","Mysan","Tafo",
+                  "Syffane","Emafah","Scefferas","Yrripes",
+                  "Astoh","Pilna","Nimbes","Steodhe",
+                  "Zashes","Yfi","Thintili","Yphlapysh",
+                  "Draerlomi","Scafravi"))
+    } else {
+     return(pep.choice( "Urnuthun", "Tralroloth", "Unorez", "Sinoth", 
+                  "Vog'thun", "Bag'thanniud", "Onnoch", "Geglod", 
+                  "Toth'tekis", "Anez","Tastraniz","Thol'gith",
+                  "Sigrok","Vizreruth","Uzomud","Jurkadal",
+                  "Thelgen","Bagoneth","Orkodath","Urkomaud",
+                  "Ag'thoth","Or'amal","Tonnon","Ogixath",
+                  "Xirzarath","Golgrech","Solvos","Elmadir",
+                  "Birgrath","Vullmin","Iz'gadig","Drorgrazon",
+                  "Bagdrazith","Trorrother","Ragrinor","Oth'tomen",
+                  "Tarruth","Roz'gonath","Roth'tidag","Tharzamon",
+                  "Moggiz","Agrauth","Moz'gonog","Sinnelan",
+                  "Troramith","Galremath","Ralgromoth","Ozgunaug",
+                  "Baglanod","Jiz'gad","Xozoruth","Birremon",
+                  "Brugdris","Gag'draros","Volgemos","Jolgriroth",
+                  "Uzgak","Sag'dran","Zogakoth","Gar'or",))
+      }
+    }*/
+//setInt needs to go outside the function.
+//testSetting(setInterval(function(){ return ['e', 'f', 'h'].sample }, 300));
+
 
 module.exports = {//define your specialized functions here 
 
@@ -38,13 +98,10 @@ edIng: pep.match()
   },
   
   
-  //tl
+
   
-  /*div.row
-      div.col-md-3
-      div(class="col-md-6 rounded mt-2 darken box" id="capture" style="background-image: url(" + bookCover + ")")
-        h1(class="text-light module text-center title") #{title}
-        h1(class="text-light module text-center author") #{author}*/
+  
+  
   
   html: {
     btt: '<p><a href="#top"><i>Back To Top</i></a></p>',
@@ -75,6 +132,7 @@ edIng: pep.match()
   
   charNames: function(v){
     console.log(v);
+    console.log(setting);
     if(v == 'e'){
 
     return(pep.choice("Arathorn","Venpeiros","Rennyn","Iliyarus",
