@@ -2,7 +2,7 @@ var pep = require("apep");
 pep = require('apep-std-transformations')(pep);
 pep = require('apep-std-vars')(pep);
 
-var myPep = require('../my-apep-fxns.js'); //custom functions
+var myPep = require('./fxns/my-apep-fxns.js'); //custom functions 
 var names = require('./fxns/constants.js'); //character and setting names
 var dict = require('./fxns/dict.js'); //word switcher
 var pronouns = require('./fxns/pronouns.js'); //pronoun lookup
