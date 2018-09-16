@@ -1,115 +1,10 @@
-//this file needs some organization
-
+  
 var pep = require("apep");
-pep = require('apep-std-transformations')(pep);
-pep = require('apep-std-vars')(pep);
+//pep = require('apep-std-transformations')(pep);
+//pep = require('apep-std-vars')(pep);
+//var myPep = require('../my-apep-fxns.js');
 
-
-module.exports = {//define your specialized functions here 
-
- pluralize: pep.match()
-    .case(/(.*)y$/,   (_, x) => x + 'ies')
-    .case(/(.*s)$/,   (_, x) => x + 'es')
-    .case(/.*/,       (x) => x + 's'),
-
- doing: pep.match()
-    .case(/(.*)e$/,   (_, x) => x + 'ing')
-    //.case(/(.*s)$/,   (_, x) => x + 'es')
-    .case(/.*/,       (x) => x + 'ing'),
-  
-aAn: pep.match()
-    .case(/^[aeiou]/, (x) => 'an '+x)
-    .case(/.*/, (x) => 'a '+x),
-
-edIng: pep.match()
-    .case(/(.*)ing$/, (_, x) => x + 'ed')
-    .case(/(.*)ed$/, (_, x) => x + 'ing'),
- 
- 
-  html: {
-    btt: '<p><a href="#top"><i>Back To Top</i></a></p>',
-    i: pep.dict({o: '<i>', c: '</i>'}),
-    p: pep.dict({o: '<p>', c: '</p>', co: '</p><p>',}),
-    div: pep.dict({row: '<div class="row mt-3">', 
-                   sp: '<div class="col-md-1"></div>',
-                   oCov: '<div class="col-md-3"></div><div class="col-md-6 rounded mt-2 darken box" style="background-image:url(',
-                   //put in book cover url
-                   oCovC: ')"><h1 class="text-light module text-center title">',
-                   //put in title, end h1
-                   oCovA: '<h1 class="text-light module text-center author">',
-                   //end h1
-                   oAbs: '<div class="col-md-5 rounded bg-info t-2 ml-2 mr-2 text-light">', 
-                   oCh: '<div class="row mt-3"><div class="col-md-2"></div><div class="col-md-8 rounded bg-light pt-3 pl-3 pr-3 pb-3 text-dark">',
-                   c: '</div>',
-                   c2: '</div></div>',
-                   h1: '<h1 class="text-center text-primary">',
-                   h1c: '</h1>'}),
-    
-    
-  },
-  
-  //tl myPep.chooseRealm
-  chooseRealm: pep.choice('e', 'f', 'h'),
-  
-  verbS: pep.dict({male: 's', female: 's'}, ''),
-  
-  charNames: function(v){
-    console.log(v);
-    console.log(setting);
-    if(v == 'e'){
-
-    return(pep.choice("Arathorn","Venpeiros","Rennyn","Iliyarus",
-                "Mardeiym","Zylmoira","Intevar","Phiqirelle",
-                "Ayas","Uriwraek","Alwin","Eilris",
-                "Montagor","Wranwraek","Ualair","Aragwyn",
-                "Ettrian","Sarsalor","Kymil","Magna",
-                "Anhaern","Orikian","Naesala","Genqirelle",
-                "Farryn","Ulacaryn","Elincia","Phiqen",
-                "Ygrainne","Syldove","Caerthynna","Preslen",
-                "Gweyr","Zinleth","Radelia","Elgolor",
-                "Kenia","Magbanise","Cilivren","Vadan",
-                  ))
-    } else if(v == 'f'){
-    
-     return(pep.choice("Teodi","Pamla","Lyllas","Styssa",
-                  "Ghamish","Nefre","Sceothisy","Sinsebe",
-                  "Pherravy","Miastore","Dhympaph","Giero",
-                  "Zeormof","Zifrath","Mnastri","Shapo",
-                  "Stentamuih","Nylrimaeph","Oelitesh","Scylrene",
-                  "Dhoelleph","Zyphif","Shiste","Maethrah",
-                  "Phrevaph","Gaphlaph","Ziflode","Pynshiny",
-                  "Pirlereos","Phrempanuis","Thapha","Scinshi",
-                  "Phamesh","Paetse","Mysan","Tafo",
-                  "Syffane","Emafah","Scefferas","Yrripes",
-                  "Astoh","Pilna","Nimbes","Steodhe",
-                  "Zashes","Yfi","Thintili","Yphlapysh",
-                  "Draerlomi","Scafravi"))
-    } else {
-     return(pep.choice( "Urnuthun", "Tralroloth", "Unorez", "Sinoth", 
-                  "Vog'thun", "Bag'thanniud", "Onnoch", "Geglod", 
-                  "Toth'tekis", "Anez","Tastraniz","Thol'gith",
-                  "Sigrok","Vizreruth","Uzomud","Jurkadal",
-                  "Thelgen","Bagoneth","Orkodath","Urkomaud",
-                  "Ag'thoth","Or'amal","Tonnon","Ogixath",
-                  "Xirzarath","Golgrech","Solvos","Elmadir",
-                  "Birgrath","Vullmin","Iz'gadig","Drorgrazon",
-                  "Bagdrazith","Trorrother","Ragrinor","Oth'tomen",
-                  "Tarruth","Roz'gonath","Roth'tidag","Tharzamon",
-                  "Moggiz","Agrauth","Moz'gonog","Sinnelan",
-                  "Troramith","Galremath","Ralgromoth","Ozgunaug",
-                  "Baglanod","Jiz'gad","Xozoruth","Birremon",
-                  "Brugdris","Gag'draros","Volgemos","Jolgriroth",
-                  "Uzgak","Sag'dran","Zogakoth","Gar'or",))
-      }
-    },
-  
-  
-  
-  //myPep.gender
-  gender: pep.choice("male", "female", "enby"),
-  
-  //tl
-  frMat: {
+module.exports =  {
     //one level myPep.frMat. ...
     darknessTitle: pep.choice("darkness", "night", "shadows", "depth", 
                               "deep", "twilight", "flame", "fire", "fury"),
@@ -224,7 +119,5 @@ edIng: pep.match()
                   "Zashes","Yfi","Thintili","Yphlapysh",
                   "Draerlomi","Scafravi"
                        ),
-  },//end frMat
-  
-  
-}//end module.exports
+    
+  };//end frMat
