@@ -4,7 +4,7 @@ pep = require('apep-std-transformations')(pep);
 pep = require('apep-std-vars')(pep);
 
 var myPep = require('../my-apep-fxns.js');
-var myCon = require('./constants.js');
+var fixed = require('./constants.js');
 
 //This section will appear at least once, but may appear multiple times. This will be a three section arc where the main character interacts with a mortal, sees the delayed aftermath, and then is confronted by creatures from homeland chasing them down. No lessons are learned in this section.
 
@@ -15,11 +15,11 @@ let title = pep.choice("Chaos", "Blood Colored Glasses", "Mayhem and Murder");
 let aText = {
   
 //p1
-p1as1a: pep.seq('The sun was uncomfortably warm against ', myCon.c0, '\'s skin as ', myPep.pronouns.they(myCon.c0g), ' sat on a hot park bench, squinting in the brightness. '),
+p1as1a: pep.seq('The sun was uncomfortably warm against ', fixed.c0, '\'s skin as ', myPep.pronouns.they(fixed.c0g), ' sat on a hot park bench, squinting in the brightness. '),
 p1as1b: pep.seq(),
 p1as1c: pep.seq(),
 
-p1as2a: pep.seq('The air was buzzing with life around ', myPep.pronouns.them(myCon.c0g), ', full of cicadas whining and birds singing. '),
+p1as2a: pep.seq('The air was buzzing with life around ', myPep.pronouns.them(fixed.c0g), ', full of cicadas whining and birds singing. '),
 p1as2b: pep.seq(),
 p1as2c: pep.seq(),
 
@@ -36,11 +36,11 @@ p2as1a: pep.seq('Across the path, there were children playing on brightly colore
 p2as1b: pep.seq(),
 p2as1c: pep.seq(),
 
-p2as2a: pep.seq('Suddenly, ', myCon.c0, ' longed for a family of ', myPep.pronouns.their(myCon.c0g), ' own. '),
+p2as2a: pep.seq('Suddenly, ', fixed.c0, ' longed for a family of ', myPep.pronouns.their(fixed.c0g), ' own. '),
 p2as2b: pep.seq(),
 p2as2c: pep.seq(),
 
-p2as3a: pep.seq(myCon.c0, '\'s parents were older and had never really made ', myPep.pronouns.them(myCon.c0g), ' feel wanted as a child, but these children, in contrast, seemed so happy. '),
+p2as3a: pep.seq(fixed.c0, '\'s parents were older and had never really made ', myPep.pronouns.them(fixed.c0g), ' feel wanted as a child, but these children, in contrast, seemed so happy. '),
 p2as3b: pep.seq(),
 p2as3c: pep.seq(),
 
@@ -63,7 +63,7 @@ p4as1a: pep.seq('"Hey, how\'s it going?" '),
 p4as1b: pep.seq(),
 p4as1c: pep.seq(),
 
-p4as2a: pep.seq('The human muffed at ', myCon.c0, ' as it passed by. '),
+p4as2a: pep.seq('The human muffed at ', fixed.c0, ' as it passed by. '),
 p4as2b: pep.seq(),
 p4as2c: pep.seq(),
 
@@ -72,15 +72,15 @@ p5as1a: pep.seq('"Great, thanks!" '),
 p5as1b: pep.seq(),
 p5as1c: pep.seq(),
 
-p5as2a: pep.seq(myCon.c0, ' said. '),
+p5as2a: pep.seq(fixed.c0, ' said. '),
 p5as2b: pep.seq(),
 p5as2c: pep.seq(),
 
-p5as3a: pep.seq('The human seemed to wince at ', myCon.c0, '\'s words, and walked a little faster. '),
+p5as3a: pep.seq('The human seemed to wince at ', fixed.c0, '\'s words, and walked a little faster. '),
 p5as3b: pep.seq(),
 p5as3c: pep.seq(),
 
-p5as4a: pep.seq(myCon.c0, ' frowned. '),
+p5as4a: pep.seq(fixed.c0, ' frowned. '),
 p5as4b: pep.seq(),
 p5as4c: pep.seq(),
 
@@ -89,25 +89,25 @@ p5as5b: pep.seq(),
 p5as5c: pep.seq(),
  
   //p6
-p6as1a: pep.seq('The minutes passed and ', myCon.c0, ' tried ', myPep.pronouns.their(myCon.c0g), ' hardest to forget about what had just had happened in ', myPep.setting.realm(myCon.setVar), '. '),
+p6as1a: pep.seq('The minutes passed and ', fixed.c0, ' tried ', myPep.pronouns.their(fixed.c0g), ' hardest to forget about what had just had happened in ', myPep.setting.realm(fixed.setVar), '. '),
 p6as1b: pep.seq(),
 p6as1c: pep.seq(),
 
-p6as2a: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0g)), ' had no choice after becoming trapped. '),
+p6as2a: pep.seq(pep.capitalize(myPep.pronouns.they(fixed.c0g)), ' had no choice after becoming trapped. '),
 p6as2b: pep.seq(),
 p6as2c: pep.seq(),
 
-p6as3a: pep.seq('The punishment would\'ve been death or exile anyway -- and ', myPep.pronouns.they(myCon.c0g), ' preferred exile. '),
+p6as3a: pep.seq('The punishment would\'ve been death or exile anyway -- and ', myPep.pronouns.they(fixed.c0g), ' preferred exile. '),
 p6as3b: pep.seq(),
 p6as3c: pep.seq(),
 
 
   //p7
-p7as1a: pep.seq('In the distance, ', myCon.c0, ' heard the sounds of distress. '),
+p7as1a: pep.seq('In the distance, ', fixed.c0, ' heard the sounds of distress. '),
 p7as1b: pep.seq(),
 p7as1c: pep.seq(),
 
-p7as2a: pep.seq('An ear-piercing scream cut across the park and straight into ', myCon.c0, '\'s heart. '),
+p7as2a: pep.seq('An ear-piercing scream cut across the park and straight into ', fixed.c0, '\'s heart. '),
 p7as2b: pep.seq(),
 p7as2c: pep.seq(),
 
@@ -122,7 +122,7 @@ p7as4c: pep.seq(),
   
 
   // p8
-p8as1a: pep.seq(myCon.c0, ' rose from ', myPep.pronouns.their(myCon.c0g), ' resting place and walked past the parents who were hurriedly gathering their children to move away from the potential danger. '),
+p8as1a: pep.seq(fixed.c0, ' rose from ', myPep.pronouns.their(fixed.c0g), ' resting place and walked past the parents who were hurriedly gathering their children to move away from the potential danger. '),
 p8as1b: pep.seq(),
 p8as1c: pep.seq(),
 
@@ -139,7 +139,7 @@ p8as4b: pep.seq(),
 p8as4c: pep.seq(),
 
   //p9
-p9as1a: pep.seq('Cresting the hill in front of ', myPep.pronouns.them(myCon.c0g), ', ', myCon.c0, ' saw pure and unfiltered chaos on the edge of the park. '),
+p9as1a: pep.seq('Cresting the hill in front of ', myPep.pronouns.them(fixed.c0g), ', ', fixed.c0, ' saw pure and unfiltered chaos on the edge of the park. '),
 p9as1b: pep.seq(''),
 p9as1c: pep.seq(''),
 
@@ -147,7 +147,7 @@ p9as2a: pep.seq('An almond brown smear spread across the earth beneath a mangled
 p9as2b: pep.seq(''),
 p9as2c: pep.seq(''),
 
-p9as3a: pep.seq('It looked like something straight out of one of those pirated cult classic horror films that ', myCon.c0, '\'s parents had brought home from the mortal realm. '),
+p9as3a: pep.seq('It looked like something straight out of one of those pirated cult classic horror films that ', fixed.c0, '\'s parents had brought home from the mortal realm. '),
 p9as3b: pep.seq(''),
 p9as3c: pep.seq(''),
 
@@ -168,15 +168,15 @@ p10as3a: pep.seq('Off in the distance, a siren wailed. '),
 p10as3b: pep.seq(''),
 p10as3c: pep.seq(''),
   
-p10as4a: pep.seq('Unsure of what to do, ', myCon.c0, ' stood there for a while, trying to piece things together. '),
+p10as4a: pep.seq('Unsure of what to do, ', fixed.c0, ' stood there for a while, trying to piece things together. '),
 p10as4b: pep.seq(),
 p10as4c: pep.seq(),
 
-p10as5a: pep.seq(pep.capitalize(myPep.pronouns.they(myCon.c0)), ' noticed the rope from earlier descending from the feet of the human and into the gory mess. '),
+p10as5a: pep.seq(pep.capitalize(myPep.pronouns.they(fixed.c0)), ' noticed the rope from earlier descending from the feet of the human and into the gory mess. '),
 p10as5b: pep.seq(),
 p10as5c: pep.seq(),
   
-p10as6a: pep.seq(myCon.c0, ' realized with a start that the body was the human\'s plump, happy, stupid little mutt from not 10 minutes ago. '),
+p10as6a: pep.seq(fixed.c0, ' realized with a start that the body was the human\'s plump, happy, stupid little mutt from not 10 minutes ago. '),
 p10as6b: pep.seq(),
 p10as6c: pep.seq(),
 
@@ -185,7 +185,7 @@ p11as1a: pep.seq('How does a human even inflict that much damage? '),
 p11as1b: pep.seq(''),
 p11as1c: pep.seq(''),
 
-p11as2a: pep.seq(myCon.c0, ' wondered as the sirens grew louder and louder. '),
+p11as2a: pep.seq(fixed.c0, ' wondered as the sirens grew louder and louder. '),
 p11as2b: pep.seq(''),
 p11as2c: pep.seq(''),
 
