@@ -4,6 +4,8 @@ pep = require('apep-std-transformations')(pep);
 pep = require('apep-std-vars')(pep);
 
 var myPep = require('./fxns/my-apep-fxns.js');
+var html = require('./fxns/html.js');
+var frmat = require('./fxns/frmat.js');
 
 //include constants and story content
 var myCon = require('./fxns/constants.js');
@@ -12,13 +14,11 @@ var myCh1 = require('./ch1.js');
 var myCh2 = require('./ch2.js');
 var myCh3 = require('./ch3.js');
 var myCh4 = require('./ch4.js');
-var html = require('./fxns/html.js');
-var frmat = require('./fxns/frmat.js');
+
 
  
 
 //define chapter titles
-let ch4t = 'ch4 title';
 let ch5t = 'ch5 title';
 let ch6t = 'ch6 title';
 let ch7t = 'ch7 title';
