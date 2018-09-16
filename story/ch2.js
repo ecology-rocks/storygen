@@ -131,27 +131,38 @@ module.exports = {
         //p6     
         pep.choice(
             pep.seq(pep.choice(pep.seq(names.reed, ' and ', names.jerry), 'They'),
-                ' rose to place their trash in the bin and left the cafeteria to the dim skies outside. '
+                ' ', dict.rose, ' to ', dict.place, ' their ', dict.trash, ' in the ', dict.bin,
+                ' and ', dict.left, ' the ', dict.cafeteria, ' to the ', dict.dim, ' ', dict.skies,
+                ' ', dict.outside, '. '
             ),
-            pep.seq('Leaving their trash behind for the staff to clean, ', names.reed, ' and ', names
-                .jerry, ' left the cafeteria for the barren outdoors. '),
+            pep.seq('Leaving their ', dict.trash, ' ', pep.opt('behind '), 'for the staff to ', dict.clean,
+                ', ', names.reed, ' and ', names
+                .jerry, ' left the ', dict.cafeteria, ' for the ', dict.dim, ' ', dict.outdoors, '. '
+            ),
             pep.seq(
-                'Lingering as long as they could, they finally left the cafeteria behind and went outside. '
+                'Lingering as long as they could, they ', dict.finally, ' ', dict.left, ' the ', dict
+                .cafeteria, ' behind and went ', dict.outdoors, '. '
             ),
         ), pep.choice(
-            pep.seq('It somehow seemed creepier than usual, glowing a putrid green in the dusk sky. '),
-            pep.seq('The sky was a putrid, off shade of green. '),
-            pep.seq('The sky looked ominous and strangely colored -- more so than usual. '),
+            pep.seq('It ', pep.opt('somehow '), 'seemed more ', dict.creepy, ' than ', dict.usual,
+                ',  a ', dict.putrid, ' ', dict.green, ' ', dict.glowing, ' in the ', dict.dim,
+                ' sky. '),
+            pep.seq('The sky was a ', dict.putrid, ', off-shade of ', dict.green, ', . '),
+            pep.seq('The sky looked ', dict.creepy, ' and ', dict.strangely, ' colored ', dict.green,
+                ' -- more so than ', dict.usual, '. '),
         ), pep.choice(
-            pep.seq('"Catch you later." '),
-            pep.seq('"See you tomorrow." '),
+            pep.seq('"Catch you ', dict.tomorrow, '." '),
+            pep.seq('"See you ', dict.tomorrow, '." '),
             pep.seq('"Peace be with you." '),
         ), pep.choice(
-            pep.seq(names.reed, ' said warmly to ', names.jerry, ' as ', pronouns.they(names.reed0),
-                ' strode off towards the west tower. '),
-            pep.seq(names.reed, ' left ', names.jerry, ', veering right towards the west tower. '),
+            pep.seq(names.reed, ' said ', dict.warmly, ' to ', names.jerry, ' as ', pronouns.they(
+                    names.reed0),
+                ' ', dict.strode, ' off towards the ', dict.cardinal, ' tower. '),
+            pep.seq(names.reed, ' left ', names.jerry, ', veering right towards the ', dict.cardinal,
+                ' tower. '),
             pep.seq(names.reed, ' put ', pronouns.they(names.reed0),
-                ' cap on and strode off towards the west tower. '),
+                ' ', dict.hat, ' on and ', dict.strode, ' off towards the ', dict.cardinal,
+                ' tower. '),
         ), html.pco,
         //p7          
         pep.choice(
