@@ -1,7 +1,7 @@
 var pep = require("apep");
 pep = require('apep-std-transformations')(pep);
 pep = require('apep-std-vars')(pep);
-var myPep = require('../../my-apep-fxns.js');
+var myPep = require('./my-apep-fxns.js');
 var frmat = require('./frmat.js');
 
 var nameFn = frmat.demonName;
