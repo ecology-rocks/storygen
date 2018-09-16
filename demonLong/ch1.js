@@ -4,7 +4,8 @@ pep = require('apep-std-transformations')(pep);
 pep = require('apep-std-vars')(pep);
 
 var myPep = require('../my-apep-fxns.js');
-var fixed = require('./constants.js');
+var names = require('./constants.js');
+var dict = require('./dict.js');
 
 
 
@@ -34,39 +35,39 @@ let aText = {
   //s1
   
   // “Momma, momma!” C0 cried as they ran from their tormentors. 
-  p1as1a: pep.seq('"Momma, momma!" ', fixed.c0, ' ', myPep.dict.cried, ' as ',myPep.pronouns.they(fixed.c0g), ' ', myPep.dict.fled, ' from ', myPep.pronouns.their(fixed.c0g), ' ', myPep.dict.bullies, '. '),
+  p1as1a: pep.seq('"Momma, momma!" ', names.c0, ' ', dict.cried, ' as ',myPep.pronouns.they(names.c0g), ' ', dict.fled, ' from ', myPep.pronouns.their(names.c0g), ' ', dict.bullies, '. '),
   //"Leave me alone!" C0 shouted as  they fled in terror.
-  p1as1b: pep.seq('"', myPep.dict.leaveMeAlone, '" ', fixed.c0, ' ', myPep.dict.cried, ' as ', myPep.pronouns.they(fixed.c0g), ' ', myPep.dict.fled, ' in ', myPep.dict.terror, '. '),
+  p1as1b: pep.seq('"', dict.leaveMeAlone, '" ', names.c0, ' ', dict.cried, ' as ', myPep.pronouns.they(names.c0g), ' ', dict.fled, ' in ', dict.terror, '. '),
   //C0 ran at breakneck speed around the corner and towards the house. 
-  p1as1c: pep.seq(fixed.c0, ' ', myPep.dict.fled, ' at ', myPep.dict.breakneck, ' ', myPep.dict.speed, ' around the ', myPep.dict.corner, ' and towards the ', myPep.dict.house, '. '),
+  p1as1c: pep.seq(names.c0, ' ', dict.fled, ' at ', dict.breakneck, ' ', dict.speed, ' around the ', dict.corner, ' and towards the ', dict.house, '. '),
   
   //s2
   
   //C2 and C3 chased after them, leaving hastily placed footprints behind them as they ran. 
-  p1as2a: pep.seq(fixed.c2, ' and ', fixed.c3, ' ', myPep.dict.chased, ' after ', myPep.pronouns.them(fixed.c0g), ', leaving ', myPep.dict.hastily, ' placed ', myPep.dict.footprints, ' behind them as they ', myPep.dict.chased,'. '),
+  p1as2a: pep.seq(names.c2, ' and ', names.c3, ' ', dict.chased, ' after ', myPep.pronouns.them(names.c0g), ', leaving ', dict.hastily, ' placed ', dict.footprints, ' behind them as they ', dict.chased,'. '),
   //Their tormentors, C2 and C3, were chasing C0 and cackling as they went.
-  p1as2b: pep.seq(pep.capitalize(myPep.pronouns.their(fixed.c0g)), ' ', myPep.dict.bullies, ', ', fixed.c2, ' and ', fixed.c3, ', were ',myPep.edIng(myPep.dict.chased),' ', fixed.c0, ' and ', myPep.dict.cackling, ' as they went. '),
+  p1as2b: pep.seq(pep.capitalize(myPep.pronouns.their(names.c0g)), ' ', dict.bullies, ', ', names.c2, ' and ', names.c3, ', were ',myPep.edIng(dict.chased),' ', names.c0, ' and ', dict.cackling, ' as they went. '),
   //A team of taller, stronger, faster children were chasing C0 at a supernaturally fast speed. 
-  p1as2c: pep.seq('A ', myPep.dict.couple, ' of ', myPep.dict.taller, ', ', myPep.dict.stronger, ', ', myPep.dict.faster, ' ', myPep.dict.juveniles, ' were ', myPep.dict.chasing, ' ', fixed.c0, ' at a ', myPep.dict.breakneck, ' ', myPep.dict.speed, '. '),
+  p1as2c: pep.seq('A ', dict.couple, ' of ', dict.taller, ', ', dict.stronger, ', ', dict.faster, ' ', dict.juveniles, ' were ', dict.chasing, ' ', names.c0, ' at a ', dict.breakneck, ' ', dict.speed, '. '),
   
   
   //s3
   
   //C0 felt relief wash over them when they say their mother peeking out from behind the kitchen window curtains.
-  p1as3a: pep.seq(fixed.c0, ' felt relief ', myPep.dict.washOver, ' ', myPep.pronouns.them(fixed.c0g), ' when ', myPep.pronouns.they(fixed.c0g), ' ', myPep.dict.spotted,' ', myPep.pronouns.their(fixed.c0g), ' mother ', myPep.dict.peeking, pep.opt(pep.seq(" ", myPep.dict.furtively)), ' out from behind the ',pep.opt("kitchen "), 'window',pep.opt(" curtains"), '. '),
+  p1as3a: pep.seq(names.c0, ' felt relief ', dict.washOver, ' ', myPep.pronouns.them(names.c0g), ' when ', myPep.pronouns.they(names.c0g), ' ', dict.spotted,' ', myPep.pronouns.their(names.c0g), ' mother ', dict.peeking, pep.opt(pep.seq(" ", dict.furtively)), ' out from behind the ',pep.opt("kitchen "), 'window',pep.opt(" curtains"), '. '),
   // C0 spotted their mother inside the window. 
-  p1as3b: pep.seq(fixed.c0, ' ', myPep.dict.spotted, ' ', myPep.pronouns.their(fixed.c0g), ' mother inside the window. '),
+  p1as3b: pep.seq(names.c0, ' ', dict.spotted, ' ', myPep.pronouns.their(names.c0g), ' mother inside the window. '),
   //Closing the distance to the house, C0 knew relief and safety were close.
-  p1as3c: pep.seq('Closing the distance to the ', myPep.dict.house, ', ', fixed.c0, ' knew relief and safety were close. '),
+  p1as3c: pep.seq('Closing the distance to the ', dict.house, ', ', names.c0, ' knew relief and safety were close. '),
   
   //s4
   
   //C0 scrambled up the front steps to the door and yanked on the handle.
-  p1as4a: pep.seq(fixed.c0, ' ', myPep.dict.fled, ' up the front steps to the door and yanked on the handle. '),
+  p1as4a: pep.seq(names.c0, ' ', dict.fled, ' up the front steps to the door and yanked on the handle. '),
   // C0 cleared the front steps on the way to the safety of the door, twisting the knob with ferocity.
-  p1as4b: pep.seq(fixed.c0, ' cleared the front steps on the way to the safety of the door, twisting the knob with ferocity. '),
+  p1as4b: pep.seq(names.c0, ' cleared the front steps on the way to the safety of the door, twisting the knob with ferocity. '),
   // C0 grabbed the front door handle and pulled backwards, the sounds of bullies right behind them.
-  p1as4c: pep.seq(fixed.c0, ' grabbed the front door handle and pulled backwards, the sounds of ', myPep.dict.bullies, ' right behind ', myPep.pronouns.them(fixed.c0g), '. '),
+  p1as4c: pep.seq(names.c0, ' grabbed the front door handle and pulled backwards, the sounds of ', dict.bullies, ' right behind ', myPep.pronouns.them(names.c0g), '. '),
   
   
   //s5 
@@ -74,7 +75,7 @@ let aText = {
   //It didn't budge.
   p1as5a: pep.seq('It didn\'t budge. '),
   p1as5b: pep.seq('The door wouldn\'t move. '),
-  p1as5c: pep.seq('The door was like iron in ', myPep.pronouns.their(fixed.c0g), ' hands. '),
+  p1as5c: pep.seq('The door was like iron in ', myPep.pronouns.their(names.c0g), ' hands. '),
   
   //p2
   
@@ -85,46 +86,46 @@ let aText = {
   //"Are you home, momma?"
   p2as1b: pep.seq('"Are you home, momma?" '),
   //C0 jiggled the door handle again.
-  p2as1c: pep.seq(fixed.c0, ' jiggled the door handle again. '),
+  p2as1c: pep.seq(names.c0, ' jiggled the door handle again. '),
   
   //s2
   
   //C0’s voice grew desperate.  
-  p2as2a: pep.seq(fixed.c0, '\'s voice grew desperate. '),
+  p2as2a: pep.seq(names.c0, '\'s voice grew desperate. '),
   //C0's voice shook with fear. 
-  p2as2b: pep.seq(fixed.c0, '\'s voice shook with fear. '),
+  p2as2b: pep.seq(names.c0, '\'s voice shook with fear. '),
   //The fear in C0's voice was obvious.
-  p2as2c: pep.seq('The fear in ', fixed.c0, '\'s voice was obvious. '),
+  p2as2c: pep.seq('The fear in ', names.c0, '\'s voice was obvious. '),
   
   //“Let me in!”
   p2as3a: pep.seq('"Let me in!" '),
   //"Please god."
-  p2as3b: pep.seq('"Please, ', myPep.dict.gods, '. "'),
+  p2as3b: pep.seq('"Please, ', dict.gods, '. "'),
   //"Momma..."
   p2as3c: pep.seq('"Momma..." '),
   
   //p3
   
     //“Play with your friends.” 
-  p3as1a: pep.seq('"Play with your ', myPep.pluralize(myPep.dict.buddy), '." '),
+  p3as1a: pep.seq('"Play with your ', myPep.pluralize(dict.buddy), '." '),
   // "Don't you be running in here when you\'ve got friends outside."
-  p3as1b: pep.seq('"Don\'t you be coming in here when you\'ve got ', myPep.pluralize(myPep.dict.buddy), ' outside." '),
+  p3as1b: pep.seq('"Don\'t you be coming in here when you\'ve got ', myPep.pluralize(dict.buddy), ' outside." '),
   //"You know the rule. Stay outside until dinner. "
   p3as1c: pep.seq('"You know the rule. Stay outside until dinner." '),
   
   //A dull, flat voice came from behind the door. 
   p3as2a: pep.seq('A dull, flat voice came from behind the door. '),
   //Their mother's trill voice came from the other side.
-  p3as2b: pep.seq(pep.capitalize(myPep.pronouns.their(fixed.c0g)),' mother\'s trill voice came from the other side. '),
+  p3as2b: pep.seq(pep.capitalize(myPep.pronouns.their(names.c0g)),' mother\'s trill voice came from the other side. '),
   //A heartless monotone met C0's struggles
-  p3as2c: pep.seq('A ', myPep.dict.heartless, ' monotone met ', fixed.c0, '\'s struggles. '),
+  p3as2c: pep.seq('A ', dict.heartless, ' monotone met ', names.c0, '\'s struggles. '),
   
   //C0 heard the door chain jingle. 
-  p3as3a: pep.seq(fixed.c0, ' heard the door chain jingle. '),
+  p3as3a: pep.seq(names.c0, ' heard the door chain jingle. '),
   // C0 heard footsteps walking away.
-  p3as3b: pep.seq(fixed.c0, ' heard footsteps walking away. '),
+  p3as3b: pep.seq(names.c0, ' heard footsteps walking away. '),
   // C0 knew their mother would be no help.
-  p3as3c: pep.seq(fixed.c0, ' knew ', myPep.pronouns.their(fixed.c0g), ' mother would be no help. '),
+  p3as3c: pep.seq(names.c0, ' knew ', myPep.pronouns.their(names.c0g), ' mother would be no help. '),
   
   //“And don’t come home until sundown.”
   p3as4a: pep.seq('"And don\'t come home until sundown." '),
@@ -136,51 +137,51 @@ let aText = {
   //p4
   
     //C2 and C3 were upon C0, though the steps were a line in the sand they were not willing to cross. 
-  p4as1a: pep.seq(fixed.c2, ' and ', fixed.c3, ' were upon ', fixed.c0, ', though the steps were a line in the sand they were not willing to cross. '),
+  p4as1a: pep.seq(names.c2, ' and ', names.c3, ' were upon ', names.c0, ', though the steps were a line in the sand they were not willing to cross. '),
   // C2 and C3 stood motionless in front of the house.
-  p4as1b: pep.seq(fixed.c2, ' and ', fixed.c3, ' stood motionless in front of the house. '),
+  p4as1b: pep.seq(names.c2, ' and ', names.c3, ' stood motionless in front of the house. '),
   //The children raced to the house but stopped short of the porch. 
-  p4as1c: pep.seq('The children ', myPep.dict.raced, ' to the ', myPep.dict.house, ' but stopped ', myPep.dict.short, ' of the porch. '),
+  p4as1c: pep.seq('The children ', dict.raced, ' to the ', dict.house, ' but stopped ', dict.short, ' of the porch. '),
   
   //They crossed their arms in front of their chests like creepy twins.
-  p4as2a: pep.seq('They simultaneously ', myPep.dict.crossedTheirArms, ' like ', myPep.dict.creepy, ' twins. '),
+  p4as2a: pep.seq('They simultaneously ', dict.crossedTheirArms, ' like ', dict.creepy, ' twins. '),
   
   // C2/C3 grinned from ear to ear while the other stared, slack-jawed. 
-  p4as2b: pep.seq(pep.choice(fixed.c2, fixed.c3),  ' ', myPep.dict.grinned, ' ',myPep.dict.widely, ' while the other ', myPep.dict.stared, ', ', myPep.dict.slackJawed, '. '),
+  p4as2b: pep.seq(pep.choice(names.c2, names.c3),  ' ', dict.grinned, ' ',dict.widely, ' while the other ', dict.stared, ', ', dict.slackJawed, '. '),
   // The freakishly tall bullies had patient looks on their faces.
-  p4as2c: pep.seq('The ', myPep.dict.freakishly, ' tall ', myPep.dict.bullies, ' had patient looks on their faces. '),
+  p4as2c: pep.seq('The ', dict.freakishly, ' tall ', dict.bullies, ' had patient looks on their faces. '),
   
   //p5 
   
   //“Come play with us!” 
   p5as1a: pep.seq('"Come play', pep.opt(' with us'), '!" '),
   //"Come on, it'll only hurt a little." 
-  p5as1b: pep.seq('"Come on, it\'ll only hurt a ', myPep.dict.little, '." '),
+  p5as1b: pep.seq('"Come on, it\'ll only hurt a ', dict.little, '." '),
   //"There\'s no escape now."
-  p5as1c: pep.seq('"You may as well come down -- there\'s no ',myPep.dict.escape, ' now." '),
+  p5as1c: pep.seq('"You may as well come down -- there\'s no ',dict.escape, ' now." '),
   
   //C2 cajoled, no hint of laughter in their voice.
-  p5as2a: pep.seq(fixed.c2, ' ', myPep.dict.cajoled, ', no hint of ', myPep.dict.laughter, ' in ', myPep.pronouns.their(fixed.c2g), ' voice. '),
+  p5as2a: pep.seq(names.c2, ' ', dict.cajoled, ', no hint of ', dict.laughter, ' in ', myPep.pronouns.their(names.c2g), ' voice. '),
   // C3 said seriously.
-  p5as2b: pep.seq(fixed.c3, ' said ', myPep.dict.seriously, '. '),
+  p5as2b: pep.seq(names.c3, ' said ', dict.seriously, '. '),
   //Their faces held no sunshine, only murder. 
-  p5as2c: pep.seq('Their faces held no sunshine, only ', myPep.dict.murder, '. '),
+  p5as2c: pep.seq('Their faces held no sunshine, only ', dict.murder, '. '),
   
   //p6
   
   //“No thank you.” 
-  p6as1a: pep.seq('"No, ', myPep.dict.thankYou, '." '),
+  p6as1a: pep.seq('"No, ', dict.thankYou, '." '),
   //"I'd rather swallow a sack of bees."
-  p6as1b: pep.seq('"I\'d rather ', myPep.dict.swallow, ' a ', myPep.dict.sack, ' of ', myPep.dict.bees, '." '),
+  p6as1b: pep.seq('"I\'d rather ', dict.swallow, ' a ', dict.sack, ' of ', dict.bees, '." '),
   //"Go fuck yourselves."
-  p6as1c: pep.seq('"Go ', myPep.dict.fuckYourselves, '." '),  
+  p6as1c: pep.seq('"Go ', dict.fuckYourselves, '." '),  
   
   //C0 said firmly, and leaned against their front door for support. 
-  p6as2a: pep.seq(fixed.c0, ' said ', myPep.dict.seriously, ', and ', myPep.dict.leaned, ' against ', myPep.pronouns.their(fixed.c0g), ' front door for support. '),
+  p6as2a: pep.seq(names.c0, ' said ', dict.seriously, ', and ', dict.leaned, ' against ', myPep.pronouns.their(names.c0g), ' front door for support. '),
   // Their voice shook as they spoke.
-  p6as2b: pep.seq(pep.capitalize(myPep.pronouns.their(fixed.c0g)), ' voice shook as ', myPep.pronouns.they(fixed.c0g), ' spoke. '),
+  p6as2b: pep.seq(pep.capitalize(myPep.pronouns.their(names.c0g)), ' voice shook as ', myPep.pronouns.they(names.c0g), ' spoke. '),
   // It came as a whisper from C0's mouth.
-  p6as2c: pep.seq('It came as a whisper from ', fixed.c0, '\'s mouth. '),  
+  p6as2c: pep.seq('It came as a whisper from ', names.c0, '\'s mouth. '),  
   
   //“I’d like to play by myself for a while.” 
   p6as3a: pep.seq('"I\'d like to play by myself for a while." '),
@@ -190,11 +191,11 @@ let aText = {
   p6as3c: pep.seq('"Please go away. I don\'t want to play your stupid game." '),  
   
   //The three passed a long moment in silence, no one budging from their spot.
-  p6as4a: pep.seq('The three ', myPep.dict.spent, ' a long ', myPep.dict.moment, ' in ', myPep.dict.silence, ', no one ', myPep.dict.budging, ' from their ', myPep.dict.position, '. '),
+  p6as4a: pep.seq('The three ', dict.spent, ' a long ', dict.moment, ' in ', dict.silence, ', no one ', dict.budging, ' from their ', dict.position, '. '),
   // It seemed that they were at a standstill.
-  p6as4b: pep.seq('It seemed that they were at ', myPep.aAn(myPep.dict.standstill), '. '),
+  p6as4b: pep.seq('It seemed that they were at ', myPep.aAn(dict.standstill), '. '),
   // No one moved.
-  p6as4c: pep.seq('No one ',myPep.edIng(myPep.dict.budging), '. '),  
+  p6as4c: pep.seq('No one ',myPep.edIng(dict.budging), '. '),  
   
   
   //p7
@@ -207,37 +208,37 @@ let aText = {
   p7as1c: pep.seq('"It\'ll be fun though, we promise!" '),  
   
   //C2 said, and together, they strode to the scraggly elm in the front yard. 
-  p7as2a: pep.seq(fixed.c2, ' said, and together, they ',myPep.dict.strode, ' to the ', myPep.dict.scraggly, ' ', myPep.dict.elm, ' in the front yard. '),
+  p7as2a: pep.seq(names.c2, ' said, and together, they ',dict.strode, ' to the ', dict.scraggly, ' ', dict.elm, ' in the front yard. '),
   // C2 and C3 walked towards the shrubbery near the house.
-  p7as2b: pep.seq(fixed.c2, ' and ', fixed.c3, ' ', myPep.dict.strode, ' towards the ',myPep.dict.elm, ' near the ', myPep.dict.house, '. '),
+  p7as2b: pep.seq(names.c2, ' and ', names.c3, ' ', dict.strode, ' towards the ',dict.elm, ' near the ', dict.house, '. '),
   // The children backed away from the porch, taking up space near the ornamental tree out front. 
-  p7as2c: pep.seq('The children ', myPep.dict.retreated, ' from the porch, taking up space near the ', myPep.dict.ornamental, ' ', myPep.dict.elm, ' out front. '),  
+  p7as2c: pep.seq('The children ', dict.retreated, ' from the porch, taking up space near the ', dict.ornamental, ' ', dict.elm, ' out front. '),  
   
   //It gave no shade, but they were not there for the shade. 
-  p7as3a: pep.seq('It gave little ', myPep.dict.shade, ', but they were not there for the ', myPep.dict.shade, '. '),
+  p7as3a: pep.seq('It gave little ', dict.shade, ', but they were not there for the ', dict.shade, '. '),
   // Even the greenery seemed cowed by their presence. 
-  p7as3b: pep.seq('Even the greenery seemed ', myPep.dict.cowed, ' by their presence. '),
+  p7as3b: pep.seq('Even the greenery seemed ', dict.cowed, ' by their presence. '),
   // C0 breathed a sigh of relief.
-  p7as3c: pep.seq(fixed.c0, ' breathed a sigh of relief. '),  
+  p7as3c: pep.seq(names.c0, ' breathed a sigh of relief. '),  
   
   //They sat down in front of the elm, and C3 produced a ball from their left pocket.  
-  p7as4a: pep.seq(fixed.c2, ' sat down, and ', fixed.c3 ,' produced a ball from their left pocket. '),
+  p7as4a: pep.seq(names.c2, ' sat down, and ', names.c3 ,' produced a ball from their left pocket. '),
   // Taking a seat, c2 began drawing a gruesome picture in the dirt.
-  p7as4b: pep.seq('Taking a seat, ', fixed.c2, ' began drawing a gruesome picture in the dirt. '),
+  p7as4b: pep.seq('Taking a seat, ', names.c2, ' began drawing a gruesome picture in the dirt. '),
   // They settled in the dirt by the trees. 
-  p7as4c: pep.seq('They settled in the ', myPep.dict.dirt, ' by the tree. '),  
+  p7as4c: pep.seq('They settled in the ', dict.dirt, ' by the tree. '),  
   
   //They began to play ball, as if it was the most natural thing in the world.
-  p7as5a: pep.seq('They ', myPep.dict.began, ' to play ball, as if it was the most natural thing in the world. '),
+  p7as5a: pep.seq('They ', dict.began, ' to play ball, as if it was the most natural thing in the world. '),
   // C3 idly threw a ball up in the air and caught it with their eyes closed.
-  p7as5b: pep.seq(fixed.c3, ' ', myPep.dict.idly, ' ', myPep.dict.threw, ' a ball up in the air and ',myPep.dict.caught, ' it with ', myPep.pronouns.their(fixed.c3g), ' eyes closed. '),
+  p7as5b: pep.seq(names.c3, ' ', dict.idly, ' ', dict.threw, ' a ball up in the air and ',dict.caught, ' it with ', myPep.pronouns.their(names.c3g), ' eyes closed. '),
   // C2 giggled with anticipation.
-  p7as5c: pep.seq(fixed.c2, ' ', myPep.edIng(myPep.dict.cackling), ' with anticipation. '),  
+  p7as5c: pep.seq(names.c2, ' ', myPep.edIng(dict.cackling), ' with anticipation. '),  
   
   //As if three minutes ago, they had not just tried to beat C0 into a pulp.
-  p7as6a: pep.seq('As if ', myPep.dict.sp2to6, ' ', myPep.pluralize(myPep.dict.moment), ' ago, they had not just tried to ',myPep.dict.beat, ' ', fixed.c0, ' into a pulp. '),
+  p7as6a: pep.seq('As if ', dict.sp2to6, ' ', myPep.pluralize(dict.moment), ' ago, they had not just tried to ',dict.beat, ' ', names.c0, ' into a pulp. '),
   // They seemed wholly unconcerned with C0, but c0 was not fooled.
-  p7as6b: pep.seq('They seemed wholly ', myPep.dict.unconcerned, ' with ', fixed.c0, ', but ', fixed.c0, ' was not ', myPep.dict.fooled, '. '),
+  p7as6b: pep.seq('They seemed wholly ', dict.unconcerned, ' with ', names.c0, ', but ', names.c0, ' was not ', dict.fooled, '. '),
   //It was as if nothing had happened. 
   p7as6c: pep.seq('It was as if nothing had happened. '),  
   
@@ -245,11 +246,11 @@ let aText = {
   //p8
   
   //Not knowing what else to do, C0 sat on the front porch, back against the door, and cried.
-  p8as1a: pep.seq(pep.opt('Not knowing what else to do, ') ,fixed.c0, ' sat on the front porch, back against the door, and ', myPep.dict.sobbed, '.'),
+  p8as1a: pep.seq(pep.opt('Not knowing what else to do, ') ,names.c0, ' sat on the front porch, back against the door, and ', dict.sobbed, '.'),
   // C0 wondered if a day would ever go without being harrassed by the neighbor kids.
-  p8as1b: pep.seq(fixed.c0, ' wondered if a day would ever ', myPep.dict.goBy, ' without being ', myPep.dict.harassed, ' by the neighbors. '),
+  p8as1b: pep.seq(names.c0, ' wondered if a day would ever ', dict.goBy, ' without being ', dict.harassed, ' by the neighbors. '),
   // C0 stifled back tears as they took a seat to wait for sunset.
-  p8as1c: pep.seq(fixed.c0, ' ',myPep.dict.stifled, ' ', myPep.dict.sobs, ' as ', myPep.pronouns.they(fixed.c0), ' took a seat to wait for sunset. '),  
+  p8as1c: pep.seq(names.c0, ' ',dict.stifled, ' ', dict.sobs, ' as ', myPep.pronouns.they(names.c0), ' took a seat to wait for sunset. '),  
   
 };
 
