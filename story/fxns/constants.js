@@ -2,13 +2,9 @@
 var pep = require("apep");
 pep = require('apep-std-transformations')(pep);
 pep = require('apep-std-vars')(pep);
-var myPep = require('../my-apep-fxns.js');
+var myPep = require('../../my-apep-fxns.js');
 
 
-
-/*Array.prototype.sample = function(){
-  return this[Math.floor(Math.random()*this.length)];
-}*/
 
 
 let titleFxn = pep.choice(pep.seq(myPep.frMat.intoTitle,
@@ -23,12 +19,6 @@ let author = pep.store('author', pep.seq(myPep.frMat.authorFirst, " ",
                      pep.opt(pep.many1(myPep.frMat.authorMiddle, 0.3)), 
                      myPep.frMat.authorLast));
 
-//choose the setting
-
-
-//trying to fix page refresh environmental variable
-//setInterval(function(){console.log(['e', 'f', 'h'].sample()); }, 30000);
-//setInterval(function(){ console.log("Hello"); }, 3000); //these both work
 
 
 let setVar = pep.store('setVar', pep.choice('e', 'f', 'h'));
@@ -82,4 +72,37 @@ module.exports = {
   c5g: c5g, 
   c6: c6,
   c6g: c6g,
+  //reworking so names are memorable
+  realm: setVar,
+  jerry: c0,
+  jerry0: c0g,
+  eddie: c1,
+  eddie0: c1g,
+  adrian: c2,
+  adrian0: c2g, 
+  max: c3,
+  max0: c3g,
+  reed: c4,
+  reed0: c4g,
+  kaden: c5,
+  kaden0: c5g, 
+  dorian: c6,
+  dorian0: c6g,
 };
+
+/* gender neutral character names
+
+Addison,Adrian,Aiden,Ainsley,Alex,Amari,Andy,Ari,Ash,Aspen
+Aubrey,August,Avery,Bailey,Bay,Blaine,Blake,Bobbie,Brett,Brook
+Brooklyn,Caelan,Cameron,Campbell,Carroll,Carson,Casey,Charlie,Chris,Clay
+Corey,Dana,Dakota,Dale,Dallas,Daryl,Delta,Devin,Dorian,Drew
+Dylan,Easton,Eddie,Eli,Elliott,Emerson,Emery,Finley,Frances,Frankie
+Gabriel,Glenn,Gray,Harley,Harper,Hayden,Hudson,Hunter,James,Jamie
+Jayden,Jean,Jesse,Jordan,Jules,Julian,Kaden,Kai,Karter,Kelly
+Kelsey,Kendall,Kennedy,Kyle,Lake,Landry,Lincoln,Logan,London,Lou
+Mackenzie,Mason,Max,Maxwell,Monroe,Morgan,Parker,Pat,Peyton,Phoenix
+Quinn,Ray,Reagan,Reed,Reese,Remy,Riley,River,Roan,Rory
+Rowan,Rudy,Ryan,Sage,Sam,Sawyer,Shawn,Sean,Skylar,Spencer
+Stevie,Sydney,Tanner,Tatum,Taylor,Toby,Tyler,Val,West,Winter
+ 
+ */

@@ -20,7 +20,7 @@ const pug = require('pug');
 
 //my script
 var dS = require('./demonSolo.js');
-var dL = require('./demonLong/demonLong.js');
+var dL = require('./story/demonLong.js');
 
 app.set("view engine", "pug");
 app.set("views", (__dirname + "/views"));

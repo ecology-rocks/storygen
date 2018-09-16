@@ -3,14 +3,15 @@ var pep = require("apep");
 pep = require('apep-std-transformations')(pep);
 pep = require('apep-std-vars')(pep);
 
-var myPep = require('../my-apep-fxns.js');
-var names = require('./constants.js');
-var dict = require('./dict.js');
+var myPep = require('../my-apep-fxns.js'); //custom functions
+var names = require('./fxns/constants.js'); //character and setting names
+var dict = require('./fxns/dict.js'); //word switcher
+var pronouns = require('./fxns/pronouns.js'); //pronoun lookup
+var world = require('./fxns/world.js'); //world lookup
+var html = require('./fxns/html.js'); //formatting lookup
 
 
 //Our main character struggles to name and stand strong for their pacifism in the face of growing tensions. Our character is told to 'do or die' in terms of joining the fight. They are left unsettled and looking for a way out.
-
-
 
 
 
@@ -23,49 +24,49 @@ let aText = {
   
 //p1
 
-p1as1a: pep.seq('"Is ', names.c1, ' ', dict.insane, '?" '),
-p1as1b: pep.seq('"Do you think this whole ', names.c1, ' stuff is ',dict.legit, '?" '),
+p1as1a: pep.seq('"Is ', names.eddie, ' ', dict.insane, '?" '),
+p1as1b: pep.seq('"Do you think this whole ', names.eddie, ' stuff is ',dict.legit, '?" '),
 p1as1c: pep.seq('"What do you think about our ', dict.impending, ' ', dict.doom, '?" '),
 
-p1as2a: pep.seq(names.c0, ' ', dict.asked, ', ', dict.gnawing, ' ', myPep.pronouns.their(names.c0g), ' way through a piece of ', dict.overcooked, ' meat. '),
-p1as2b: pep.seq(names.c0, ' ', dict.wondered, ' as ', myPep.pronouns.they(names.c0g), ' ', dict.gnawed, ' the final bites of ', myPep.pronouns.their(names.c0g), ' meal. '),
-p1as2c: pep.seq('The question hung in the air as ', names.c0, ' took another bite. '),
+p1as2a: pep.seq(names.jerry, ' ', dict.asked, ', ', dict.gnawing, ' ', pronouns.their(names.jerry0), ' way through a piece of ', dict.overcooked, ' meat. '),
+p1as2b: pep.seq(names.jerry, ' ', dict.wondered, ' as ', pronouns.they(names.jerry0), ' ', dict.gnawed, ' the final bites of ', pronouns.their(names.jerry0), ' meal. '),
+p1as2c: pep.seq('The question hung in the air as ', names.jerry, ' took another bite. '),
 
-p1as3a: pep.seq(pep.capitalize(myPep.pronouns.they(names.c0g)), ' ', dict.looked, ' at ', myPep.pronouns.their(names.c0g), ' friend, ', names.c4, ', for reassurance. '),
-p1as3b: pep.seq(names.c0, ' glanced at ',names.c4, ', weighing ', myPep.pronouns.their(names.c4g), ' expression. '),
-p1as3c: pep.seq(names.c4, ' ', myPep.edIng(dict.cackling), '. '),
+p1as3a: pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' ', dict.looked, ' at ', pronouns.their(names.jerry0), ' friend, ', names.reed, ', for reassurance. '),
+p1as3b: pep.seq(names.jerry, ' glanced at ',names.reed, ', weighing ', pronouns.their(names.reed0), ' expression. '),
+p1as3c: pep.seq(names.reed, ' ', myPep.edIng(dict.cackling), '. '),
 
 //p2
  
 p2as1a: pep.seq('"', pep.capitalize(dict.perhaps), '." '),
 p2as1b: pep.seq('"Does it matter?" '),
-p2as1c: pep.seq('"You ', dict.always, ' ask the ', dict.tough, ' questions, ', names.c0, '." '),
+p2as1c: pep.seq('"You ', dict.always, ' ask the ', dict.tough, ' questions, ', names.jerry, '." '),
 
-p2as2a: pep.seq(names.c4, ' ', dict.wondered, ', ', dict.pushing, ' the tray away. '),
-p2as2b: pep.seq(names.c4, ' pushed ', myPep.pronouns.their(names.c4g), ' ', dict.tray, ' away and ', dict.crossed, ' ', myPep.pronouns.their(names.c4g), ' arms. '),
-p2as2c: pep.seq(names.c4, ' ',dict.grinned, ' a ', dict.toothy, ' ', dict.grin, ' at ', names.c0, '. '),
+p2as2a: pep.seq(names.reed, ' ', dict.wondered, ', ', dict.pushing, ' the tray away. '),
+p2as2b: pep.seq(names.reed, ' pushed ', pronouns.their(names.reed0), ' ', dict.tray, ' away and ', dict.crossed, ' ', pronouns.their(names.reed0), ' arms. '),
+p2as2c: pep.seq(names.reed, ' ',dict.grinned, ' a ', dict.toothy, ' ', dict.grin, ' at ', names.jerry, '. '),
 
-p2as3a: pep.seq('"But is anyone going to stop ',myPep.pronouns.them(names.c1g),'?" '),
-p2as3b: pep.seq(names.c4, ' was ', myPep.aAn(dict.intimidating), ' ', dict.sight, ', even with ', dict.grape, ' ', dict.jelly, ' ', dict.drippingFrom, ' ', myPep.pronouns.their(names.c4g), ' ', dict.chin, '. '),
+p2as3a: pep.seq('"But is anyone going to stop ',pronouns.them(names.eddie0),'?" '),
+p2as3b: pep.seq(names.reed, ' was ', myPep.aAn(dict.intimidating), ' ', dict.sight, ', even with ', dict.grape, ' ', dict.jelly, ' ', dict.drippingFrom, ' ', pronouns.their(names.reed0), ' ', dict.chin, '. '),
 p2as3c: pep.seq('"There’s ', dict.nothing, ' we can do about it." '),
 
   //p3
 
 p3as1a: pep.seq('That was the ', dict.issue, ', after all. '),
-p3as1b: pep.seq('It was the ', dict.issue, ' on every ', myPep.setting.brethren(names.setVar), '\'s mind. '),
-p3as1c: pep.seq('It was what kept ', myPep.setting.brethrens(names.setVar), ' up at night. '),
+p3as1b: pep.seq('It was the ', dict.issue, ' on every ', world.brethren(names.realm), '\'s mind. '),
+p3as1c: pep.seq('It was what kept ', world.brethrens(names.realm), ' up at night. '),
 
-p3as2a: pep.seq('Would anyone ', dict.stop, ' ', names.c1, '’s ', dict.planned, ' ', dict.rebellion, ' against the ', myPep.setting.boss(names.setVar), '? '),
-p3as2b: pep.seq('Would ', names.c1, ' ', dict.retreat, ' before it was too late? '),
-p3as2c: pep.seq('Would anyone put ', names.c1, ' in ',myPep.pronouns.their(names.c1g), ' place? '),
+p3as2a: pep.seq('Would anyone ', dict.stop, ' ', names.eddie, '’s ', dict.planned, ' ', dict.rebellion, ' against the ', world.boss(names.realm), '? '),
+p3as2b: pep.seq('Would ', names.eddie, ' ', dict.retreat, ' before it was too late? '),
+p3as2c: pep.seq('Would anyone put ', names.eddie, ' in ',pronouns.their(names.eddie0), ' place? '),
 
-p3as3a: pep.seq('Or were ', myPep.setting.brethrens(names.setVar), ' really that ', dict.frustrated, ' with the current ', myPep.setting.boss(names.setVar), '\'s style of rule? '),
-p3as3b: pep.seq('Or were ', myPep.setting.brethrens(names.setVar), ' really that ', dict.apathetic, ' to ', dict.impending, ' ', dict.war, '?'),
+p3as3a: pep.seq('Or were ', world.brethrens(names.realm), ' really that ', dict.frustrated, ' with the current ', world.boss(names.realm), '\'s style of rule? '),
+p3as3b: pep.seq('Or were ', world.brethrens(names.realm), ' really that ', dict.apathetic, ' to ', dict.impending, ' ', dict.war, '?'),
 p3as3c: pep.seq('Was it even possible? '),
 
-p3as4a: pep.seq('It was ', dict.tough, ' to ', dict.ascertain, ', because there was ', dict.always, ' a level of ', dict.trouble, ' in ', myPep.setting.realm(names.setVar), ' -- but ', dict.somehow, ', it ', dict.seemed, ' like this time was ', dict.serious, '. '),
-p3as4b: pep.seq('There had ', dict.always, ' been a level of ', dict.trouble, ' in ', myPep.setting.realm(names.setVar), ', but this time seemed more ', dict.serious, '. '),
-p3as4c: pep.seq('The entire ', dict.realm, ' of ', myPep.setting.realm(names.setVar), ' ', dict.teetered, ' on ', dict.uncertainty, ' and ', dict.impending, ' ', dict.war, '. '),
+p3as4a: pep.seq('It was ', dict.tough, ' to ', dict.ascertain, ', because there was ', dict.always, ' a level of ', dict.trouble, ' in ', world.realm(names.realm), ' -- but ', dict.somehow, ', it ', dict.seemed, ' like this time was ', dict.serious, '. '),
+p3as4b: pep.seq('There had ', dict.always, ' been a level of ', dict.trouble, ' in ', world.realm(names.realm), ', but this time seemed more ', dict.serious, '. '),
+p3as4c: pep.seq('The entire ', dict.realm, ' of ', world.realm(names.realm), ' ', dict.teetered, ' on ', dict.uncertainty, ' and ', dict.impending, ' ', dict.war, '. '),
 
 p3as5a: pep.seq('Like they ', dict.could, ' ', dict.actually, ' mean it.'),
 p3as5b: pep.seq('Like it ', dict.could, ' ', dict.actually, ' ', dict.happen, '. '),
@@ -73,8 +74,8 @@ p3as5c: pep.seq('This ', dict.time, ' was ', dict.dangerously, ' ', dict.differe
 
 //p4 -- stopped here for words
 
-p4as1a: pep.seq(names.c0, ' ', dict.savored, ' ', myPep.pronouns.their(names.c0g), ' ', dict.last, ' ', dict.morsel, '. '),
-p4as1b: pep.seq(names.c0, ' was ', dict.suddenly, ' no longer ', dict.hungry, '. '),
+p4as1a: pep.seq(names.jerry, ' ', dict.savored, ' ', pronouns.their(names.jerry0), ' ', dict.last, ' ', dict.morsel, '. '),
+p4as1b: pep.seq(names.jerry, ' was ', dict.suddenly, ' no longer ', dict.hungry, '. '),
 p4as1c: pep.seq('The ', dict.food, ' had ', dict.lost, ' its ', dict.appeal, '. '),
 
 p4as2a: pep.seq('"I feel like this ', dict.impending, ' ', dict.war, ' spells trouble. '),
@@ -83,7 +84,7 @@ p4as2c: pep.seq('"I ', pep.choice("hope", "wish"), ' they would all ', dict.self
 
 p4as3a: pep.seq('We\'re all going to be ', dict.dragged, ' into this ', dict.steaming, ' ', dict.pile, ' of ', pep.choice(dict.dog, dict.animalList), '-', dict.shit, ' ', dict.war, '. '),
 p4as3b: pep.seq('You know who ', dict.dies, ' when ', dict.rulers, ' fight? It\'s us, ', dict.damnIt, '.'),
-p4as3c: pep.seq('Who cares who the ', myPep.setting.boss(names.setVar), ' is? '),
+p4as3c: pep.seq('Who cares who the ', world.boss(names.realm), ' is? '),
 
 p4as4a: pep.seq('I don\'t ',pep.opt('particularly '),'care who ', dict.wipes, ' their ', dict.ass, ' at the top of the food chain -- it doesn’t really ', dict.affect, ' me from day to day." '),
 p4as4b: pep.seq('The ', dict.rulers, ' don\'t ', dict.affect, ' our ', dict.shitty, ' lives one way or another." '),
@@ -91,9 +92,9 @@ p4as4c: pep.seq('I could go my ', dict.whole, ' ', dict.life, ' not ', dict.fret
 
   //p5
 
-p5as1a: pep.seq(names.c4, ' ', dict.barked, ' a ', dict.harsh, ' ', dict.laugh, pep.opt(' in response'), '. '),
-p5as1b: pep.seq(names.c4, ' ', myPep.edIng(dict.cackling), ' at ', names.c0, '\'s ', dict.bluntness, '. '),
-p5as1c: pep.seq(names.c4, ' nodded ', dict.heartily, ' in ', dict.agreement, '. '),
+p5as1a: pep.seq(names.reed, ' ', dict.barked, ' a ', dict.harsh, ' ', dict.laugh, pep.opt(' in response'), '. '),
+p5as1b: pep.seq(names.reed, ' ', myPep.edIng(dict.cackling), ' at ', names.jerry, '\'s ', dict.bluntness, '. '),
+p5as1c: pep.seq(names.reed, ' nodded ', dict.heartily, ' in ', dict.agreement, '. '),
 
 p5as2a: pep.seq('"The ', dict.truest, ' thing that has ever been ', dict.spoken, '. '),
 p5as2b: pep.seq('"How ', dict.correct, ' you are. '),
@@ -103,14 +104,14 @@ p5as3a: pep.seq('Break\'s ', dict.over, '. '),
 p5as3b: pep.seq('I think our time is about ', dict.over, '. '),
 p5as3c: pep.seq('Looks like it\'s about that time. '),
 
-p5as4a: pep.seq('Come on -- let\'s go before ', names.c5, ' gets ', dict.raging, ' ', dict.angry, '." '),
-p5as4b: pep.seq('Let\'s get back before ', names.c5,' notices." '),
+p5as4a: pep.seq('Come on -- let\'s go before ', names.kaden, ' gets ', dict.raging, ' ', dict.angry, '." '),
+p5as4b: pep.seq('Let\'s get back before ', names.kaden,' notices." '),
 p5as4c: pep.seq('At least it\'s only a ', dict.few, ' hours to midnight." '),
 
   //p6
   
-p6as1a: pep.seq(pep.choice(pep.seq(names.c4, ' and ', names.c0), 'They'), ' rose to place their trash in the bin and left the cafeteria to the dim skies outside. '),
-p6as1b: pep.seq('Leaving their trash behind for the staff to clean, ',names.c4, ' and ', names.c0, ' left the cafeteria for the barren outdoors. '),
+p6as1a: pep.seq(pep.choice(pep.seq(names.reed, ' and ', names.jerry), 'They'), ' rose to place their trash in the bin and left the cafeteria to the dim skies outside. '),
+p6as1b: pep.seq('Leaving their trash behind for the staff to clean, ',names.reed, ' and ', names.jerry, ' left the cafeteria for the barren outdoors. '),
 p6as1c: pep.seq('Lingering as long as they could, they finally left the cafeteria behind and went outside. '),
 
 p6as2a: pep.seq('It somehow seemed creepier than usual, glowing a putrid green in the dusk sky. '),
@@ -121,9 +122,9 @@ p6as3a: pep.seq('"Catch you later." '),
 p6as3b: pep.seq('"See you tomorrow." '),
 p6as3c: pep.seq('"Peace be with you." '),
 
-p6as4a: pep.seq(names.c4, ' said warmly to ', names.c0, ' as ', myPep.pronouns.they(names.c4g), ' strode off towards the west tower. '),
-p6as4b: pep.seq(names.c4, ' left ', names.c0, ', veering right towards the west tower. '),
-p6as4c: pep.seq(names.c4, ' put ', myPep.pronouns.they(names.c4g), ' cap on and strode off towards the west tower. '),
+p6as4a: pep.seq(names.reed, ' said warmly to ', names.jerry, ' as ', pronouns.they(names.reed0), ' strode off towards the west tower. '),
+p6as4b: pep.seq(names.reed, ' left ', names.jerry, ', veering right towards the west tower. '),
+p6as4c: pep.seq(names.reed, ' put ', pronouns.they(names.reed0), ' cap on and strode off towards the west tower. '),
 
   //p7
 
@@ -131,53 +132,53 @@ p7as1a: pep.seq('Guard duty for the compound was not particularly hard -- even w
 p7as1b: pep.seq('Guard duty was really at the bottom of the barrel for military jobs. '),
 p7as1c: pep.seq('Guard duty was a joke of a job. '),
 
-p7as2a: pep.seq('The military were the only ', myPep.setting.brethrens(names.setVar), ' allowed to carry weapons, so that meant that there was a pretty big barrier between insurgents, rabble-rousers, and troublemakers, and the military. '),
+p7as2a: pep.seq('The military were the only ', world.brethrens(names.realm), ' allowed to carry weapons, so that meant that there was a pretty big barrier between insurgents, rabble-rousers, and troublemakers, and the military. '),
 p7as2b: pep.seq('Only soldiers could carry weapons, so even the biggest revolts could be put down easily. '),
-p7as2c: pep.seq('But every member of the military received a weapon, and no one else had them -- which made ', names.c0, ' feel safe. '),
+p7as2c: pep.seq('But every member of the military received a weapon, and no one else had them -- which made ', names.jerry, ' feel safe. '),
 
   //p8
 
 p8as1a: pep.seq('But guard duty was worrying, given the potential for insurrection. '),
 p8as1b: pep.seq('Guard duty became a lot more important when rebellion was on the horizon. '),
-p8as1c: pep.seq('Guards were on the front lines of defense, and ', names.c0, ' knew it. '),
+p8as1c: pep.seq('Guards were on the front lines of defense, and ', names.jerry, ' knew it. '),
 
-p8as2a: pep.seq(names.c0, ' was worried that ', myPep.pronouns.they(names.c0g),' might actually have to use ', myPep.pronouns.their(names.c0g),' weapons. '),
-p8as2b: pep.seq(names.c0, ' worried about whether ', myPep.pronouns.they(names.c0g),' would actually be able to kill if needed. '),
-p8as2c: pep.seq(names.c0, ' didn\'t want to fight if worse came to worse. '),
+p8as2a: pep.seq(names.jerry, ' was worried that ', pronouns.they(names.jerry0),' might actually have to use ', pronouns.their(names.jerry0),' weapons. '),
+p8as2b: pep.seq(names.jerry, ' worried about whether ', pronouns.they(names.jerry0),' would actually be able to kill if needed. '),
+p8as2c: pep.seq(names.jerry, ' didn\'t want to fight if worse came to worse. '),
 
 p8as3a: pep.seq('As a pacifist, that was exceptionally unnerving. '),
-p8as3b: pep.seq(names.c0, 'didn\'t want to shed blood. '),
-p8as3c: pep.seq(names.c0, ' abhorred violence. '),
+p8as3b: pep.seq(names.jerry, 'didn\'t want to shed blood. '),
+p8as3c: pep.seq(names.jerry, ' abhorred violence. '),
  
-p8as4a: pep.seq(pep.capitalize(myPep.pronouns.they(names.c0g)), ' had only taken this job for the pay, and because ', myPep.pronouns.they(names.c0g), ' were pressured to do so by ', myPep.pronouns.their(names.c0g), ' parents. '),
-p8as4b: pep.seq('Without pressure from ', myPep.pronouns.their(names.c0g), ' parents, ', names.c0, ' never would have enlisted. '),
-p8as4c: pep.seq(names.c0, ' only enlisted because of the free housing. '),
+p8as4a: pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' had only taken this job for the pay, and because ', pronouns.they(names.jerry0), ' were pressured to do so by ', pronouns.their(names.jerry0), ' parents. '),
+p8as4b: pep.seq('Without pressure from ', pronouns.their(names.jerry0), ' parents, ', names.jerry, ' never would have enlisted. '),
+p8as4c: pep.seq(names.jerry, ' only enlisted because of the free housing. '),
   
-p8as5a: pep.seq('But there was no way in ', myPep.setting.realm(names.setVar), ', that ',names.c0, ' would willingly attack fellow ', myPep.setting.brethrens(names.setVar), '. '),
+p8as5a: pep.seq('But there was no way in ', world.realm(names.realm), ', that ',names.jerry, ' would willingly attack fellow ', world.brethrens(names.realm), '. '),
 p8as5b: pep.seq('A civil war was somehow far worse than fighting imagined invaders from other realms. '),
-p8as5c: pep.seq(names.c0, ' just couldn\'t kill their fellow ', myPep.setting.brethrens(names.setVar), '. '),
+p8as5c: pep.seq(names.jerry, ' just couldn\'t kill their fellow ', world.brethrens(names.realm), '. '),
 
-p8as6a: pep.seq(pep.capitalize(myPep.pronouns.they(names.c0g)), ' would rather die or be imprisoned for treason. '),
-p8as6b: pep.seq(names.c0, ' wished that ', myPep.pronouns.they(names.c0g), ' could quit, although it would mean death or imprisonment at the hand of the court. '),
-p8as6c: pep.seq(names.c0, ' thought death or imprisonment might be better than shedding ', myPep.setting.brethren(names.setVar), ' blood. '),
+p8as6a: pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' would rather die or be imprisoned for treason. '),
+p8as6b: pep.seq(names.jerry, ' wished that ', pronouns.they(names.jerry0), ' could quit, although it would mean death or imprisonment at the hand of the court. '),
+p8as6c: pep.seq(names.jerry, ' thought death or imprisonment might be better than shedding ', world.brethren(names.realm), ' blood. '),
 
 p8as7a: pep.seq('Given the pending war, it may be the former. '),
 p8as7b: pep.seq('Either would be better than this current unease. '),
-p8as7c: pep.seq('What would ', names.c0, '\'s parents think? '),
+p8as7c: pep.seq('What would ', names.jerry, '\'s parents think? '),
 
 //p9
 
-p9as1a: pep.seq('"', names.c0, '! I need to talk to you!" '),
+p9as1a: pep.seq('"', names.jerry, '! I need to talk to you!" '),
 p9as1b: pep.seq('"Oy! Get over here!" '),
 p9as1c: pep.seq('"Hey, shit head! Come here a second." '),
  
-p9as2a: pep.seq('The commander, ', names.c5, ', barked, as ', names.c0, ' ducked through the doorway to resume ', myPep.pronouns.their(names.c0g), ' post. '),
-p9as2b: pep.seq(names.c5, ' shouted at ', names.c0, '. '),
-p9as2c: pep.seq(names.c5, ' spotted ', names.c0, ' with a shout. '),
+p9as2a: pep.seq('The commander, ', names.kaden, ', barked, as ', names.jerry, ' ducked through the doorway to resume ', pronouns.their(names.jerry0), ' post. '),
+p9as2b: pep.seq(names.kaden, ' shouted at ', names.jerry, '. '),
+p9as2c: pep.seq(names.kaden, ' spotted ', names.jerry, ' with a shout. '),
 
-p9as3a: pep.seq(names.c0, ' looked up, surprised. '),
-p9as3b: pep.seq('The noise startled ', names.c0, '. '),
-p9as3c: pep.seq(names.c0, '\'s stomach churned with surprise and trepidation. '),
+p9as3a: pep.seq(names.jerry, ' looked up, surprised. '),
+p9as3b: pep.seq('The noise startled ', names.jerry, '. '),
+p9as3c: pep.seq(names.jerry, '\'s stomach churned with surprise and trepidation. '),
 
   //p10
 
@@ -185,23 +186,23 @@ p10as1a: pep.seq('"Sure, sarge, what\'s up?" '),
 p10as1b: pep.seq('"How\'s it going, sarge?" '),
 p10as1c: pep.seq('"How can I help you?" '),
 
-p10as2a: pep.seq(names.c0, ' asked. '),
-p10as2b: pep.seq(names.c0, ' looked genially at ', names.c5, '. '),
-p10as2c: pep.seq(names.c5, ' shot ', names.c0, ' a dirty look. '),
+p10as2a: pep.seq(names.jerry, ' asked. '),
+p10as2b: pep.seq(names.jerry, ' looked genially at ', names.kaden, '. '),
+p10as2c: pep.seq(names.kaden, ' shot ', names.jerry, ' a dirty look. '),
 
-p10as3a: pep.seq(pep.capitalize(myPep.pronouns.their(names.c0g)), ' stomach was letting ', myPep.pronouns.them(names.c0g), ' know that this may be ', myPep.pronouns.their(names.c0g), ' worst fear come to life. '),
-p10as3b: pep.seq(names.c0, ' felt ', myPep.pronouns.their(names.c0g), ' courage waver. '),
-p10as3c: pep.seq(names.c0, ' was suddenly hyper aware of ', myPep.pronouns.their(names.c0g), ' sweaty palms and inadequate stature. '),
+p10as3a: pep.seq(pep.capitalize(pronouns.their(names.jerry0)), ' stomach was letting ', pronouns.them(names.jerry0), ' know that this may be ', pronouns.their(names.jerry0), ' worst fear come to life. '),
+p10as3b: pep.seq(names.jerry, ' felt ', pronouns.their(names.jerry0), ' courage waver. '),
+p10as3c: pep.seq(names.jerry, ' was suddenly hyper aware of ', pronouns.their(names.jerry0), ' sweaty palms and inadequate stature. '),
 
   //p11
 
-p11as1a: pep.seq('"Have you heard all this nonsense about ',names.c1, ' recently?" '),
+p11as1a: pep.seq('"Have you heard all this nonsense about ',names.eddie, ' recently?" '),
 p11as1b: pep.seq('"Have you heard about this impending tomfoolery?" '),
-p11as1c: pep.seq('"Have you heard about ', names.c1, '?" '),
+p11as1c: pep.seq('"Have you heard about ', names.eddie, '?" '),
 
-p11as2a: pep.seq(names.c5, ' asked with a growl, and ', names.c0, ' shrugged noncommittally. '),
-p11as2b: pep.seq(names.c5, ' growled. '),
-p11as2c: pep.seq(names.c5, ' adjusted their glasses and names their stare on ', names.c0, '. '),
+p11as2a: pep.seq(names.kaden, ' asked with a growl, and ', names.jerry, ' shrugged noncommittally. '),
+p11as2b: pep.seq(names.kaden, ' growled. '),
+p11as2c: pep.seq(names.kaden, ' adjusted their glasses and names their stare on ', names.jerry, '. '),
 
   //p12
 p12as1a: pep.seq('"A bit, here and there. '),
@@ -219,24 +220,24 @@ p12as3c: pep.seq('Do you think we should worry?" '),
   //p13
 
 p13as1a: pep.seq('"Well, knowing your past..." '),
-p13as1b: pep.seq('"Listen, ',names.c0, '..." '),
+p13as1b: pep.seq('"Listen, ',names.jerry, '..." '),
 p13as1c: pep.seq('"So, look..." '),
 
-p13as2a: pep.seq(names.c5, ' trailed off as if trying to find a delicate way to state something offensive. '),
-p13as2b: pep.seq(names.c5, ' paused as if gathering courage to say something. '),
-p13as2c: pep.seq(names.c5, ' took a breath. '),
+p13as2a: pep.seq(names.kaden, ' trailed off as if trying to find a delicate way to state something offensive. '),
+p13as2b: pep.seq(names.kaden, ' paused as if gathering courage to say something. '),
+p13as2c: pep.seq(names.kaden, ' took a breath. '),
 
-p13as3a: pep.seq('Though ', names.c5, ' had never been the polite sort. '),
-p13as3b: pep.seq(names.c0, ' wondered what ', names.c5, ' was about to drop on ', myPep.pronouns.them(names.c0g), '. '),
+p13as3a: pep.seq('Though ', names.kaden, ' had never been the polite sort. '),
+p13as3b: pep.seq(names.jerry, ' wondered what ', names.kaden, ' was about to drop on ', pronouns.them(names.jerry0), '. '),
 p13as3c: pep.seq('The silence was awkward. '),
 
 p13as4a: pep.seq('"No bullshit alright?" '),
 p13as4b: pep.seq('"This is kinda hard to say, but..." '),
 p13as4c: pep.seq('"I don\'t want to be that commander, but..." '),
 
-p13as5a: pep.seq(pep.capitalize(myPep.pronouns.they(names.c5g)), ' settled on cutting to the chase. '),
-p13as5b: pep.seq(names.c5, ' continued. '),
-p13as5c: pep.seq(names.c5, ' grinned sheepishly. '),
+p13as5a: pep.seq(pep.capitalize(pronouns.they(names.kaden0)), ' settled on cutting to the chase. '),
+p13as5b: pep.seq(names.kaden, ' continued. '),
+p13as5c: pep.seq(names.kaden, ' grinned sheepishly. '),
 
 p13as6a: pep.seq('If this comes to blows, you know we’re on the front lines. '),
 p13as6b: pep.seq('"You know we\'re the first line of defense, right?  '),
@@ -260,13 +261,13 @@ p14as2a: pep.seq('Of course not." '),
 p14as2b: pep.seq('You can trust me." '), 
 p14as2c: pep.seq('That was one time." '),
  
-p14as3a: pep.seq(names.c0, ' cut ', names.c5, ' off before ', myPep.pronouns.they(names.c5g), ' could reiterate what ', names.c0, ' had failed to do. '),
-p14as3b: pep.seq(names.c0, ' reassured the commander. '),
-p14as3c: pep.seq(names.c0, ' blushed with embarrassment at being called out. '),
+p14as3a: pep.seq(names.jerry, ' cut ', names.kaden, ' off before ', pronouns.they(names.kaden0), ' could reiterate what ', names.jerry, ' had failed to do. '),
+p14as3b: pep.seq(names.jerry, ' reassured the commander. '),
+p14as3c: pep.seq(names.jerry, ' blushed with embarrassment at being called out. '),
 
-p14as4a: pep.seq(names.c0, ' felt the falseness of the words as they left ', myPep.pronouns.their(names.c0g), ' mouth. '),
-p14as4b: pep.seq(names.c0, ' knew as soon as the words came out, that they were a lie.'),
-p14as4c: pep.seq(names.c0, ' was lying, but it didn\'t matter.'),
+p14as4a: pep.seq(names.jerry, ' felt the falseness of the words as they left ', pronouns.their(names.jerry0), ' mouth. '),
+p14as4b: pep.seq(names.jerry, ' knew as soon as the words came out, that they were a lie.'),
+p14as4c: pep.seq(names.jerry, ' was lying, but it didn\'t matter.'),
   
   //p15
 
@@ -296,13 +297,13 @@ p16as1a: pep.seq('"Yes, commander." '),
 p16as1b: pep.seq('"Of course." '),
 p16as1c: pep.seq('"I won\'t let you down." '),
 
-p16as2a: pep.seq(names.c0, '\'s palms were itchy and a sheen of sweat was breaking out across ', myPep.pronouns.their(names.c0g), ' skin. '),
-p16as2b: pep.seq(names.c0, ' was more than ready to get out of this conversation. '),
-p16as2c: pep.seq(names.c0, '\'s mouth was full of ash. '),
+p16as2a: pep.seq(names.jerry, '\'s palms were itchy and a sheen of sweat was breaking out across ', pronouns.their(names.jerry0), ' skin. '),
+p16as2b: pep.seq(names.jerry, ' was more than ready to get out of this conversation. '),
+p16as2c: pep.seq(names.jerry, '\'s mouth was full of ash. '),
 
-p16as3a: pep.seq(pep.capitalize(myPep.pronouns.they(names.c0g)), ' wondered if ', names.c5, ' noticed. '),
+p16as3a: pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' wondered if ', names.kaden, ' noticed. '),
 p16as3b: pep.seq('"Thank you for bringing this to my attention." '),
-p16as3c: pep.seq(names.c0, ' felt their knees shaking just a little bit. '),
+p16as3c: pep.seq(names.jerry, ' felt their knees shaking just a little bit. '),
   
   //p17
 
@@ -310,9 +311,9 @@ p17as1a: pep.seq('"You have duties." '),
 p17as1b: pep.seq('"Your duties are the most important." '),
 p17as1c: pep.seq('"Our duties are above all else." '),
 
-p17as2a: pep.seq(names.c5, ' finished. '),
-p17as2b: pep.seq(names.c5, ' grunted at ', names.c0, '. '),
-p17as2c: pep.seq(names.c0, ' nodded in agreement. '),
+p17as2a: pep.seq(names.kaden, ' finished. '),
+p17as2b: pep.seq(names.kaden, ' grunted at ', names.jerry, '. '),
+p17as2c: pep.seq(names.jerry, ' nodded in agreement. '),
 
 p17as3a: pep.seq('"And you will die either doing them or refusing them. '),
 p17as3b: pep.seq('"If you shirk them, you will die. '),
@@ -328,12 +329,12 @@ p18as1a: pep.seq('"I\'m sorry?" '),
 p18as1b: pep.seq('"Excuse me?" '),
 p18as1c: pep.seq('"Pardon?" '),
 
-p18as2a: pep.seq(names.c0, ' asked. '),
-p18as2b: pep.seq(names.c0, ' was confused. '),
-p18as2c: pep.seq(names.c0, ' was unsure what ', names.c5, ' had just uttered. '),
+p18as2a: pep.seq(names.jerry, ' asked. '),
+p18as2b: pep.seq(names.jerry, ' was confused. '),
+p18as2c: pep.seq(names.jerry, ' was unsure what ', names.kaden, ' had just uttered. '),
 
-p18as3a: pep.seq('Did the commander just say that ', myPep.pronouns.they(names.c0g), ' would die in battle? '),
-p18as3b: pep.seq('Did the commander just threaten ', myPep.pronouns.them(names.c0), '? '),
+p18as3a: pep.seq('Did the commander just say that ', pronouns.they(names.jerry0), ' would die in battle? '),
+p18as3b: pep.seq('Did the commander just threaten ', pronouns.them(names.jerry), '? '),
 p18as3c: pep.seq('Did the commander really just say that? '),
 
   //p19
@@ -357,27 +358,27 @@ p20as1a: pep.seq('"We\'re a team, commander." '),
 p20as1b: pep.seq('"We\'re all in this together." '),
 p20as1c: pep.seq('"Understood." '),
 
-p20as2a: pep.seq(names.c0, ' mustered all of the courage ', myPep.pronouns.they(names.c0g), ' could to make it sound convincing. '),
-p20as2b: pep.seq(names.c0, ' knew that names.c5 was dead serious. '),
-p20as2c: pep.seq(names.c0, ' felt the sweats come in ', myPep.pronouns.their(names.c0), ' fear. '),
+p20as2a: pep.seq(names.jerry, ' mustered all of the courage ', pronouns.they(names.jerry0), ' could to make it sound convincing. '),
+p20as2b: pep.seq(names.jerry, ' knew that names.kaden was dead serious. '),
+p20as2c: pep.seq(names.jerry, ' felt the sweats come in ', pronouns.their(names.jerry), ' fear. '),
 
 p20as3a: pep.seq('"I wouldn\'t abandon my fellow soldiers in the field of war." '),
 p20as3b: pep.seq('"I would never do anything to endanger my squad." '),
-p20as3c: pep.seq('"I would give my life for our ', myPep.setting.boss(names.setVar), '." '),
+p20as3c: pep.seq('"I would give my life for our ', world.boss(names.realm), '." '),
 
   //p21
 
-p21as1a: pep.seq(names.c5,'’s searching gaze seemed to invade ',names.c0, '’s soul. '),
-p21as1b: pep.seq(names.c5, ' stared menacingly at ', names.c0, '. '),
-p21as1c: pep.seq('There was a moment of silence as ', names.c5, ' evaluated the truth of ', names.c0, '\'s statement. '),
+p21as1a: pep.seq(names.kaden,'’s searching gaze seemed to invade ',names.jerry, '’s soul. '),
+p21as1b: pep.seq(names.kaden, ' stared menacingly at ', names.jerry, '. '),
+p21as1c: pep.seq('There was a moment of silence as ', names.kaden, ' evaluated the truth of ', names.jerry, '\'s statement. '),
 
 p21as2a: pep.seq('But they could not -- thank the dogs -- detect the lie in it. '),
-p21as2b: pep.seq('Thankfully, ', names.c5, ' seemed blissfully unaware of ', names.c0, '\'s nervousness. '),
-p21as2c: pep.seq(names.c5, ' seemed ready to kill ', names.c0, ' at the slightest hint of doubt. '),
+p21as2b: pep.seq('Thankfully, ', names.kaden, ' seemed blissfully unaware of ', names.jerry, '\'s nervousness. '),
+p21as2c: pep.seq(names.kaden, ' seemed ready to kill ', names.jerry, ' at the slightest hint of doubt. '),
 
-p21as3a: pep.seq(names.c5, ' nodded approvingly. '),
-p21as3b: pep.seq(names.c5, ' smiled warmly at ', names.c0, '. '),
-p21as3c: pep.seq(names.c5, ' seemed satisfied, though, and smiled. '),
+p21as3a: pep.seq(names.kaden, ' nodded approvingly. '),
+p21as3b: pep.seq(names.kaden, ' smiled warmly at ', names.jerry, '. '),
+p21as3c: pep.seq(names.kaden, ' seemed satisfied, though, and smiled. '),
 
   //p22
 
@@ -395,46 +396,46 @@ p22as3c: pep.seq('I\'ll be up in a while." ' ),
 
   //p23
 
-p23as1a: pep.seq(names.c0, ' walked past the command desk and up the curling stairs to ', myPep.pronouns.their(names.c0g), ' post. '),
-p23as1b: pep.seq(names.c0, ' carried onwards up the stairs. '),
-p23as1c: pep.seq(names.c0, ' left the command post and headed upstairs to ', myPep.pronouns.their(names.c0), ' guard station. '),
+p23as1a: pep.seq(names.jerry, ' walked past the command desk and up the curling stairs to ', pronouns.their(names.jerry0), ' post. '),
+p23as1b: pep.seq(names.jerry, ' carried onwards up the stairs. '),
+p23as1c: pep.seq(names.jerry, ' left the command post and headed upstairs to ', pronouns.their(names.jerry), ' guard station. '),
  
 p23as2a: pep.seq('The sweat was real. '),
-p23as2b: pep.seq(pep.capitalize(myPep.pronouns.they(names.c0)), ' felt hot and cold at the same time. '),
-p23as2c: pep.seq('Sweat poured off of ', names.c0, '. ' ),
+p23as2b: pep.seq(pep.capitalize(pronouns.they(names.jerry)), ' felt hot and cold at the same time. '),
+p23as2c: pep.seq('Sweat poured off of ', names.jerry, '. ' ),
 
-p23as3a: pep.seq(names.c0, ' was trembling. '),
-p23as3b: pep.seq('Shaking with fear, ', myPep.pronouns.they(names.c0), ' finished the climb upwards. '),
-p23as3c: pep.seq('Shaking like a leaf, ', names.c0, ' wondered if anything would come of the pending conflict. '),
+p23as3a: pep.seq(names.jerry, ' was trembling. '),
+p23as3b: pep.seq('Shaking with fear, ', pronouns.they(names.jerry), ' finished the climb upwards. '),
+p23as3c: pep.seq('Shaking like a leaf, ', names.jerry, ' wondered if anything would come of the pending conflict. '),
 
 p23as4a: pep.seq('Was war really that imminent? '),
-p23as4b: pep.seq('Was ', names.c1, ' really about to take down the ', myPep.setting.boss(names.setVar), '? '),
+p23as4b: pep.seq('Was ', names.eddie, ' really about to take down the ', world.boss(names.realm), '? '),
 p23as4c: pep.seq('Could war be on the horizon? '),
  
 p23as5a: pep.seq('How could they get out of it? '),
-p23as5b: pep.seq('How would ', names.c0, ' find a way to avoid fighting? '),
+p23as5b: pep.seq('How would ', names.jerry, ' find a way to avoid fighting? '),
 p23as5c: pep.seq('Would this particular town be safe from the horrors of war? '),
 
   //p24
 
-p24as1a: pep.seq('Peering across the dusty landscape surrounding the compound, ', names.c0, ' idly wondered if ', myPep.pronouns.they(names.c0g), ' could fling ', myPep.pronouns.themself(names.c0g), ' from the ramparts. '),
-p24as1b: pep.seq(names.c0, ' contemplated suicide by rampart as ', myPep.pronouns.they(names.c0), ' scanned the dusty landscape. '),
-p24as1c: pep.seq(names.c0, ' briefly wondered if death was better than war. '),
+p24as1a: pep.seq('Peering across the dusty landscape surrounding the compound, ', names.jerry, ' idly wondered if ', pronouns.they(names.jerry0), ' could fling ', pronouns.themself(names.jerry0), ' from the ramparts. '),
+p24as1b: pep.seq(names.jerry, ' contemplated suicide by rampart as ', pronouns.they(names.jerry), ' scanned the dusty landscape. '),
+p24as1c: pep.seq(names.jerry, ' briefly wondered if death was better than war. '),
   
 p24as2a: pep.seq('After all, the hospitalized could not fight. '),
-p24as2b: pep.seq('Even if ', myPep.pronouns.they(names.c0), ' didn\'t die, ', names.c0, ' could at least avoid the fighting. '),
-p24as2c: pep.seq('But what if ', myPep.pronouns.they(names.c0), ' failed even at suicide? '),
+p24as2b: pep.seq('Even if ', pronouns.they(names.jerry), ' didn\'t die, ', names.jerry, ' could at least avoid the fighting. '),
+p24as2c: pep.seq('But what if ', pronouns.they(names.jerry), ' failed even at suicide? '),
 
-p24as3a: pep.seq('Then again, ', myPep.pronouns.they(names.c0g), ' could end up dead, or worse, especially if the invading forces took control of the hospital. '),
+p24as3a: pep.seq('Then again, ', pronouns.they(names.jerry0), ' could end up dead, or worse, especially if the invading forces took control of the hospital. '),
 p24as3b: pep.seq('Or maybe invading forces would not look kindly at prisoners of war. '),
-p24as3c: pep.seq('Likely, ', myPep.pronouns.they(names.c0), ' would be killed anyway by invading forces. '),
+p24as3c: pep.seq('Likely, ', pronouns.they(names.jerry), ' would be killed anyway by invading forces. '),
  
-p24as4a: pep.seq(myPep.setting.brethrens(names.setVar), ' were not kind in civil war. '),
-p24as4b: pep.seq(myPep.setting.brethrens(names.setVar), ' did not fuck around in times of war. '),
-p24as4c: pep.seq(names.c0, ' would not last long in the hands of ', myPep.pronouns.their(names.c0), ' enemies. '),
+p24as4a: pep.seq(world.brethrens(names.realm), ' were not kind in civil war. '),
+p24as4b: pep.seq(world.brethrens(names.realm), ' did not fuck around in times of war. '),
+p24as4c: pep.seq(names.jerry, ' would not last long in the hands of ', pronouns.their(names.jerry), ' enemies. '),
 
 p24as5a: pep.seq('There were no rules to follow. '),
-p24as5b: pep.seq('There was no Geneva Convention in ', myPep.setting.realm(names.setVar), '. '),
+p24as5b: pep.seq('There was no Geneva Convention in ', world.realm(names.realm), '. '),
 p24as5c: pep.seq('There were no rules in civil war. '),
 
 p24as6a: pep.seq('Dead could be buried -- wounded needed care. '),
@@ -443,27 +444,27 @@ p24as6c: pep.seq('Prisoners were more expensive than mass graves. '),
   
   //p25
 
-p25as1a: pep.seq('Looking down the thirty foot drop though, ', names.c0, ' decided that perhaps suicide was not the best way. '),
-p25as1b: pep.seq('Looking down into the chasm, ', names.c0, ' decided that suicide was not for ', myPep.pronouns.them(names.c0), '. '),
-p25as1c: pep.seq(names.c0, ' shied away from thoughts of suicide. '),
+p25as1a: pep.seq('Looking down the thirty foot drop though, ', names.jerry, ' decided that perhaps suicide was not the best way. '),
+p25as1b: pep.seq('Looking down into the chasm, ', names.jerry, ' decided that suicide was not for ', pronouns.them(names.jerry), '. '),
+p25as1c: pep.seq(names.jerry, ' shied away from thoughts of suicide. '),
 
 p25as2a: pep.seq('There had to be another. '),
 p25as2b: pep.seq('There had to be a way to stay out of war that didn\'t result in pain or death. '),
 p25as2c: pep.seq('Like momma always said, there\'s a better way to do things. '),
 
-p25as3a: pep.seq('Could ', myPep.pronouns.they(names.c0g), ' request a transfer to the medical or other nonviolent units? '),
-p25as3b: pep.seq('Maybe ', myPep.pronouns.they(names.c0), ' could request a transfer. '),
-p25as3c: pep.seq('Maybe ', myPep.pronouns.they(names.c0), ' could request a promotion. '),
+p25as3a: pep.seq('Could ', pronouns.they(names.jerry0), ' request a transfer to the medical or other nonviolent units? '),
+p25as3b: pep.seq('Maybe ', pronouns.they(names.jerry), ' could request a transfer. '),
+p25as3c: pep.seq('Maybe ', pronouns.they(names.jerry), ' could request a promotion. '),
   
-p25as4a: pep.seq(pep.capitalize(myPep.pronouns.they(names.c0g)), ' could -- but ', myPep.pronouns.they(names.c0g), ' would be laughed at, for ', myPep.pronouns.they(names.c0g), ' had no marketable skills. '),
+p25as4a: pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' could -- but ', pronouns.they(names.jerry0), ' would be laughed at, for ', pronouns.they(names.jerry0), ' had no marketable skills. '),
 p25as4b: pep.seq('The commander wouldn\'t go for it. ' ),
 p25as4c: pep.seq('That plan was doomed to fail. '),
 
   //p26
 
-p26as1a: pep.seq(pep.capitalize(myPep.pronouns.they(names.c0g)), ' could join the revolution, although then ', myPep.pronouns.they(names.c0g), '’d just be fighting for the otherside, and ', names.c0, ' doubted that they were kinder. '),
-p26as1b: pep.seq(names.c0, ' contemplated joining the rebellion. '),
-p26as1c: pep.seq(names.c0, ' wondered if joining the rebellion would somehow be safer. '),
+p26as1a: pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' could join the revolution, although then ', pronouns.they(names.jerry0), '’d just be fighting for the otherside, and ', names.jerry, ' doubted that they were kinder. '),
+p26as1b: pep.seq(names.jerry, ' contemplated joining the rebellion. '),
+p26as1c: pep.seq(names.jerry, ' wondered if joining the rebellion would somehow be safer. '),
 
 p26as2a: pep.seq('What about an extended vacation, perhaps to the mortal realm? '),
 p26as2b: pep.seq('What about vacationing to the mortal realm? '),
@@ -473,9 +474,9 @@ p26as3a: pep.seq('Or joining a scouting mission to the other side? '),
 p26as3b: pep.seq('Or joining an expedition to somewhere remote? '),
 p26as3c: pep.seq('Or joining the fire crews instead? '),
 
-p26as4a: pep.seq('Either could help ', names.c0, ' forego battle, although ', names.c0, ' had a feeling that no vacations were being approved in this particular moment in time. '),
-p26as4b: pep.seq('Either would help ', names.c0, ' avoid battle, but they weren\'t exactly easy solutions. '),
-p26as4c: pep.seq(names.c0, ' knew that these were just fantasies. '),
+p26as4a: pep.seq('Either could help ', names.jerry, ' forego battle, although ', names.jerry, ' had a feeling that no vacations were being approved in this particular moment in time. '),
+p26as4b: pep.seq('Either would help ', names.jerry, ' avoid battle, but they weren\'t exactly easy solutions. '),
+p26as4c: pep.seq(names.jerry, ' knew that these were just fantasies. '),
 
 p26as5a: pep.seq('You know, pending civil war and all. '),
 p26as5b: pep.seq('Pending civil war really narrowed the options for escape. '),
@@ -487,9 +488,9 @@ p27as1a: pep.seq('"Did you hear they closed the portals down?" '),
 p27as1b: pep.seq('"Did you hear about the portals?" '),
 p27as1c: pep.seq('"Did you hear the mortal world\'s been cut off from us?" '),
 
-p27as2a: pep.seq(names.c6, '\'s voice came from behind ', names.c0, ', startling them.'),
-p27as2b: pep.seq(names.c6, ' spoke behind ', names.c0, '. '),
-p27as2c: pep.seq(names.c6, ' blew cigar smoke in ', names.c0, '\'s face as ', myPep.pronouns.they(names.c6), ' approached. '),
+p27as2a: pep.seq(names.dorian, '\'s voice came from behind ', names.jerry, ', startling them.'),
+p27as2b: pep.seq(names.dorian, ' spoke behind ', names.jerry, '. '),
+p27as2c: pep.seq(names.dorian, ' blew cigar smoke in ', names.jerry, '\'s face as ', pronouns.they(names.dorian), ' approached. '),
 
   //p28
 
@@ -497,19 +498,19 @@ p28as1a: pep.seq('"What?" '),
 p28as1b: pep.seq('"You\'re kidding." '),
 p28as1c: pep.seq('"No way." '),
 
-p28as2a: pep.seq(names.c0, ' said incredulously. '),
-p28as2b: pep.seq(names.c0, ' was surprised. '),
-p28as2c: pep.seq(names.c0, ' couldn\'t tell if ', names.c6, ' was kidding. '), 
+p28as2a: pep.seq(names.jerry, ' said incredulously. '),
+p28as2b: pep.seq(names.jerry, ' was surprised. '),
+p28as2c: pep.seq(names.jerry, ' couldn\'t tell if ', names.dorian, ' was kidding. '), 
   
 //p29
 
-p29as1a: pep.seq('"Yeah, no one is supposed to leave or enter until this whole mess with ', names.c1, ' is done." '),
-p29as1b: pep.seq('"They\'ve got the portals under lock and key until ', names.c1, ' is dealt with." '),
-p29as1c: pep.seq('"Yeah, portals are closed and there\'s a bounty on ', names.c1, ', too." '),
+p29as1a: pep.seq('"Yeah, no one is supposed to leave or enter until this whole mess with ', names.eddie, ' is done." '),
+p29as1b: pep.seq('"They\'ve got the portals under lock and key until ', names.eddie, ' is dealt with." '),
+p29as1c: pep.seq('"Yeah, portals are closed and there\'s a bounty on ', names.eddie, ', too." '),
 
-p29as2a: pep.seq(names.c6, ' huffed on a cigarette, releasing a long trail of white smoke. '),
-p29as2b: pep.seq(names.c6, ' took another drag of ', myPep.pronouns.their(names.c6), ' cigar. '),
-p29as2c: pep.seq(names.c6, ' nodded sagely. '),
+p29as2a: pep.seq(names.dorian, ' huffed on a cigarette, releasing a long trail of white smoke. '),
+p29as2b: pep.seq(names.dorian, ' took another drag of ', pronouns.their(names.dorian), ' cigar. '),
+p29as2c: pep.seq(names.dorian, ' nodded sagely. '),
 
   //p30
 
@@ -517,9 +518,9 @@ p30as1a: pep.seq('"Well, fuck me." '),
 p30as1b: pep.seq('"Damn, that\'s crazy." '),
 p30as1c: pep.seq('"Who would\'ve thought." ' ),
 
-p30as2a: pep.seq(names.c0, ' said. '),
-p30as2b: pep.seq(names.c0, ' chewed on the words for a moment. '),
-p30as2c: pep.seq(names.c0, ' felt the unease grow inside ', myPep.pronouns.them(names.c0), '. ' ),
+p30as2a: pep.seq(names.jerry, ' said. '),
+p30as2b: pep.seq(names.jerry, ' chewed on the words for a moment. '),
+p30as2c: pep.seq(names.jerry, ' felt the unease grow inside ', pronouns.them(names.jerry), '. ' ),
 
 p30as3a: pep.seq('"This is serious then." '),
 p30as3b: pep.seq('"That\'s unreal." '),
@@ -533,15 +534,15 @@ p31as1c: pep.seq('"Can\'t make this shit up. '),
  
 p31as2a: pep.seq('It\'s a fucking shame, too. '),
 p31as2b: pep.seq('It\'s so hard to imagine us at war. '),
-p31as2c: pep.seq('I can\'t believe the ', myPep.setting.boss(names.setVar), ' let it get this far. '),
+p31as2c: pep.seq('I can\'t believe the ', world.boss(names.realm), ' let it get this far. '),
 
 p31as3a: pep.seq('I\'d hate to get blood on my brand new dagger." '),
-p31as3b: pep.seq('I didn\'t want to blood my new dagger on ', myPep.setting.brethrens(names.setVar), '." '),
+p31as3b: pep.seq('I didn\'t want to blood my new dagger on ', world.brethrens(names.realm), '." '),
 p31as3c: pep.seq('I didn\'t actually want to use this dagger." '),
 
-p31as4a: pep.seq(names.c6, ' hefted a shiny blade from ', myPep.pronouns.their(names.c6g), ' waist belt. '),
-p31as4b: pep.seq(names.c6, ' displayed a bright new blade from ', myPep.pronouns.their(names.c6), ' belt. '),
-p31as4c: pep.seq(names.c6, ' fingered a blade on ', myPep.pronouns.their(names.c6), ' belt. '),
+p31as4a: pep.seq(names.dorian, ' hefted a shiny blade from ', pronouns.their(names.dorian0), ' waist belt. '),
+p31as4b: pep.seq(names.dorian, ' displayed a bright new blade from ', pronouns.their(names.dorian), ' belt. '),
+p31as4c: pep.seq(names.dorian, ' fingered a blade on ', pronouns.their(names.dorian), ' belt. '),
 
 p31as5a: pep.seq('"But I guess if traitor blood is the only way to whet it, count me in." '),
 p31as5b: pep.seq('"I hope it does me good though, when the time comes." '),
@@ -549,13 +550,13 @@ p31as5c: pep.seq('"But that\'s what daggers are for, I guess." '),
 
   //p32
 
-p32as1a: pep.seq(names.c0, ' paused a moment, weighing what to say to that ridiculously, flat toned desire to murder. '),
-p32as1b: pep.seq(names.c0, ' gathered thoughts before speaking. '),
-p32as1c: pep.seq(names.c0, ' wasn\'t sure how to respond. '),
+p32as1a: pep.seq(names.jerry, ' paused a moment, weighing what to say to that ridiculously, flat toned desire to murder. '),
+p32as1b: pep.seq(names.jerry, ' gathered thoughts before speaking. '),
+p32as1c: pep.seq(names.jerry, ' wasn\'t sure how to respond. '),
 
-p32as2a: pep.seq(pep.capitalize(myPep.pronouns.they(names.c0g)), ' settled on an ambivalent nod and grunt. '),
-p32as2b: pep.seq(pep.capitalize(myPep.pronouns.they(names.c0)), ' decided on a smile. '),
-p32as2c: pep.seq('Smiling, ', names.c0, ' nodded at ', names.c6, '. ' ),
+p32as2a: pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' settled on an ambivalent nod and grunt. '),
+p32as2b: pep.seq(pep.capitalize(pronouns.they(names.jerry)), ' decided on a smile. '),
+p32as2c: pep.seq('Smiling, ', names.jerry, ' nodded at ', names.dorian, '. ' ),
 
   //p33
 
@@ -563,15 +564,15 @@ p33as1a: pep.seq('"I\'m going to walk the ledge." '),
 p33as1b: pep.seq('"I\'m off for a round." '),
 p33as1c: pep.seq('"I will be back shortly." '),
 
-p33as2a: pep.seq(names.c6, ' said, pocketing the blade. '),
-p33as2b: pep.seq(names.c6, ' sheathed the blade. '),
-p33as2c: pep.seq(names.c6, ' grinned at names.c0. '),
+p33as2a: pep.seq(names.dorian, ' said, pocketing the blade. '),
+p33as2b: pep.seq(names.dorian, ' sheathed the blade. '),
+p33as2c: pep.seq(names.dorian, ' grinned at names.jerry. '),
 
 p33as3a: pep.seq('"Commander thinks you’re going to break first. '),
-p33as3b: pep.seq('"', names.c6, ' says you\'re our first and biggest coward." '),
-p33as3c: pep.seq('"', names.c6, ' is saying you\'ll break rank and run when the time comes." '),
+p33as3b: pep.seq('"', names.dorian, ' says you\'re our first and biggest coward." '),
+p33as3c: pep.seq('"', names.dorian, ' is saying you\'ll break rank and run when the time comes." '),
 
-p33as4a: pep.seq('You aren’t, are you, ', names.c0, '? '),
+p33as4a: pep.seq('You aren’t, are you, ', names.jerry, '? '),
 p33as4b: pep.seq('You won\'t, will you? '),
 p33as4c: pep.seq('You wouldn\'t do that to me, though. '),
 
@@ -581,16 +582,16 @@ p33as5c: pep.seq('I believe in you." '),
 
   //p34
 
-p34as1a: pep.seq('"Fuck ', names.c5, '." '),
+p34as1a: pep.seq('"Fuck ', names.kaden, '." '),
 p34as1b: pep.seq('"Fuck this place." '),
 p34as1c: pep.seq('"This place could burn up for all I care." '),
 
-p34as2a: pep.seq(names.c0, ' said rashly. '),
-p34as2b: pep.seq(names.c0, ' spoke without a waver in ', myPep.pronouns.their(names.c0), ' voice. '),
-p34as2c: pep.seq(names.c0, ' did not hesitate to speak rashly. '),
+p34as2a: pep.seq(names.jerry, ' said rashly. '),
+p34as2b: pep.seq(names.jerry, ' spoke without a waver in ', pronouns.their(names.jerry), ' voice. '),
+p34as2c: pep.seq(names.jerry, ' did not hesitate to speak rashly. '),
 
 p34as3a: pep.seq('Boldly. '),
-p34as3b: pep.seq(names.c0, ' felt reckless. '),
+p34as3b: pep.seq(names.jerry, ' felt reckless. '),
 p34as3c: pep.seq('With fervor. '),
 
 p34as4a: pep.seq('"They don\'t know shit about me. '),
@@ -601,27 +602,27 @@ p34as5a: pep.seq('I got your back." '),
 p34as5b: pep.seq('I would never leave you." ' ),
 p34as5c: pep.seq('I would never fuck you over." ' ),
 
-p34as6a: pep.seq(names.c0, ' felt the lie like a wet blanket. '),
-p34as6b: pep.seq(names.c0, ' knew ', myPep.pronouns.they(names.c0), ' were veering into dangerous territory. '),
-p34as6c: pep.seq(names.c0, ' was straight up lying. '),
+p34as6a: pep.seq(names.jerry, ' felt the lie like a wet blanket. '),
+p34as6b: pep.seq(names.jerry, ' knew ', pronouns.they(names.jerry), ' were veering into dangerous territory. '),
+p34as6c: pep.seq(names.jerry, ' was straight up lying. '),
 
-p34as7a: pep.seq('But ', names.c6, ' had an unblooded knife, and ', names.c0, ' wasn\'t about to be its maiden voyage. '),
-p34as7b: pep.seq('But ', names.c6, ' had a knife, so honesty wasn\'t an option. '),
-p34as7c: pep.seq('Anything to keep ', myPep.pronouns.them(names.c0), ' alive another day. '),
+p34as7a: pep.seq('But ', names.dorian, ' had an unblooded knife, and ', names.jerry, ' wasn\'t about to be its maiden voyage. '),
+p34as7b: pep.seq('But ', names.dorian, ' had a knife, so honesty wasn\'t an option. '),
+p34as7c: pep.seq('Anything to keep ', pronouns.them(names.jerry), ' alive another day. '),
 
   //p35
 
-p35as1a: pep.seq(names.c6, '\'s eyes widened at the outright insult to the commander. '),
-p35as1b: pep.seq(names.c6, ' flinched when ', names.c0, ' insulted the commander. '),
-p35as1c: pep.seq(names.c6, ' looked perplexed at ', names.c0, '\'s resolve. '),
+p35as1a: pep.seq(names.dorian, '\'s eyes widened at the outright insult to the commander. '),
+p35as1b: pep.seq(names.dorian, ' flinched when ', names.jerry, ' insulted the commander. '),
+p35as1c: pep.seq(names.dorian, ' looked perplexed at ', names.jerry, '\'s resolve. '),
 
 p35as2a: pep.seq('That, apparently, took courage to say out loud. '),
-p35as2b: pep.seq(pep.capitalize(myPep.pronouns.they(names.c6)), ' had not expected such furor from ', names.c1, '. '),
-p35as2c: pep.seq(names.c6, ' was utterly taken aback by ', names.c0, '\'s boldness. '),
+p35as2b: pep.seq(pep.capitalize(pronouns.they(names.dorian)), ' had not expected such furor from ', names.eddie, '. '),
+p35as2c: pep.seq(names.dorian, ' was utterly taken aback by ', names.jerry, '\'s boldness. '),
 
-p35as3a: pep.seq(names.c6, ' slapped ', names.c0, ' on the back. '),
-p35as3b: pep.seq(names.c6, ' grinned. '),
-p35as3c: pep.seq(names.c6, ' seemed satisfied. '),
+p35as3a: pep.seq(names.dorian, ' slapped ', names.jerry, ' on the back. '),
+p35as3b: pep.seq(names.dorian, ' grinned. '),
+p35as3c: pep.seq(names.dorian, ' seemed satisfied. '),
 
 p35as4a: pep.seq('"I knew they were full of shit. '),
 p35as4b: pep.seq('"I knew it. '),
@@ -848,25 +849,25 @@ let aBlock = {
   
 };
 
-let content = pep.seq(myPep.html.p('o'),                        
-           aBlock.p1a, myPep.html.p('co'), aBlock.p2a, myPep.html.p('co'),                      
-           aBlock.p3a, myPep.html.p('co'), aBlock.p4a, myPep.html.p('co'), 
-           aBlock.p5a, myPep.html.p('co'), aBlock.p6a, myPep.html.p('co'), 
-           aBlock.p7a, myPep.html.p('co'), aBlock.p8a, myPep.html.p('co'), 
-           aBlock.p9a, myPep.html.p('co'), aBlock.p10a, myPep.html.p('co'), 
-          aBlock.p11a, myPep.html.p('co'), aBlock.p12a, myPep.html.p('co'), 
-          aBlock.p13a, myPep.html.p('co'), aBlock.p14a, myPep.html.p('co'), 
-          aBlock.p15a, myPep.html.p('co'), aBlock.p16a, myPep.html.p('co'), 
-          aBlock.p17a, myPep.html.p('co'), aBlock.p18a, myPep.html.p('co'), 
-          aBlock.p19a, myPep.html.p('co'), aBlock.p20a, myPep.html.p('co'), 
-          aBlock.p21a, myPep.html.p('co'), aBlock.p22a, myPep.html.p('co'), 
-          aBlock.p23a, myPep.html.p('co'), aBlock.p24a, myPep.html.p('co'), 
-          aBlock.p25a, myPep.html.p('co'), aBlock.p26a, myPep.html.p('co'), 
-          aBlock.p27a, myPep.html.p('co'), aBlock.p28a, myPep.html.p('co'), 
-          aBlock.p29a, myPep.html.p('co'), aBlock.p30a, myPep.html.p('co'), 
-          aBlock.p31a, myPep.html.p('co'), aBlock.p32a, myPep.html.p('co'), 
-          aBlock.p33a, myPep.html.p('co'), aBlock.p34a, myPep.html.p('co'), 
-          aBlock.p35a, myPep.html.p('co'), myPep.html.p('c'), 
+let content = pep.seq(html.p('o'),                        
+           aBlock.p1a, html.p('co'), aBlock.p2a, html.p('co'),                      
+           aBlock.p3a, html.p('co'), aBlock.p4a, html.p('co'), 
+           aBlock.p5a, html.p('co'), aBlock.p6a, html.p('co'), 
+           aBlock.p7a, html.p('co'), aBlock.p8a, html.p('co'), 
+           aBlock.p9a, html.p('co'), aBlock.p10a, html.p('co'), 
+          aBlock.p11a, html.p('co'), aBlock.p12a, html.p('co'), 
+          aBlock.p13a, html.p('co'), aBlock.p14a, html.p('co'), 
+          aBlock.p15a, html.p('co'), aBlock.p16a, html.p('co'), 
+          aBlock.p17a, html.p('co'), aBlock.p18a, html.p('co'), 
+          aBlock.p19a, html.p('co'), aBlock.p20a, html.p('co'), 
+          aBlock.p21a, html.p('co'), aBlock.p22a, html.p('co'), 
+          aBlock.p23a, html.p('co'), aBlock.p24a, html.p('co'), 
+          aBlock.p25a, html.p('co'), aBlock.p26a, html.p('co'), 
+          aBlock.p27a, html.p('co'), aBlock.p28a, html.p('co'), 
+          aBlock.p29a, html.p('co'), aBlock.p30a, html.p('co'), 
+          aBlock.p31a, html.p('co'), aBlock.p32a, html.p('co'), 
+          aBlock.p33a, html.p('co'), aBlock.p34a, html.p('co'), 
+          aBlock.p35a, html.p('co'), html.p('c'), 
 );
 
 module.exports = {
@@ -874,3 +875,7 @@ module.exports = {
   title: title,
   
 };
+
+
+
+

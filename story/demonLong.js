@@ -6,7 +6,7 @@ pep = require('apep-std-vars')(pep);
 var myPep = require('../my-apep-fxns.js');
 
 //include constants and story content
-var myCon = require('./constants.js');
+var myCon = require('./fxns/constants.js');
 var myA = require('./abstract.js');
 var myCh1 = require('./ch1.js');
 var myCh2 = require('./ch2.js');
@@ -24,7 +24,7 @@ let ch8t = 'ch8 title';
 let ch9t = 'ch9 title';
 let ch10t = 'ch10 title';
 let ch11t = 'ch11 title';
-let ch12t = 'ch12 title';
+let ch12t = 'ch12 title'; 
 let ch13t = 'ch13 title';
 let ch14t = 'ch14 title';
 let ch15t = 'ch15 title';
