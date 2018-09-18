@@ -167,19 +167,19 @@ module.exports = {
         //p7          
         pep.choice(
             pep.seq(
-                'Guard duty for the compound was not particularly hard -- even with tensions higher than normal. '
+                dict.Guard, ' duty for the ', dict.compound, ' was not particularly ', dict.challenging, ' -- even with tensions higher than normal. '
             ),
-            pep.seq('Guard duty was really at the bottom of the barrel for military jobs. '),
-            pep.seq('Guard duty was a joke of a job. '),
+            pep.seq(dict.Guard, ' duty was really at the ', dict.bottom, ' ', pep.opt('of the barrel'), ' for ', dict.military, ' jobs. '),
+            pep.seq(dict.Guard, ' duty was a ',dict.joke, ' of a job. '),
         ), pep.choice(
-            pep.seq('The military were the only ', world.brethrens(names.realm),
-                ' allowed to carry weapons, so that meant that there was a pretty big barrier between insurgents, rabble-rousers, and troublemakers, and the military. '
+            pep.seq('The ', dict.military, ' were the only ', world.brethrens(names.realm),
+                ' allowed to ', dict.wield, ' weapons, so there was a big barrier between ', dict.revolts, ', and the ', dict.military, '. '
             ),
             pep.seq(
-                'Only soldiers could carry weapons, so even the biggest revolts could be put down easily. '
+                'Only soldiers could ', dict.wield, ' weapons, so even the ', dict.biggest, ' ', dict.revolts, ' could be ', dict.stopped, ' easily. '
             ),
             pep.seq(
-                'But every member of the military received a weapon, and no one else had them -- which made ',
+                'But every member of the ', dict.military, ' could ', dict.wield, ' a weapon, and no one else had them -- which made ',
                 names.jerry, ' feel safe. '),
         ), html.pco,
         //p8           
