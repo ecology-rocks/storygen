@@ -44,10 +44,14 @@ module.exports = {
     bees: pep.choice("bees", "hornets", "wasps", "cockroaches", "dung beetles"),
 
     began: pep.choice("began", "started", "commenced", ),
+  
+    biggest: pep.choice("biggest", "largest", "colossal", ),
 
     bin: pep.choice("trash", "bin", "dumpster", "can"),
 
     bluntness: pep.choice("blutness", "candor", "directness", "forthrightness", "honesty", "unreserve"),
+  
+    bottom: pep.choice("bottom", "basement", "base"),
 
     breakneck: pep.choice("breakneck", "reckless", "full-tilt", "lightning", "supernatural"),
 
@@ -67,6 +71,8 @@ module.exports = {
     cardinal: pep.choice("east", "north", "south", "west"),
 
     caught: pep.choice("caught", "snagged", "grabbed", "snared"),
+  
+    challenging: pep.choice("challenging", "hard", "difficult", "demanding", "taxing", "exacting"),
 
     chased: pep.choice("chased", "followed", "hounded", "hunted", "trailed", "ran"),
 
@@ -79,6 +85,8 @@ module.exports = {
     colored: pep.choice("colored", "tinted", "painted", "stained", "tinged"),
 
     coming: pep.choice("coming", "running", "hiding"),
+  
+    compound: pep.choice("compound", "base", "barracks", "fortress", "castle"),
 
     corner: pep.choice("corner", "bend", "ridge", "edge"),
 
@@ -186,6 +194,8 @@ module.exports = {
     grin: pep.choice("grin", "smile", "smirk"),
 
     grinned: pep.choice("grinned", "smiled", "smirked", "beamed", ),
+  
+  Guard: pep.choice("Guard", "Sentry"),
 
     happen: pep.choice("happen", "occur", "come to pass"),
 
@@ -219,6 +229,8 @@ module.exports = {
     issue: pep.choice("question", "issue", "problem"),
 
     jelly: pep.choice("jelly", "jam", "cheese", "spread", "clumps", "cream"),
+  
+    joke: pep.choice("joke", "farce", "laughingstock"),
 
     juveniles: pep.choice("juveniles", "adolescents", "children", "miscreants", "teenagers", "youths"),
 
@@ -247,6 +259,8 @@ module.exports = {
     lost: pep.choice("lost", "squandered", "forgotten", "wasted"),
 
     meat: pep.choice("meat", "game", ),
+  
+    military: pep.choice("military", "army", "guard", "royal guard", "armed forces"),
 
     moment: pep.choice("minute", "moment", "second", "space", "time"),
 
@@ -303,6 +317,8 @@ module.exports = {
     retreat: pep.choice("retreat", "back down", "stop", "withdraw", ),
 
     retreated: pep.choice("retreated", "backed away", "fell back", "withdrew"),
+    
+    revolts: pep.choice("revolts", "insurrections", "rebellions", "mutinies", "revolutions"),
 
     rose: pep.choice("rose", "stood", "got up"),
 
@@ -370,6 +386,8 @@ module.exports = {
         "rising", "looming", "pending"),
 
     stop: pep.choice("stop", "halt", "defeat", "block", "kill"),
+  
+    stopped: pep.choice("stopped", "halted", "defeated", "crushed", "put down"), 
 
     strangely: pep.choice("strangely", "unusually", "abnormally", "curiously", "peculiarly", ),
 
@@ -426,6 +444,8 @@ module.exports = {
     whole: pep.choice("whole", "complete", "entire", "full"),
 
     widely: pep.choice("widely", "ear to ear", "lavishly", "liberally", ),
+  
+    wield: pep.choice("wield", "carry", "brandish", "possess", "own"),
 
     wipes: pep.choice("wipes", "cleans", "sponges", "swabs", ),
 
