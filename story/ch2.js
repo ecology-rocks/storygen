@@ -184,44 +184,44 @@ module.exports = {
         ), html.pco,
         //p8           
         pep.choice(
-            pep.seq('But guard duty was worrying, given the potential for insurrection. '),
-            pep.seq('Guard duty became a lot more important when rebellion was on the horizon. '),
+            pep.seq('But ', dict.guard, ' duty was ', dict.worrying, ', given the potential for ', dict.revolts, '. '),
+            pep.seq(dict.Guard, ' duty became a lot more ', dict.loaded, '   when ', dict.revolts, ' was on the horizon. '),
             pep.seq('Guards were on the front lines of defense, and ', names.jerry, ' knew it. '),
         ), pep.choice(
-            pep.seq(names.jerry, ' was worried that ', pronouns.they(names.jerry0),
+            pep.seq(names.jerry, ' was ', dict.worried, ' that ', pronouns.they(names.jerry0),
                 ' might actually have to use ', pronouns.their(names.jerry0), ' weapons. '),
-            pep.seq(names.jerry, ' worried about whether ', pronouns.they(names.jerry0),
-                ' would actually be able to kill if needed. '),
-            pep.seq(names.jerry, ' didn\'t want to fight if worse came to worse. '),
+            pep.seq(names.jerry, ' was ', dict.worried, ' about whether ', pronouns.they(names.jerry0),
+                ' would actually be able to ', dict.kill, pep.opt(' if needed'), '. '),
+            pep.seq(names.jerry, ' didn\'t want to ', dict.kill, ' if worse came to worse. '),
         ), pep.choice(
-            pep.seq('As a pacifist, that was exceptionally unnerving. '),
-            pep.seq(names.jerry, 'didn\'t want to shed blood. '),
-            pep.seq(names.jerry, ' abhorred violence. '),
+            pep.seq('As a pacifist, that was ', dict.exceptionally, ' ', dict.worrying, '. '),
+            pep.seq(dict.afterAll, ", ", names.jerry, 'didn\'t want to shed blood. '),
+            pep.seq(names.jerry, ' ', dict.abhorred, ' violence. '),
         ), pep.choice(
             pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
-                ' had only taken this job for the pay, and because ', pronouns.they(names.jerry0),
-                ' were pressured to do so by ', pronouns.their(names.jerry0), ' parents. '),
+                ' had only taken this ', dict.job, ' for the pay, and because ', pronouns.they(names.jerry0),
+                ' were ', dict.pressured, ' to do so by ', pronouns.their(names.jerry0), ' parents. '),
             pep.seq('Without pressure from ', pronouns.their(names.jerry0), ' parents, ', names.jerry,
-                ' never would have enlisted. '),
-            pep.seq(names.jerry, ' only enlisted because of the free housing. '),
+                ' never would have ', dict.enlisted, '. '),
+            pep.seq(names.jerry, ' only ', dict.enlisted, ' because of the free housing. '),
         ), pep.choice(
             pep.seq('But there was no way in ', world.realm(names.realm), ', that ', names.jerry,
-                ' would willingly attack fellow ', world.brethrens(names.realm), '. '),
+                ' would ', dict.willingly, ' attack fellow ', world.brethrens(names.realm), '. '),
             pep.seq(
-                'A civil war was somehow far worse than fighting imagined invaders from other realms. '
+                'A ', dict.rebellion, ' was ', dict.somehow, ' far worse than fighting ', dict.imagined, ' invaders from other ', dict.realm, 's. '
             ),
-            pep.seq(names.jerry, ' just couldn\'t kill their fellow ', world.brethrens(names.realm),
+            pep.seq(names.jerry, ' just couldn\'t ', dict.kill, ' ', pronouns.their(names.jerry0), ' fellow ', world.brethrens(names.realm),
                 '. '),
         ), pep.choice(
             pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
-                ' would rather die or be imprisoned for treason. '),
+                ' would rather ', dict.die, ' or be ', dict.imprisoned, ' for treason. '),
             pep.seq(names.jerry, ' wished that ', pronouns.they(names.jerry0),
-                ' could quit, although it would mean death or imprisonment at the hand of the court. '
+                ' could quit, although it would mean ', dict.death, ' or being ', dict.imprisoned, ' at the hand of the court. '
             ),
-            pep.seq(names.jerry, ' thought death or imprisonment might be better than shedding ',
+            pep.seq(names.jerry, ' thought ', dict.death, ' or being ', dict.imprisoned, ' might be better than shedding ',
                 world.brethren(names.realm), ' blood. '),
         ), pep.choice(
-            pep.seq('Given the pending war, it may be the former. '),
+            pep.seq('Given the ', dict.pending, ' ', dict.revolts, ', it may be the former. '),
             pep.seq('Either would be better than this current unease. '),
             pep.seq('What would ', names.jerry, '\'s parents think? '),
         ), html.pco,

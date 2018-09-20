@@ -5,6 +5,8 @@ var pep = require("apep");
 
 module.exports = {
 
+    abhorred: pep.choice("abhorred", "detested", "despised", "loathed"),
+  
     across: pep.choice("across", "within", "around", "between", "inside", ),
 
     actually: pep.choice("actually", "really", "definitely", "absolutely", "indeed"),
@@ -113,8 +115,12 @@ module.exports = {
         "for the love of all"),
 
     dangerously: pep.choice("dangerously", "alarmingly", "precariously", "severely"),
+  
+    death: pep.choice("death", "obliteration", "dying", "annihilation"),
 
     depths: pep.seq("the ", pep.choice("depths", "boundaries", "breadth", "borders"), " of"),
+  
+    die: pep.choice("die", "perish", "expire", "burn"),
 
     dies: pep.choice("dies", "perishes", "burns", "expires"),
 
@@ -142,9 +148,13 @@ module.exports = {
 
     elm: pep.choice("elm", "tree", "bush", "pine", "maple", "oak", "tupelo", "crabapple", "ash",
         "shrubbery", ),
+  
+    enlisted: pep.choice("enlisted", "joined", "volunteered"),
 
     escape: pep.choice("escape", "escaping", "way out", "running", "going back", "safe passage", ),
 
+    exceptionally: pep.choice("exceptionally", "abnormally", "especially", "particularly"),  
+  
     faster: pep.choice("faster", "speedier", "quicker", "agile", "swifter", "fleet"),
 
     few: pep.choice("few", "couple", "handful"),
@@ -195,7 +205,9 @@ module.exports = {
 
     grinned: pep.choice("grinned", "smiled", "smirked", "beamed", ),
   
-  Guard: pep.choice("Guard", "Sentry"),
+    Guard: pep.choice("Guard", "Sentry"),
+  
+    guard: pep.choice("guard", "sentry"),
 
     happen: pep.choice("happen", "occur", "come to pass"),
 
@@ -219,8 +231,12 @@ module.exports = {
     hungry: pep.choice("hungry", "starved", "famished", "ravenous"),
 
     idly: pep.choice("idly", "casually", "easily", "absently", "carelessly", "leisurely"),
+  
+    imagined: pep.choice("imagined", "imaginary", "abstract", "fanciful", "fantastic", "hypothetical"),
 
     impending: pep.choice("impending", "imminent", "looming", "pending", ),
+  
+    imprisoned: pep.choice("imprisoned", "jailed", "incarcerated"),
 
     insane: pep.choice("insane", "crazy", "mad", "certifiable", "half-baked", "batshit", ),
 
@@ -230,9 +246,13 @@ module.exports = {
 
     jelly: pep.choice("jelly", "jam", "cheese", "spread", "clumps", "cream"),
   
+    job: pep.choice("job", "position", "gig", "post"), 
+  
     joke: pep.choice("joke", "farce", "laughingstock"),
 
     juveniles: pep.choice("juveniles", "adolescents", "children", "miscreants", "teenagers", "youths"),
+    
+    kill: pep.choice("kill", "fight", "murder", "slay"), 
 
     last: pep.choice("last", "final", "ultimate", "concluding", "finishing"),
 
@@ -251,6 +271,8 @@ module.exports = {
     life: pep.choice("life", "existence", "creation", "mortal coil"),
 
     little: pep.choice("little", "bit", "tad", ),
+  
+    loaded: pep.choice("loaded", "challenging", "high-stakes", "precarious", "touch-and-go"),
 
     longing: pep.choice("longing", "searching", "yearning", "scheming"),
 
@@ -283,6 +305,8 @@ module.exports = {
     overthrow: pep.choice("overthrow", "conquer", "depose", "topple", "displace", "unseat", "dethrone"),
 
     peeking: pep.choice("peeking", "peering", "looking", ),
+  
+    pending: pep.choice("pending", "imminent", "impending", "forthcoming"), 
 
     perhaps: pep.choice("perhaps", "maybe", "possibly", "conceivably", ),
 
@@ -300,6 +324,8 @@ module.exports = {
     pleased: pep.choice("pleased", "happy", "comfortable", "excited", ),
 
     position: pep.choice("position", "spot", "location", "place", "station", ),
+      
+    pressured: pep.choice("pressured", "pushed", "compelled"), 
 
     pushing: pep.choice("pushing", "thrusting", ),
 
@@ -446,9 +472,15 @@ module.exports = {
     widely: pep.choice("widely", "ear to ear", "lavishly", "liberally", ),
   
     wield: pep.choice("wield", "carry", "brandish", "possess", "own"),
+  
+    willingly: pep.choice("willingly", "voluntarily", "unquestionably", "cheerfully", "readily"), 
 
     wipes: pep.choice("wipes", "cleans", "sponges", "swabs", ),
 
     wondered: pep.choice("wondered", "pondered", "considered", "mused", "reflected", "mulled"),
+  
+    worried: pep.choice("worried", "concerned", "bothered", "distressed"),
+  
+   worrying: pep.choice("worrying", "worrisome", "alarming", "perturbing", "bothersome", "troublesome"),
 
 };
