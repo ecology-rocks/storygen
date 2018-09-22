@@ -227,9 +227,9 @@ module.exports = {
         ), html.pco,
         //p9            
         pep.choice(
-            pep.seq('"', names.jerry, '! I need to talk to you!" '),
+            pep.seq('"', names.jerry, '! I need to ', dict.talk, ' with you!" '),
             pep.seq('"Oy! Get over here!" '),
-            pep.seq('"Hey, shit head! Come here a second." '),
+            pep.seq('"Hey, ', dict.shithead, '! Come here a second." '),
         ), pep.choice(
             pep.seq('The commander, ', names.kaden, ', barked, as ', names.jerry,
                 ' ducked through the doorway to resume ', pronouns.their(names.jerry0), ' post. '),

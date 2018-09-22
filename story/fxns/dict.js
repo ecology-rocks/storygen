@@ -369,6 +369,9 @@ module.exports = {
     shade: pep.choice("shade", "shadow", "relief from heat", "penumbra", "cover"),
 
     shit: pep.choice("shit", "poop", "crap", "poo poo", "fecal matter"),
+  
+    shithead: pep.seq(pep.choice("shit", "poop", "crap", "poo poo"), 
+                                 pep.choice(" head", " for brains", " face", " toes")),
 
     shitty: pep.choice("shitty", "poopy", "crappy", "terrible", "gross"),
 
@@ -425,6 +428,8 @@ module.exports = {
         "precipitously", ),
 
     swallow: pep.choice("swallow", "eat", "choke on", ),
+  
+    talk: pep.choice("talk", "speak", "chat"),
 
     taller: pep.choice("taller", "lanky", "towering", "slender", "gangly", "angular"),
 
