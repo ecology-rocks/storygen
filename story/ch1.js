@@ -281,7 +281,7 @@ module.exports = {
                 pep.seq(names.jerry, ' wondered if a day would ever ', dict.goBy, ' without being ', dict
                     .harassed, ' by the neighbors. '),
                 // jerry stifled back tears as they took a seat to wait for sunset.
-                pep.seq(names.jerry, ' ', dict.stifled, ' ', dict.sobs, ' as ', pronouns.they(names.jerry),
+                pep.seq(names.jerry, ' ', dict.stifled, ' ', dict.sobs, ' as ', pronouns.they(names.jerry0),
                     ' took a seat to wait for sunset. '),
             ), //end choice
             html.i('c'), html.p('c'),

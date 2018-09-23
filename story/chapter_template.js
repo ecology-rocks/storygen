@@ -11,7 +11,7 @@ var html = require('./fxns/html.js'); //formatting lookup
 
 module.exports = {
 
-    title: pep.choice(pep.seq('My Title 1'),),
+    title: pep.choice(pep.seq('Title1'), pep.seq('Title1'), pep.seq('Title3'),),
     text: pep.seq(html.p('o'),
 
         pep.choice( //p1as1

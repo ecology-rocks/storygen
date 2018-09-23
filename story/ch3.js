@@ -101,10 +101,10 @@ module.exports = {
         ), pep.choice( //s3
              pep.seq(names.jerry,
                 ' offered, surveying past the soldier to the fresh splats of blood on the wall. '),
-             pep.seq('names.jerry wondered what the story was. '),
-             pep.seq('names.jerry offered absentmindedly, immediately regretting the decision. '),
+             pep.seq(names.jerry, ' wondered what the story was. '),
+             pep.seq(names.jerry, ' offered absentmindedly, immediately regretting the decision. '),
         ), pep.choice( //s3
-             pep.seq(world.brethrens(names.realm), ' in hazmat suits were hard at work. '),
+             pep.seq(pep.capitalize(world.brethrens(names.realm)), ' in hazmat suits were hard at work. '),
              pep.seq('The hazmats buzzed around behind the guard like busy little bees. '),
              pep.seq('Hazmatted ', world.brethrens(names.realm), ' were staring. '),
         ), html.pco,
@@ -120,7 +120,7 @@ module.exports = {
              pep.seq('Just a bit of a hiccup in the day. '),
         ), pep.choice( //s3
              pep.seq('Don\'t have to worry about that piece of scum any longer." '),
-             pep.seq('There\s no need to be concerned." '),
+             pep.seq('There\'s no need to be concerned." '),
              pep.seq('Carry on with your day, good person." '),
         ), pep.choice( //s3
              pep.seq('The soldier took a breath and ', names.jerry,

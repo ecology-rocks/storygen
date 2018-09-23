@@ -67,7 +67,7 @@ module.exports = {
 
     budging: pep.choice("moving", "budging", "shifting", "swaying", ),
 
-    bullies: pep.choice("bullies", "tormenters", "persecutors"),
+    bullies: pep.choice("bullies", "tormentors", "persecutors"),
 
     cackling: pep.choice("cackling", "laughing", "giggling", "chortling", "snickering", "sniggering",
         "tittering"),
@@ -247,7 +247,7 @@ module.exports = {
 
     hat: pep.choice("hat", "cap", "helmet", "fedora"),
   
-    haveYouHeard: pep.choice(pep.seq("Have ", pep.choice("you", "y'a'll"), " heard"), pep.seq("Did ", pep.choice("you", "y'a'll"), " hear")),
+    haveYouHeard: pep.choice(pep.seq("Have ", pep.choice("you", "y'all"), " heard"), pep.seq("Did ", pep.choice("you", "y'all"), " hear")),
 
     heartily: pep.choice("heartily", "wholeheartedly", "sincerely", "genuinely", "warmly"),
 

@@ -96,7 +96,7 @@ module.exports = {
             ),
             //jerry discovered an open portal to the mortal world left unguarded in the fighting.
             pep.seq(names.jerry, " ", dict.discovered,
-                " an open portal to the mortal world left unguarded in the fighting."),
+                " an open portal to the mortal world left unguarded in the fighting. "),
             //Seeing an unguarded portal, jerry realized that they had a chance at freedom.
             pep.seq("Seeing an unguarded portal, ", names.jerry, " realized that ", pronouns.they(
                 names.jerry0), " had a chance at freedom. "),
