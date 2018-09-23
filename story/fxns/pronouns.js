@@ -13,7 +13,7 @@ module.exports = {
     Them: pep.dict({ male: 'Him', female: 'Her',}, 'Them'),
     Their: pep.dict({ male: 'His', female: 'Her',}, 'Their'),
     Theirs: pep.dict({ male: 'His', female: 'Hers',}, 'Theirs'),
-    themself: pep.dict({male: 'himself', female: 'herself',}, 'themselves'),
-    Themself: pep.dict({male: 'Himself', female: 'Herself',}, 'Themselves'),
+    themself: pep.dict({male: 'himself', female: 'herself',}, 'themself'),
+    Themself: pep.dict({male: 'Himself', female: 'Herself',}, 'Themself'),
   
 }
