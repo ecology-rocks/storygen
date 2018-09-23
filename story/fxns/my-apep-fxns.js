@@ -31,7 +31,9 @@ edIng: pep.match()
   
   
   //myPep.gender
-  gender: pep.choice("male", "female", "enby"),
+  gender: pep.weightedChoice([[0.45, "male"], 
+                             [0.45, "female"], 
+                             [0.1, "enby"]]),
   
   //tl
   

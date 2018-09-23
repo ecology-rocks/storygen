@@ -13,7 +13,8 @@ var myA = require('./abstract.js');
 var myCh1 = require('./ch1.js');
 var myCh2 = require('./ch2.js');
 var myCh3 = require('./ch3.js');
-var myCh4 = require('./ch4.js');
+var myCh4a = require('./ch4a.js');
+var myCh4b = require('./ch4b.js');
 
 
  
@@ -36,12 +37,6 @@ let ch15t = 'ch15 title';
 
 //define looping chapters
 
-let limitsClusterNoLearn = pep.many1(pep.seq(html.div('oCh'),
-                         html.div('h1'),
-                               myCh4.title,
-                         html.div('h1c'), 
-                                myCh4.text, 
-                         html.btt,html.div('c2'),), 0.45);
 
 let limitsClusterStLearn = pep.many1(pep.seq(html.div('oCh'),
                          html.div('h1'),
@@ -97,17 +92,21 @@ let finalStory = pep.seq(html.div('row'),
                          
                          //ch4 repeater
                          
-                         pep.many1(pep.seq(
+                         pep.many1(pep.choice(pep.seq(
                             html.div('oCh'),
                             html.div('h1'),
-                                myCh4.title,
+                                myCh4a.title,
                             html.div('h1c'), 
-                                myCh4.text, 
+                                myCh4a.text, 
                             html.btt,html.div('c2'),
-                         ), 0.45),
-                         
-                         //ch5
-                               limitsClusterStLearn,
+                         ), pep.seq(
+                            html.div('oCh'),
+                            html.div('h1'),
+                                myCh4b.title,
+                            html.div('h1c'), 
+                                myCh4b.text, 
+                            html.btt,html.div('c2'),
+                         )), 0.45),
                          
                          html.div('oCh'),
                          html.div('h1'),
