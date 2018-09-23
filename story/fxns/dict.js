@@ -18,6 +18,8 @@ module.exports = {
     afterAll: pep.choice("After all", "Truly", "Above all", "Most importantly"),
 
     agreement: pep.choice("agreement", "consensus", "concurrence", ),
+  
+    allThingsConsidered: pep.choice("all things considered", "everything else aside", "putting it all on the table", "taking everything into account", "all in all"), 
 
     always: pep.choice("always", "perpetually", "habitually", "unfailingly", "regularly"),
 
@@ -48,6 +50,8 @@ module.exports = {
     bees: pep.choice("bees", "hornets", "wasps", "cockroaches", "dung beetles"),
 
     began: pep.choice("began", "started", "commenced", ),
+  
+    better: pep.choice("better", "preferable", "superior"), 
   
     biggest: pep.choice("biggest", "largest", "colossal", ),
 
@@ -83,6 +87,8 @@ module.exports = {
     chasing: pep.choice("chasing", "following", "hounding", "hunting", "trailed", "running"),
 
     chin: pep.choice("chin", "lips", "smackers", "gobbers", "face", "cheeks"),
+  
+    churned: pep.choice("churned", "boiled", "heaved", "seethed", "tossed", ), 
 
     clean: pep.choice("clean", "remove", "dispose"),
 
@@ -99,6 +105,8 @@ module.exports = {
     could: pep.choice("could", "might", "may"),
 
     couple: pep.choice("team", "couple", "brace", "set", "duo", "dyad", "twosome", "doublet"),
+  
+    courage: pep.choice("courage", "bravery", "pluck", "valor"), 
 
     cowed: pep.choice("cowed", "intimidated", "subdued", "unnerved", "rattled"),
 
@@ -112,6 +120,8 @@ module.exports = {
         "giggled", "cackled", "waved"),
 
     crusade: pep.choice("crusade", "conquest", "campaign", "struggle", "goal", ),
+  
+    current: pep.choice("current", "contemporaneous", "present"), 
 
     damnIt: pep.choice(pep.seq("damn it", pep.opt(" all to hell")), "for fuck's sake",
         "for the love of all"),
@@ -119,6 +129,8 @@ module.exports = {
     dangerously: pep.choice("dangerously", "alarmingly", "precariously", "severely"),
   
     death: pep.choice("death", "obliteration", "dying", "annihilation"),
+  
+    delicate: pep.choice("delicate", "fragile", "diplomatic", "tactful", "sensitive", "discreet", ), 
 
     depths: pep.seq("the ", pep.choice("depths", "boundaries", "breadth", "borders"), " of"),
   
@@ -131,6 +143,8 @@ module.exports = {
     dim: pep.choice("dim", "dark", "gray", "night-lit"),
 
     dirt: pep.choice("dirt", "soil", "muck", "mud", "dust", ),
+  
+    dirtyLook: pep.choice("black look", "death glare", "death stare", "evil eye", "dirty look"), 
 
     discover: pep.choice("discover", "stumble upon", "find", "unearth", "uncover"),
 
@@ -188,6 +202,10 @@ module.exports = {
         "hump a porcupine", "deep throat a dagger", "eat shit and die", "pound salt in your ass"),
 
     furtively: pep.choice("furtively", "covertly", "clandestinely", "surreptitiously", ),
+  
+    gathering: pep.choice("gathering", "assembling", "collecting", "drawing"), 
+  
+    genially: pep.choice("genially", "amicably", "affably", "cheerfully", ),
 
     glowing: pep.choice("glowing", "gleaming", "flaming", "luminous"),
 
@@ -209,6 +227,10 @@ module.exports = {
 
     grinned: pep.choice("grinned", "smiled", "smirked", "beamed", ),
   
+    growl: pep.choice("growl", "snarl", "groan"), 
+  
+    growled: pep.choice("growled", "snarled", "groaned"), 
+  
     Guard: pep.choice("Guard", "Sentry"),
   
     guard: pep.choice("guard", "sentry"),
@@ -224,6 +246,8 @@ module.exports = {
     hastily: pep.choice("hastily", "carelessly", "rashly"),
 
     hat: pep.choice("hat", "cap", "helmet", "fedora"),
+  
+    haveYouHeard: pep.choice(pep.seq("Have ", pep.choice("you", "y'a'll"), " heard"), pep.seq("Did ", pep.choice("you", "y'a'll"), " hear")),
 
     heartily: pep.choice("heartily", "wholeheartedly", "sincerely", "genuinely", "warmly"),
 
@@ -242,6 +266,10 @@ module.exports = {
   
     imprisoned: pep.choice("imprisoned", "jailed", "incarcerated"),
 
+    inadequate: pep.choice("insufficient", "deficient", "inadequate", "scant", "sparse"),
+  
+    inhaled: pep.choice("took a breath", "inhaled", "breathed in"), 
+  
     insane: pep.choice("insane", "crazy", "mad", "certifiable", "half-baked", "batshit", ),
 
     intimidating: pep.choice("intimidating", "hellish", "scary", "fearsome"),
@@ -293,8 +321,14 @@ module.exports = {
     morsel: pep.choice("morsel", "bite", "nibble", "piece"),
 
     murder: pep.choice("murder", "annihilation", "torture", "destruction", "bloodshed", "trouble"),
+  
+    noise: pep.choice("noise", "sound", "clamor", "din"), 
+  
+    nonsense: pep.choice("nonsense", "rubbish", "gibberish", "claptrap", "balderdash", "blarney"),
 
     nothing: pep.choice("nothing", "nada", "nil", "aught", "zilch", "nought", ),
+  
+    offensive: pep.choice("offensive", "detestable", "insulting", "derogatory"), 
 
     ornamental: pep.choice("ornamental", "ornate", "exquisite", "showy", ),
 
@@ -307,6 +341,8 @@ module.exports = {
     overcooked: pep.choice("overcooked", "well-done"),
 
     overthrow: pep.choice("overthrow", "conquer", "depose", "topple", "displace", "unseat", "dethrone"),
+  
+    palms: pep.choice("palms", "hands", "fingers"), 
 
     peeking: pep.choice("peeking", "peering", "looking", ),
   
@@ -353,6 +389,8 @@ module.exports = {
     rose: pep.choice("rose", "stood", "got up"),
 
     rulers: pep.choice("rulers", "kings", "conquerors", "elites", "royals", "ruling classes"),
+  
+    rumors: pep.choice("nonsense", "rumors", "hearsay"), 
 
     sack: pep.choice("sack", "bundle", "satchel", "pouch", "tote", "bag", "duffel"),
 
@@ -410,6 +448,10 @@ module.exports = {
     standstill: pep.choice("standstill", "impasse", "stalemate", "dead end", "deadlock", ),
 
     stared: pep.choice("stared", "gawked", "looked", "gazed", "goggled", ),
+  
+    startled: pep.choice("startled", "surprised", "frightened", "jolted", ), 
+  
+    state: pep.choice("state", "say", "express", "voice", "utter", ), 
 
     steaming: pep.choice("steaming", "piping", "hot", "scalding"),
 
@@ -430,8 +472,12 @@ module.exports = {
 
     suddenly: pep.choice("suddenly", "abruptly", "without warning", "unanticipatedly", "without cause",
         "precipitously", ),
+  
+    surprise: pep.choice("surprise", "shock", "tension", "unease", ), 
 
     swallow: pep.choice("swallow", "eat", "choke on", ),
+  
+    sweaty: pep.choice("sweaty", "moist", "clammy", "sticky", ), 
   
     talk: pep.choice("talk", "speak", "chat"),
 
@@ -447,10 +493,6 @@ module.exports = {
 
     time: pep.choice("time", "instance", "occasion"),
 
-    trash: pep.choice("trash", "refuse", "rubbish", "scraps"),
-
-    tray: pep.choice("tray", "platter", "plate"),
-
     tomorrow: pep.choice("tomorrow", "later", "next sunrise", "soon", "on the morrow"),
 
     toothy: pep.choice("toothy", "toothsome", "fanged", "devilish"),
@@ -458,14 +500,26 @@ module.exports = {
     tough: pep.choice("tough", "hard", "challenging", "grueling", "difficult", ),
 
     tower: pep.choice("tower", "turret", "belfry", "citadel", "lookout"),
+    
+    trailedOff: pep.choice("trailed off", "got quiet", "petered out", ), 
+  
+    trash: pep.choice("trash", "refuse", "rubbish", "scraps"),
+
+    tray: pep.choice("tray", "platter", "plate"),
+  
+    trepidation: pep.choice("trepidation", "apprehension", "dread", "fright", ), 
 
     trouble: pep.choice("trouble", "disaster", "calamity", "catastrophe", "unrest", "discontent", ),
 
     truest: pep.choice("truest", "most true", "most accurate"),
+  
+    trying: pep.choice("trying", "struggling", "working", ), 
 
     uncertainty: pep.choice("uncertainty", "ambiguity", "murky outcomes"),
 
     unconcerned: pep.choice("unconcerned", "unperturbed", "uninterested"),
+  
+    unease: pep.choice("unease", "anxiety", "fear"), 
 
     usual: pep.choice("usual", "normal", "average"),
 
