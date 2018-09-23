@@ -28,8 +28,8 @@ module.exports = {
             pep.seq('The question hung in the air as ', names.jerry, ' took another bite. '),
         ), pep.choice(
             pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' ', dict.looked, ' at ', pronouns.their(
-                names.jerry0), ' friend, ', names.reed, ', for reassurance. '),
-            pep.seq(names.jerry, ' glanced at ', names.reed, ', weighing ', pronouns.their(names.reed0),
+                names.jerry0), ' ', dict.buddy, ', ', names.reed, ', for reassurance. '),
+            pep.seq(names.jerry, ' ', dict.looked, ' at ', names.reed, ', weighing ', pronouns.their(names.reed0),
                 ' expression. '),
             pep.seq(names.reed, ' ', myPep.edIng(dict.cackling), '. '),
         ), html.pco,
@@ -148,7 +148,7 @@ module.exports = {
                 ',  a ', dict.putrid, ' ', dict.green, ' ', dict.glowing, ' in the ', dict.dim,
                 ' sky. '),
             pep.seq('The sky was a ', dict.putrid, ', off-shade of ', dict.green, ', . '),
-            pep.seq('The sky looked ', dict.creepy, ' and ', dict.strangely, ' colored ', dict.green,
+            pep.seq('The sky ', dict.appeared, ' ', dict.creepy, ' and ', dict.strangely, ' colored ', dict.green,
                 ' -- more so than ', dict.usual, '. '),
         ), pep.choice(
             pep.seq('"Catch you ', dict.tomorrow, '." '),
@@ -228,15 +228,15 @@ module.exports = {
         //p9            
         pep.choice(
             pep.seq('"', names.jerry, '! I need to ', dict.talk, ' with you!" '),
-            pep.seq('"Oy! Get over here!" '),
-            pep.seq('"Hey, ', dict.shithead, '! Come here a second." '),
+            pep.seq('"Oy! Get over here a ', dict.moment, '!" '),
+            pep.seq('"Hey, ', dict.shithead, '! Come here a ', dict.moment, '." '),
         ), pep.choice(
-            pep.seq('The commander, ', names.kaden, ', barked, as ', names.jerry,
-                ' ducked through the doorway to resume ', pronouns.their(names.jerry0), ' post. '),
-            pep.seq(names.kaden, ' shouted at ', names.jerry, '. '),
-            pep.seq(names.kaden, ' spotted ', names.jerry, ' with a shout. '),
+            pep.seq('The commander, ', names.kaden, ', ', dict.cried, ', as ', names.jerry,
+                ' ', dict.ducked, ' through the doorway to resume ', pronouns.their(names.jerry0), ' post. '),
+            pep.seq(names.kaden, ' ', dict.cried, ' at ', names.jerry, '. '),
+            pep.seq(names.kaden, ' ', dict.spotted, ' ', names.jerry, ' with a shout. '),
         ), pep.choice(
-            pep.seq(names.jerry, ' looked up, surprised. '),
+            pep.seq(names.jerry, ' ', dict.looked, ' up, surprised. '),
             pep.seq('The noise startled ', names.jerry, '. '),
             pep.seq(names.jerry, '\'s stomach churned with surprise and trepidation. '),
         ), html.pco,
@@ -246,8 +246,8 @@ module.exports = {
             pep.seq('"How\'s it going, sarge?" '),
             pep.seq('"How can I help you?" '),
         ), pep.choice(
-            pep.seq(names.jerry, ' asked. '),
-            pep.seq(names.jerry, ' looked genially at ', names.kaden, '. '),
+            pep.seq(names.jerry, ' ', dict.asked, '. '),
+            pep.seq(names.jerry, ' ', dict.looked, ' genially at ', names.kaden, '. '),
             pep.seq(names.kaden, ' shot ', names.jerry, ' a dirty look. '),
         ), pep.choice(
             pep.seq(pep.capitalize(pronouns.their(names.jerry0)), ' stomach was letting ', pronouns.them(
@@ -260,10 +260,10 @@ module.exports = {
         //p11   
         pep.choice(
             pep.seq('"Have you heard all this nonsense about ', names.eddie, ' recently?" '),
-            pep.seq('"Have you heard about this impending tomfoolery?" '),
+            pep.seq('"Have you heard about this ', dict.impending, ' tomfoolery?" '),
             pep.seq('"Have you heard about ', names.eddie, '?" '),
         ), pep.choice(
-            pep.seq(names.kaden, ' asked with a growl, and ', names.jerry,
+            pep.seq(names.kaden, ' ', dict.asked, ' with a growl, and ', names.jerry,
                 ' shrugged noncommittally. '),
             pep.seq(names.kaden, ' growled. '),
             pep.seq(names.kaden, ' adjusted their glasses and names their stare on ', names.jerry,
@@ -403,7 +403,7 @@ module.exports = {
             pep.seq('"Excuse me?" '),
             pep.seq('"Pardon?" '),
         ), pep.choice(
-            pep.seq(names.jerry, ' asked. '),
+            pep.seq(names.jerry, ' ', dict.asked, '. '),
             pep.seq(names.jerry, ' was confused. '),
             pep.seq(names.jerry, ' was unsure what ', names.kaden, ' had just uttered. '),
         ), pep.choice(
@@ -732,7 +732,7 @@ module.exports = {
         pep.choice(
             pep.seq(names.dorian, '\'s eyes widened at the outright insult to the commander. '),
             pep.seq(names.dorian, ' flinched when ', names.jerry, ' insulted the commander. '),
-            pep.seq(names.dorian, ' looked perplexed at ', names.jerry, '\'s resolve. '),
+            pep.seq(names.dorian, ' ', dict.looked, ' perplexed at ', names.jerry, '\'s resolve. '),
         ), pep.choice(
             pep.seq('That, apparently, took courage to say out loud. '),
             pep.seq(pep.capitalize(pronouns.they(names.dorian)), ' had not expected such furor from ',
