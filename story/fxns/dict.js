@@ -32,6 +32,8 @@ module.exports = {
     army: pep.choice("army", "batallion", "horde", "force", "calvary", "militia"),
 
     appeal: pep.choice("appeal", "charm", "attractiveness", "pizzazz", "allure"),
+  
+    appeared: pep.choice("appeared", "seemed", "looked"),
 
     ascertain: pep.choice("ascertain", "tell", "determine", ),
 
@@ -102,7 +104,7 @@ module.exports = {
 
     creepy: pep.choice("creepy", "macabre", "eerie", "menacing", "ominous", "sinister"),
 
-    cried: pep.choice("cried", "shouted", "yelped", "hollered", "bellowed"),
+    cried: pep.choice("cried", "shouted", "yelped", "hollered", "bellowed", "barked"),
 
     crossed: pep.choice("crossed", "folded", "intertwined"),
 
@@ -145,6 +147,8 @@ module.exports = {
     dog: pep.choice("dog", "hound", "cur", "beast"),
 
     doom: pep.choice("doom", "annihilation", "destruction", "ruin", "downfall", "catastrophe"),
+  
+    ducked: pep.choice("ducked", "hunkered", "hunched", "stooped", ),
 
     elm: pep.choice("elm", "tree", "bush", "pine", "maple", "oak", "tupelo", "crabapple", "ash",
         "shrubbery", ),
@@ -276,7 +280,7 @@ module.exports = {
 
     longing: pep.choice("longing", "searching", "yearning", "scheming"),
 
-    looked: pep.choice("looked", "glanced", "stared"),
+    looked: pep.choice("looked", "glanced", "stared", "peered"),
 
     lost: pep.choice("lost", "squandered", "forgotten", "wasted"),
 
@@ -284,7 +288,7 @@ module.exports = {
   
     military: pep.choice("military", "army", "guard", "royal guard", "armed forces"),
 
-    moment: pep.choice("minute", "moment", "second", "space", "time"),
+    moment: pep.choice("minute", "moment", "second"),
 
     morsel: pep.choice("morsel", "bite", "nibble", "piece"),
 
