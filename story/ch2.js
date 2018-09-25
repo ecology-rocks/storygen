@@ -408,7 +408,7 @@ module.exports = {
         ), pep.choice(
             pep.seq('I haven\'t heard much. '),
             pep.seq('That\'s new', pep.opt('s'), ' to me. '),
-            pep.seq('I assumed it was just ', pep.choice(dict.rumors, dict.nonsense), '. '),
+            pep.seq('I ', dict.assumed, ' it was just ', pep.choice(dict.rumors, dict.nonsense), '. '),
         ), pep.choice(
             pep.seq('Why?" '),
             pep.seq('Is it ', dict.legit, '?" '),
@@ -429,27 +429,27 @@ module.exports = {
             pep.seq(names.kaden, ' ', dict.inhaled, '. '),
         ), pep.choice(
             pep.seq('Though ', names.kaden,
-                ' had never been the polite sort. '),
+                ' had never been the ', dict.polite, ' sort. '),
             pep.seq(names.jerry, ' wondered what ', names.kaden,
                 ' was about to drop on ', pronouns.them(
                     names.jerry0), '. '),
-            pep.seq('The silence was awkward. '),
+            pep.seq('The ', dict.silence, ' was ', dict.awkward, '. '),
         ), pep.choice(
-            pep.seq('"No bullshit alright?" '),
-            pep.seq('"This is kinda hard to say, but..." '),
+            pep.seq('"No ', dict.shit, ', alright?" '),
+            pep.seq('"This is ', dict.tough, ' to ', dict.state, ', but..." '),
             pep.seq('"I don\'t want to be that commander, but..." '),
         ), pep.choice(
             pep.seq(pep.capitalize(pronouns.they(names.kaden0)),
-                ' settled on cutting to the chase. '),
+                ' cut to the chase. '),
             pep.seq(names.kaden, ' continued. '),
-            pep.seq(names.kaden, ' grinned sheepishly. '),
+            pep.seq(names.kaden, ' ', dict.grinned, ' ', dict.sheepishly, '. '),
         ), pep.choice(
             pep.seq(
-                'If this comes to blows, you know we’re on the front lines. '
+                'If this comes to ', dict.rebellion, ', you know we’re on the front lines. '
             ),
             pep.seq(
-                '"You know we\'re the first line of defense, right?  '),
-            pep.seq('"If you spot something unusual on your shift... '),
+                '"You know we\'re the ', pep.opt(pep.choice('first', 'only')), ' line of defense, right?  '),
+            pep.seq('"If you spot something ', dict.strange, ' on your shift... '),
         ), pep.choice(
             pep.seq('You can’t hesitate. '),
             pep.seq('You can\'t back down. '),
