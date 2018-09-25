@@ -42,6 +42,10 @@ module.exports = {
     asked: pep.choice("asked", "questioned", "inquired", "queried"),
 
     ass: pep.seq(pep.choice("ass", "rump", "butt", ), pep.opt("-hole")),
+  
+    assumed: pep.choice("assumed", "figured", "thought"), 
+  
+    awkward: pep.choice("awkward", "strange", "uncomfortable"), 
 
     barked: pep.choice("barked", "snapped", "coughed", "growled"),
 
@@ -362,6 +366,8 @@ module.exports = {
         "imminent"),
 
     pleased: pep.choice("pleased", "happy", "comfortable", "excited", ),
+  
+    polite: pep.choice("polite", "civil", "mannered", "courteous"), 
 
     position: pep.choice("position", "spot", "location", "place", "station", ),
       
@@ -409,6 +415,8 @@ module.exports = {
     seriously: pep.choice("seriously", "earnestly", "passionately", "sincerely", "resolutely", "firmly", ),
 
     shade: pep.choice("shade", "shadow", "relief from heat", "penumbra", "cover"),
+  
+    sheepishly: pep.choice("sheepishly", "awkwardly", "embarrassed"), 
 
     shit: pep.choice("shit", "poop", "crap", "poo poo", "fecal matter"),
   
@@ -463,6 +471,8 @@ module.exports = {
     stop: pep.choice("stop", "halt", "defeat", "block", "kill"),
   
     stopped: pep.choice("stopped", "halted", "defeated", "crushed", "put down"), 
+  
+    strange: pep.choice("strange", "unusual", "abnormal", "curious", "peculiar"),
 
     strangely: pep.choice("strangely", "unusually", "abnormally", "curiously", "peculiarly", ),
 

@@ -248,32 +248,32 @@ module.exports = {
             pep.choice( //p12s1
                 //p12
                 pep.seq('"Hands up!" '),
-                // pep.seq(''),
-                // pep.seq(''),
+                pep.seq('"Stop what you\'re doing!" '),
+                pep.seq('"Now hold it, mister! '),
             ), pep.choice( //s2
                 pep.seq('He heard the cops shout, but the human just kept... laughing. '),
-                //  pep.seq(''),
-                //pep.seq(''),
+                pep.seq('He seemed oblivious to the guards\' shouts. '),
+                pep.seq('Could he even hear them? '),
             ), pep.choice( //s3
                 pep.seq('He did move his hands, however. '),
-                //pep.seq(''),
-                //pep.seq(''),
+                pep.seq('He moved his hands, for sure. '),
+                pep.seq('The man wiggled his fingers in response. '),
             ), pep.choice( //s4
                 pep.seq(
                     'He moved the hand that was still attached to the leash, grabbing it and pulled it towards him. '
                 ),
-                //pep.seq(''),
-                //pep.seq(''),
+                pep.seq('He moved his leash-attached hand closer to himself. '),
+                pep.seq('The man pulled the leash towards him. '),
             ), pep.choice( //s5
                 pep.seq(
                     'The lump of meat and flesh moved awkwardly along the grass, leaving a smear of blood behind it, as the man giggled uncontrollably. '
                 ),
-                //pep.seq(''),
-                //pep.seq(''),
+                pep.seq('The former lump of dog dragged gracelessly across the grass. '),
+                pep.seq('The man giggled as his prize drew closer. '),
             ), pep.choice( //s6
                 pep.seq('Shots rang out. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('The policeman fired. '),
+                pep.seq('They fired. '),
             ), html.p('c'), //end choice
         ) //endseq
 };
