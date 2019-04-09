@@ -17,21 +17,24 @@ module.exports = {
             pep.choice( //p1 s1
                 pep.seq('The sun was uncomfortably warm against ', names.jerry, '\'s skin as ', pronouns.they(
                     names.jerry0), ' sat on a hot park bench, squinting in the brightness. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('Warming ', names.jerry, '\'s skin, the sun blistered out activity all around ', 
+                        pronouns.them(names.jerry0), ', making it seem as though life was vibrant yet dull in the park. '),
+                pep.seq('The sun burst even the saddest frown around ', names.jerry, ' as ', 
+                       pronouns.they(names.jerry0), ' sat for while on a park bench. '),
             ), pep.choice( //s2
                 pep.seq('The air was buzzing with life around ', pronouns.them(names.jerry0),
                     ', full of cicadas whining and birds singing. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('The air held no trace of spring, with its wet warmth caressing ', names.jerry, '\'s face. '),
+                pep.seq(names.jerry, ' wondered if it was always this hot in this strange, bright place. '),
             ), pep.choice( //s3
                 pep.seq('It was so unlike home, where the dull light was ever present. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('Home seemed close, yet so far away. '),
+                pep.seq('Home was a world away now, and ', pronouns.they(names.jerry0), ' knew that ', 
+                       pronouns.they(names.jerry0), ' could never go back. '),
             ), pep.choice( //s4
                 pep.seq('Being here was like living in three dimensions for the first time. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('It was terrifying, but somehow it felt right. '),
+                pep.seq('What would the future hold? '),
             ), html.pco,
 
             pep.choice( //p2 s1
@@ -114,7 +117,7 @@ module.exports = {
                 //pep.seq(),
                 //pep.seq(),
             ), pep.choice( //s2
-                pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+                pep.seq(pronouns.They(names.jerry0),
                     ' had no choice after becoming trapped. '),
                 //pep.seq(),
                 //pep.seq(),
@@ -212,7 +215,7 @@ module.exports = {
                 //   pep.seq(),
                 //   pep.seq(),
             ), pep.choice( //s5
-                pep.seq(pep.capitalize(pronouns.they(names.jerry)),
+                pep.seq(pronouns.They(names.jerry0),
                     ' noticed the rope from earlier descending from the feet of the human and into the gory mess. '
                 ),
                 //  pep.seq(),

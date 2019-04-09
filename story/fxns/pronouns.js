@@ -17,5 +17,7 @@ module.exports = {
     Themself: pep.dict({male: 'Himself', female: 'Herself',}, 'Themself'),
     were: pep.dict({male: 'was', female: 'was', }, 'were'),
     are: pep.dict({male: 'is', female: 'is', }, 'are'),
+    Were: pep.dict({male: 'Was', female: 'Was', }, 'Were'),
+    Are: pep.dict({male: 'Is', female: 'Is', }, 'Are'),  
   
 }
