@@ -40,26 +40,29 @@ module.exports = {
             pep.choice( //p2 s1
                 //p2
                 pep.seq(
-                    'Across the path, there were children playing on brightly colored metal swing sets under their parents\' watchful eyes. '
+                    'Across the path, there were children playing on ', 
+                  'brightly colored metal swing sets under their parents\' watchful eyes. '
                 ),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq(names.jerry, 
+                        ' watched as a boy and a girl swung from ropes hanging off the nearby jungle gym. '),
+                pep.seq('The sounds of screaming and giggling children surrounded ', 
+                        names.jerry, ' as ', pronouns.they(names.jerry0), ' sat on a nearby bench. '),
             ), pep.choice( //s2
                 pep.seq('Suddenly, ', names.jerry, ' longed for a family of ', pronouns.their(names.jerry0),
                     ' own. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq(names.jerry, ' felt a deep and mysterous longing bubble up inside of ', pronouns.them(names.jerry0), '. '),
+                pep.seq(names.jerry, ' suddenly wondered if ', pronouns.they(names.jerry0), 
+                        'would ever have any kids to call ', pronouns.their(names.jerry0), ' own. '),
             ), pep.choice( //s3
-                pep.seq(names.jerry, '\'s parents were older and had never really made ', pronouns.them(
-                        names
-                        .jerry0),
+                pep.seq(names.jerry, '\'s parents were older and had never really made ', 
+                        pronouns.them(names.jerry0),
                     ' feel wanted as a child, but these children, in contrast, seemed so happy. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('Kids seemed so happy and carefree. '),
+                pep.seq('Kids didn\'t feel right for this world -- too sweet. '),
             ), pep.choice( //s4
                 pep.seq('They were giggling away as if they didn\'t have a care in the world. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq(names.jerry, ' wondered what it would be like to have a family. '),
+                pep.seq('Would a family fix this deep longing inside of ', pronouns.them(names.jerry0), '? '),
             ), html.pco,
 
             pep.choice( //p3 s1
@@ -67,66 +70,66 @@ module.exports = {
                 pep.seq(
                     'Along the path waddled a short and plump brown, white, and black patchy dog, well beyond its ideal body shape. '
                 ),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('A strange creature waddled by ', names.jerry, '. '),
+                pep.seq('All fur and no eyes to be seen underneath the mess, a dog trotted by ', names.jerry, '. '),
             ), pep.choice( //s2
                 pep.seq(
                     'It was attached by the neck to a blue rope that was held by a human with many of the same characteristics. '
                 ),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('The human with the dog held it by a rope, taut and blue. '),
+                pep.seq('Was it a slave? ', names.jerry, ' wondered at the blue rope attached to its neck. '),
             ), html.pco,
 
             pep.choice( //p4
                 pep.seq('"Hey, how\'s it going?" '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('"How are you today?" '),
+                pep.seq('"Nice day for a sit, isn\'t it?"'),
             ), pep.choice( //s2
                 pep.seq('The human muffed at ', names.jerry, ' as it passed by. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('The human grunted a half-hearted greeting as it passed. '),
+                pep.seq('The human passed casually muttering niceties at ', names.jerry, '. '),
             ), html.pco,
 
             pep.choice( //p5
                 pep.seq('"Great, thanks!" '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('"What\'s that now?" '),
+                pep.seq('"Oh, hello." '),
             ), pep.choice( //s2
                 pep.seq(names.jerry, ' said. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq(names.jerry, ' responded naturally, without thinking about it. '),
+                pep.seq('Apparently I\'m not invisible, ', names.jerry, ' thought. '),
             ), pep.choice( //s3
                 pep.seq('The human seemed to wince at ', names.jerry,
                     '\'s words, and walked a little faster. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('The human seemed deeply offended by his response. '),
+                pep.seq('The human marched quickly away as if ', names.jerry, ' had just shit in their sandal. '),
             ), pep.choice( //s4
                 pep.seq(names.jerry, ' frowned. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq(names.jerry, ' felt a rush of red spread across ', pronouns.their(names.jerry0), ' face. '),
+                pep.seq(names.jerry, ' felt equally offended by the human\'s reaction. '),
             ), pep.choice( //s5
                 pep.seq('People were sure rude up here. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('How rude! '),
+                pep.seq('What a monstrous little mortal this person was. '),
             ), html.pco,
 
             pep.choice( //p6
                 pep.seq('The minutes passed and ', names.jerry, ' tried ', pronouns.their(names.jerry0),
                     ' hardest to forget about what had just had happened in ', world.realm(names.realm),
                     '. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq(names.jerry, ' spent the next few minutes avoiding memories of the night before. '),
+                pep.seq('The night before flooded into ', names.jerry, '\'s head. '),
             ), pep.choice( //s2
                 pep.seq(pronouns.They(names.jerry0),
                     ' had no choice after becoming trapped. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('There had been no other way. '),
+                pep.seq('What happened... happened. '),
             ), pep.choice( //s3
                 pep.seq('The punishment would\'ve been death or exile anyway -- and ', pronouns.they(
                         names.jerry0),
                     ' preferred exile. '),
-                //pep.seq(),
-                //pep.seq(),
+                pep.seq('Either way, death was at the end of this road. '),
+                pep.seq('What would the gods do next? '),
             ), html.pco,
 
             pep.choice( //p7
