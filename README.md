@@ -9,6 +9,10 @@ I'm hosting the project on Glitch (read more below), and I'll push occasional up
 
 The live version can be found [here](https://gem-cook.glitch.me/).
 
+  This project is open source under the [MIT license](https://choosealicense.com/licenses/mit/).
+
+![BrowserStack Logo](https://cdn.glitch.com/b0a1be1d-962e-4ae1-bdff-1c343af18259%2FBrowserstack-logo%402x.png?v=1567435703224)
+
 --------------------
 ## Road Map and Random Notes
 *  Noticed a potential issue with pronouns and past-tense was/were -- will need to watch as I implement.
@@ -52,7 +56,7 @@ The live version can be found [here](https://gem-cook.glitch.me/).
 
 1. ~~Write the first version of text~~
 2. ~~Import the first version and get it running~~
-3. Add two alternate sentence versions to each sentence (1 of 12)
+3. Add two alternate sentence versions to each sentence (7 of 12)
 4. Add in word variation 
 
 

@@ -40,7 +40,7 @@ module.exports = {
                         names.jerry0), ', leaving ', dict.hastily, ' placed ', dict.footprints,
                     ' behind them as they ', dict.chased, '. '),
                 //Their tormentors, adrian and max, were chasing jerry and cackling as they went.
-                pep.seq(pep.capitalize(pronouns.their(names.jerry0)), ' ', dict.bullies, ', ', names.adrian,
+                pep.seq(pronouns.Their(names.jerry0), ' ', dict.bullies, ', ', names.adrian,
                     ' and ', names.max, ', were ', myPep.edIng(dict.chased), ' ', names.jerry, ' and ',
                     dict.cackling, ' as they went. '),
                 //A team of taller, stronger, faster children were chasing jerry at a supernaturally fast speed. 
@@ -123,7 +123,7 @@ module.exports = {
                 //A dull, flat voice came from behind the door. 
                 pep.seq('A dull, flat voice came from behind the door. '),
                 //Their mother's trill voice came from the other side.
-                pep.seq(pep.capitalize(pronouns.their(names.jerry0)),
+                pep.seq(pronouns.Their(names.jerry0),
                     ' mother\'s trill voice came from the other side. '),
                 //A heartless monotone met jerry's struggles
                 pep.seq('A ', dict.heartless, ' monotone met ', names.jerry, '\'s struggles. '),
@@ -194,7 +194,7 @@ module.exports = {
                 pep.seq(names.jerry, ' said ', dict.seriously, ', and ', dict.leaned, ' against ',
                     pronouns.their(names.jerry0), ' front door for support. '),
                 // Their voice shook as they spoke.
-                pep.seq(pep.capitalize(pronouns.their(names.jerry0)), ' voice shook as ', pronouns.they(
+                pep.seq(pronouns.Their(names.jerry0), ' voice shook as ', pronouns.they(
                     names.jerry0), ' spoke. '),
                 // It came as a whisper from jerry's mouth.
                 pep.seq('It came as a whisper from ', names.jerry, '\'s mouth. '),

@@ -104,7 +104,7 @@ module.exports = {
              pep.seq(names.jerry, ' wondered what the story was. '),
              pep.seq(names.jerry, ' offered absentmindedly, immediately regretting the decision. '),
         ), pep.choice( //s3
-             pep.seq(pep.capitalize(world.brethrens(names.realm)), ' in hazmat suits were hard at work. '),
+             pep.seq(world.Brethrens(names.realm), ' in hazmat suits were hard at work. '),
              pep.seq('The hazmats buzzed around behind the guard like busy little bees. '),
              pep.seq('Hazmatted ', world.brethrens(names.realm), ' were staring. '),
         ), html.pco,
@@ -128,7 +128,7 @@ module.exports = {
              pep.seq(names.jerry, ' couldn\'t take ', pronouns.their(names.jerry0), ' eyes off of the blood dripping from the guard\'s sword. '),
              pep.seq('Blood dripped from the sword that the guard held. '),
         ), pep.choice( //s3
-             pep.seq(pep.capitalize(pronouns.their(names.jerry0)), ' stomach turned. '),
+             pep.seq(pronouns.Their(names.jerry0), ' stomach turned. '),
              pep.seq(names.jerry, ' felt sick at the sight. '),
              pep.seq('The gore made ', names.jerry, '\'s stomach churn. '),
         ), html.pco,
@@ -171,7 +171,7 @@ module.exports = {
             pep.seq('The soldier\'s shout followed ', names.jerry, ' down the hallway. '),
             pep.seq(names.jerry, ' heard the soldier say as ', pronouns.they(names.jerry0), ' departed. '),
         ), pep.choice( //s3
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' were unsure what to make of the scene, but bed still called ', pronouns.their(names
                     .jerry0),
                 ' name. '),
@@ -194,7 +194,7 @@ module.exports = {
             pep.seq(names.jerry, ' felt a surge of adrenaline as ', pronouns.they(names.jerry0), ' realized that this might be part of the ', dict.rebellion, '. '),
             pep.seq('Light flooded the hallway from the askew door as ', names.jerry, ' approached. '),
         ), pep.choice( //s3
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' unsheathed ', pronouns.their(names
+            pep.seq(pronouns.They(names.jerry0), ' unsheathed ', pronouns.their(names
                     .jerry0),
                 ' own dagger, gripping it with a white-knuckled ferocity.'),
             pep.seq('Gripping ', pronouns.their(names.jerry0), ' dagger, ', names.jerry, ' felt ', pronouns.their(names.jerry0), ' heart pounding painfully. '),
@@ -223,9 +223,9 @@ module.exports = {
             pep.seq(names.jerry, ' tiptoed through the doorway and into the room. '),
             pep.seq('Hands shaking, ', names.jerry, ' held the dagger out as ', pronouns.they(names.jerry0), ' stepped into the room. '),
         ), pep.choice( //s3
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' flipped ', pronouns.their(names.jerry0),
+            pep.seq(pronouns.They(names.jerry0), ' flipped ', pronouns.their(names.jerry0),
                 ' head left and right, scanning the walls for signs of an ambush. '),
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' scanned the room for a potential ambush. '),
+            pep.seq(pronouns.They(names.jerry0), ' scanned the room for a potential ambush. '),
             pep.seq(names.jerry, ' fingered the blade lightly as ', pronouns.they(names.jerry0), ' took stock of the room. '),
         ), html.pco,
 
@@ -290,7 +290,7 @@ module.exports = {
             pep.seq('It was too late, and ', names.jerry, ' knew it. '),
         ), pep.choice( //s3
             pep.seq('The panic became full blown. '),
-            pep.seq(pep.capitalize(pronouns.their(names.jerry0)), ' throat felt tight around ', pronouns.their(names.jerry0), ' breath. '),
+            pep.seq(pronouns.Their(names.jerry0), ' throat felt tight around ', pronouns.their(names.jerry0), ' breath. '),
             pep.seq('A sinking feeling settled in. '),
         ), pep.choice( //s3
             pep.seq('How would ', names.jerry, ' explain this in the morning when someone found ',
@@ -308,7 +308,7 @@ module.exports = {
             pep.seq(names.jerry, ' muttered as ', pronouns.they(names.jerry0),
                 ' paced in front of the locked the door. '),
             pep.seq(names.jerry, '\'s voice echoed in the empty chamber. '),
-            pep.seq(pep.capitalize(pronouns.their(names.jerry0)), ' voice felt flat, yet full of pain. '),
+            pep.seq(pronouns.Their(names.jerry0), ' voice felt flat, yet full of pain. '),
         ), html.i('o'), pep.choice( //s3
             pep.seq( 'I was going home when I noticed the door open. '),
             pep.seq('I noticed the door ajar. '),
@@ -343,7 +343,7 @@ module.exports = {
             pep.seq('The voice rang loud and clear in ', pronouns.their(names.jerry0), ' head. '),
             pep.seq('The choice was clear. '),
         ), pep.choice( //s6
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' hadn\'t closed the door to prevent escapes. '),
             pep.seq(names.jerry, ' knew there was only one way out. '),
             pep.seq(names.jerry, ' knew the truth of matters. '),
@@ -352,7 +352,7 @@ module.exports = {
             pep.seq('No one compelled ', names.jerry, ' to close the door. '),
             pep.seq('There was no scapegoat to be had here. '),
         ), pep.choice( //s8
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' shut the door to escape -- and knew it. '),
             pep.seq(names.jerry, ' had been trying to flee. '),
             pep.seq(names.jerry, ' was a goner. '),
@@ -371,7 +371,7 @@ module.exports = {
             pep.seq('Spin a story, or jump to freedom. '),
             pep.seq('Stay for jail or flee for a new chance. '),
         ), pep.choice( //s3
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' stepped away from the door and looked at the portal. '),
             pep.seq(names.jerry, ' stepped towards the portal. '),
             pep.seq(names.jerry, ' could not tear ', pronouns.their(names.jerry0), ' eyes away from the portal. '),

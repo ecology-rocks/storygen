@@ -34,7 +34,7 @@ module.exports = {
             pep.seq('The question hung in the air as ', names.jerry,
                 ' took another bite. '),
         ), pep.choice(
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)), ' ',
+            pep.seq(pronouns.They(names.jerry0), ' ',
                 dict.looked, ' at ', pronouns.their(
                     names.jerry0), ' ', dict.buddy, ', ', names.reed,
                 ', for reassurance. '),
@@ -292,7 +292,7 @@ module.exports = {
                 ' didn\'t want to shed blood. '),
             pep.seq(names.jerry, ' ', dict.abhorred, ' violence. '),
         ), pep.choice(
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' had only taken this ', dict.job,
                 ' for the pay, and because ', pronouns.they(names.jerry0),
                 ' were ', dict.pressured, ' to do so by ', pronouns.their(
@@ -317,7 +317,7 @@ module.exports = {
                     names.realm),
                 '. '),
         ), pep.choice(
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' would rather ', dict.die, ' or be ', dict.imprisoned,
                 ' for treason. '),
             pep.seq(names.jerry, ' wished that ', pronouns.they(names.jerry0),
@@ -370,7 +370,7 @@ module.exports = {
             pep.seq(names.kaden, ' shot ', names.jerry, ' a ', dict.dirtyLook,
                 '. '),
         ), pep.choice(
-            pep.seq(pep.capitalize(pronouns.their(names.jerry0)),
+            pep.seq(pronouns.Their(names.jerry0),
                 ' stomach was letting ', pronouns.them(
                     names.jerry0), ' know that this may be ', pronouns.their(
                     names.jerry0),
@@ -439,7 +439,7 @@ module.exports = {
             pep.seq('"This is ', dict.tough, ' to ', dict.state, ', but..." '),
             pep.seq('"I don\'t want to be that commander, but..." '),
         ), pep.choice(
-            pep.seq(pep.capitalize(pronouns.they(names.kaden0)),
+            pep.seq(pronouns.They(names.kaden0),
                 ' cut to the chase. '),
             pep.seq(names.kaden, ' continued. '),
             pep.seq(names.kaden, ' ', dict.grinned, ' ', dict.sheepishly, '. '),
@@ -530,7 +530,7 @@ module.exports = {
             ),
             pep.seq(names.jerry, '\'s mouth was full of ash. '),
         ), pep.choice(
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' wondered if ', names.kaden,
                 ' noticed. '),
             pep.seq('"Thank you for bringing this to my attention." '),
@@ -666,7 +666,7 @@ module.exports = {
                     names.jerry), ' guard station. '),
         ), pep.choice(
             pep.seq('The sweat was real. '),
-            pep.seq(pep.capitalize(pronouns.they(names.jerry)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' felt hot and cold at the same time. '),
             pep.seq('Sweat poured off of ', names.jerry, '. '),
         ), pep.choice(
@@ -767,7 +767,7 @@ module.exports = {
             pep.seq('Maybe ', pronouns.they(names.jerry0),
                 ' could request a promotion. '),
         ), pep.choice(
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' could -- but ', pronouns.they(
                     names.jerry0), ' would be laughed at, for ',
                 pronouns.they(names.jerry0),
@@ -777,7 +777,7 @@ module.exports = {
         ), html.pco,
         //p26           
         pep.choice(
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' could join the revolution, although then ', pronouns.they(
                     names.jerry0),
                 '’d just be fighting for the otherside, and ', names.jerry,
@@ -917,9 +917,9 @@ module.exports = {
             pep.seq(names.jerry, ' gathered thoughts before speaking. '),
             pep.seq(names.jerry, ' wasn\'t sure how to respond. '),
         ), pep.choice(
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' settled on an ambivalent nod and grunt. '),
-            pep.seq(pep.capitalize(pronouns.they(names.jerry0)),
+            pep.seq(pronouns.They(names.jerry0),
                 ' decided on a smile. '),
             pep.seq('Smiling, ', names.jerry, ' nodded at ', names.dorian,
                 '. '),
@@ -997,7 +997,7 @@ module.exports = {
                 names.jerry, '\'s resolve. '),
         ), pep.choice(
             pep.seq('That, apparently, took courage to say out loud. '),
-            pep.seq(pep.capitalize(pronouns.they(names.dorian0)),
+            pep.seq(pronouns.They(names.dorian0),
                 ' had not expected such furor from ',
                 names.eddie, '. '),
             pep.seq(names.dorian, ' was utterly taken aback by ', names
